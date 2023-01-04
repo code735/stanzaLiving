@@ -276,7 +276,34 @@ img {
     display: flex;
     align-items: center;
     gap: 20px;
+    padding: 0 20px;
+    background: #61c3ae;
+    border: none;
+    color: white;
+    border-radius: 10px;
 }
+
+
+#request_callback a {
+    color: white;
+    font-size: .9rem;
+}
+
+#request_callback i {
+    color: var(--light-green);
+    background-color: var(--white);
+    padding: 4px 8px;
+    border-radius: 50px;
+}
+
+.nav_links a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.nav_links {}
 
 /*----------------- 992px media query -------------------*/
 @media only screen and (min-width: 992px) {
@@ -288,6 +315,8 @@ img {
 
     .nav_links {
         display: flex;
+        justify-content: space-between;
+        gap: 15px;
     }
 
     #mobile_navbar {
