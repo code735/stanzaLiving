@@ -50,8 +50,31 @@ function showSlidingAnimation() {
         slidingflag = true;
     }
 }
+let intervalId;
+let showAnimation = true;
 
-setInterval(showSlidingAnimation, 2000);
+intervalId = setInterval(() => {
+    if (showAnimation) {
+        showSlidingAnimation();
+    }
+}, 2000);
 
+let selectAnimationFlag = true;
+document.querySelector(".select_property_type").addEventListener('click', () => {
+    if (selectAnimationFlag) {
+        showAnimation = false;
+        document.querySelector(".down_angle").classList.add('rotate');
+        document.querySelector(".down_angle").classList.remove('rotateBack');
+        document.getElementById("select_options").style.display = "block";
+        selectAnimationFlag = false;
+    }
+    else {
+        showAnimation = true;
+        document.querySelector(".down_angle").classList.add('rotateBack');
+        document.getElementById("select_options").style.display = "none";
+        document.querySelector(".down_angle").classList.remove('rotate');
+        selectAnimationFlag = true;
+    }
+});
 
 /*------------------ Animations / Dynamic css ----------------------------*/
