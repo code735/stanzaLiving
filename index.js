@@ -21,7 +21,7 @@ document.getElementById("slider_links_2").onclick = () => {
     let slide_link1 = document.getElementById("slider_links_1");
 
     slide_link2.href = "#sliding_img_2";
-    slide_link2.style.border = "2px solid white";
+    slide_link2.style.border = "2px solid #61c3ae";
 
     slide_link1.style.border = "none";
 }
@@ -31,7 +31,7 @@ document.getElementById("slider_links_1").onclick = () => {
     let slide_link1 = document.getElementById("slider_links_1");
 
     slide_link1.href = "#sliding_img_1";
-    slide_link1.style.border = "2px solid white";
+    slide_link1.style.border = "2px solid #61c3ae";
 
     slide_link2.style.border = "none";
 }
