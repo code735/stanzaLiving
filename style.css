@@ -76,6 +76,7 @@ img {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    transition: all 2s ease;
 }
 
 .sliding_img_2 {
@@ -84,6 +85,7 @@ img {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    transition: all 2s ease;
 }
 
 .black_filter {
@@ -124,6 +126,7 @@ img {
     display: flex;
     gap: 10px;
     margin: 20px;
+    margin-left: 5%;
 }
 
 #slider_links a {
@@ -256,7 +259,7 @@ img {
 }
 
 #navbar {
-    display: none;
+    display: none !important;
 }
 
 #navbar a {
@@ -276,6 +279,31 @@ img {
     display: flex;
     align-items: center;
     gap: 20px;
+    padding: 0 20px;
+    background: #61c3ae;
+    border: none;
+    color: white;
+    border-radius: 10px;
+}
+
+
+#request_callback a {
+    color: white;
+    font-size: .9rem;
+}
+
+#request_callback i {
+    color: var(--light-green);
+    background-color: var(--white);
+    padding: 4px 8px;
+    border-radius: 50px;
+}
+
+.nav_links a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    font-weight: 600;
 }
 
 /*----------------- 992px media query -------------------*/
@@ -288,6 +316,8 @@ img {
 
     .nav_links {
         display: flex;
+        justify-content: space-between;
+        gap: 15px;
     }
 
     #mobile_navbar {
@@ -295,7 +325,7 @@ img {
     }
 
     #navbar {
-        display: flex;
+        display: flex !important;
         justify-content: space-between;
     }
 
@@ -332,4 +362,46 @@ img {
         display: none;
     }
 
+    .black_filter {
+        background: transparent;
+    }
+
+    #sliding_img_1 {
+        background-image: url('images/1-modified.png');
+        background-size: contain;
+        background-position: right;
+    }
+
+    #sliding_img_2 {
+        background-image: url('images/2-modified.png');
+        background-size: contain;
+        background-position: right;
+    }
+
+    .property_type {
+        width: 94%;
+    }
+
+    #slider_links a i {
+        background: var(--light-green);
+    }
+
+    .sliding_img_1_content {
+        color: black;
+    }
+
+    .sliding_img_1_content h1 {
+        font-size: 3.4rem;
+    }
+
+    .hero_highlight {
+        font-size: 3.4rem;
+    }
+
+    .sliding_img_1_content {
+        padding-right: 19%;
+        padding-bottom: 19%;
+        padding-top: 15%;
+        padding-bottom: 19%;
+    }
 }
