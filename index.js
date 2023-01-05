@@ -92,11 +92,24 @@ ex_recidence_btn.onclick = () => {
 }
 
 
-let getData = async (searchterm) => {
-    let res = await fetch(`http://localhost:3000/${searchterm}`);
+let getData = async () => {
+    let res = await fetch(`http://localhost:3000/data`);
     let data = await res.json();
 
-    console.log(data);
+    return data;
 }
 
-getData("chennai");
+
+let searchBox = document.getElementById("searchip");
+
+// searching 
+
+document.getElementById("searchip").oninput = async () => {
+    showAnimation = false;
+    let ipboxval = searchBox.value;
+    let Citydata = await getData();
+
+    if (ipboxval.length >= 3) {
+        console.log(Citydata);
+    }
+}
