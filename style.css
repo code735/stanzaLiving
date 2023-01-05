@@ -340,8 +340,8 @@ img {
     #navbar {
         display: flex !important;
         justify-content: space-between;
-        padding-left: 8%;
-        padding-right: 8%;
+        padding-left: 5%;
+        padding-right: 5%;
     }
 
     /*-------- Hero Section ---------*/
@@ -425,6 +425,7 @@ img {
     .select_property_type {
         gap: 20px;
         border-right: 1px solid #61c3ae9f;
+        padding-right: 10px;
     }
 
     #searchbox_lg h6 {
@@ -505,5 +506,35 @@ img {
 
     .hero_section_container {
         width: 90%;
+    }
+
+    #explore_residence_popup {
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.616);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        display: none;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #popular_cities {
+        background: white;
+        text-align: center;
+    }
+
+    #e_r_details h6 {
+        font-weight: bold;
+        text-align: center;
+    }
+
+    #e_r_details {
+        background: white;
+        width: 50%;
+        padding: 20px 40px;
+        border-radius: 10px;
     }
 }
