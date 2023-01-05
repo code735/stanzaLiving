@@ -90,3 +90,13 @@ ex_recidence_btn.onclick = () => {
     let popup = document.getElementById("explore_residence_popup");
     popup.style.display = "flex";
 }
+
+
+let getData = async (searchterm) => {
+    let res = await fetch(`http://localhost:3000/${searchterm}`);
+    let data = await res.json();
+
+    console.log(data);
+}
+
+getData("chennai");
