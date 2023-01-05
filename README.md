@@ -1,3 +1,0 @@
-# stanzaLiving
-
-Hello guys
