@@ -122,7 +122,6 @@ img {
 
 #slider_links {
     position: absolute;
-    bottom: 20px;
     display: flex;
     gap: 10px;
     margin: 20px;
@@ -327,6 +326,8 @@ img {
     #navbar {
         display: flex !important;
         justify-content: space-between;
+        padding-left: 10%;
+        padding-right: 10%;
     }
 
     /*-------- Hero Section ---------*/
@@ -394,18 +395,74 @@ img {
         font-size: 3.4rem;
     }
 
+    .sliding_img_1_content p {
+        width: 60%;
+    }
+
     .hero_highlight {
         font-size: 3.4rem;
     }
 
     .sliding_img_1_content {
-        padding-right: 19%;
-        padding-bottom: 19%;
-        padding-top: 15%;
-        padding-bottom: 19%;
+        padding-top: 0;
+        padding-bottom: 28%;
     }
+
+    .select_property_type {
+        gap: 20px;
+        border-right: 1px solid #61c3ae9f;
+    }
+
+    #searchbox_lg h6 {
+        font-size: .9rem;
+        margin: 0;
+    }
+
+    .select_property_type p {
+        font-size: .8rem;
+        font-weight: 600;
+        color: var(--light-green);
+    }
+
+    #searchbox_lg {
+        position: absolute;
+        bottom: 20%;
+        left: 5%;
+        border: 1px solid #61c3ae9f;
+        background: white;
+        padding: 10px 20px;
+        gap: 30px;
+        border-radius: 5px;
+    }
+
+    #searchbox_lg input {
+        border: none;
+        outline: none;
+    }
+
+    #searchbox_lg input::placeholder {
+        font-size: .8rem;
+        color: var(--light-green);
+    }
+
+    #search_icon i {
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+    #search_icon {
+        background: var(--light-green);
+        padding: 9px 12px;
+        color: white;
+        border-radius: 8px;
+    }
+
+    #slider_links {
+        bottom: 0;
+    }
+
+    #hero_section {
+        height: 70vh;
+    }
+
 }
-
-
-
-/* oadsihfds */
