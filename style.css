@@ -510,7 +510,7 @@ img {
 
     #explore_residence_popup {
         width: 100vw;
-        height: 100vh;
+        height: 120vh;
         background-color: rgba(0, 0, 0, 0.616);
         position: absolute;
         top: 0;

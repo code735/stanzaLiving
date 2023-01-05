@@ -89,4 +89,5 @@ let ex_recidence_btn = document.getElementById("exlpore_residence_link");
 ex_recidence_btn.onclick = () => {
     let popup = document.getElementById("explore_residence_popup");
     popup.style.display = "flex";
+    document.querySelector("body").style.overflow = "hidden";
 }
