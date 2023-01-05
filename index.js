@@ -1,3 +1,5 @@
+import { navComponent } from "./components/searchbox.js";
+
 /*------------------ Animations / Dynamic css----------------------------*/
 
 
@@ -78,3 +80,13 @@ document.querySelector(".select_property_type").addEventListener('click', () => 
 });
 
 /*------------------ Animations / Dynamic css ----------------------------*/
+
+
+// hero section pop-up
+
+let ex_recidence_btn = document.getElementById("exlpore_residence_link");
+
+ex_recidence_btn.onclick = () => {
+    let popup = document.getElementById("explore_residence_popup");
+    popup.style.display = "flex";
+}
