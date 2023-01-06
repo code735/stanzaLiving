@@ -303,19 +303,20 @@
     
 }
 
-@media only screen and (max-width:768px) {
+@media screen and (max-width:768px) {
     #headItem{
         font-size: 1em;
-
+        background-color: red;
     }
+    
     #textH{
         font-size: 15px;
     }
 }
-@media only screen and (max-width:580px) {
+@media screen and (max-width:580px) {
     #headItem{
         font-size: .5em;
-
+        background-color: red;
     }
     #textH{
         font-size: 12px;

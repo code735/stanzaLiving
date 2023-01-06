@@ -20,7 +20,6 @@ cardList[1].onmouseenter=()=>{
     const list = document.querySelectorAll(".hover_img");
     list[1].style.display="block";
     
- 
  }
  
  cardList[1].onmouseleave=()=>{
