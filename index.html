@@ -1,0 +1,552 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>StanzaLiving</title>
+    <link rel="shortcut icon"
+        href="https://play-lh.googleusercontent.com/8T2M6_2vDY9382Vmt_n4RfNaf7VRZudFVE4R1ms35sL40Mu0pDo4IE4azqSEtPXYDcAT"
+        type="image/x-icon">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- font icon -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+
+<body>
+
+
+    <!-- NAVBAR SECTION -->
+    <header>
+        <div id="mobile_navbar" class="justify-content-between align-items-center px-4 py-2">
+            <div class="nav-img w-25">
+                <img src="https://res.cloudinary.com/stanza-living/image/upload/v1672315504/Website%20v5/Logo/Stanza-Living-2023-light.gif"
+                    alt="" srcset="">
+            </div>
+            <div class="nav-icons d-flex align-items-center">
+                <div class="search_icon">
+                    <i class="bi bi-search"></i>
+                </div>
+                <div class="tel_icon">
+                    <i class="bi bi-telephone-fill"></i>
+                </div>
+            </div>
+        </div>
+
+        <div id="navbar" class="py-4 d-flex justify-content-between">
+            <div class="brand_logo">
+                <img src="https://res.cloudinary.com/stanza-living/image/upload/v1583405334/NewWebsite/Stanza_Living_Logo_3x.png"
+                    alt="">
+            </div>
+            <div class="nav_links">
+                <a href="#" id="exlpore_residence_link">Explore Residences</a>
+                <a href="">
+                    Know More
+                    <span class="material-symbols-outlined">
+                        expand_more
+                    </span>
+                </a>
+                <button id="request_callback">
+                    <i class="bi bi-telephone-fill"></i>
+                    <a href="">Request a callback</a>
+                </button>
+
+                <div id="explore_residence_popup">
+                    <div id="e_r_details">
+                        <div id="close_btn">
+                            <span class="material-symbols-outlined">
+                                close
+                            </span>
+                        </div>
+                        <div id="nav_container_hero"></div>
+                        <h6 class="py-2">Popular Cities</h6>
+                        <div id="popular_cities">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="city-slider-item cursor-pointer">
+                                    <div class="city-img hidden lg:inline-block"><img
+                                            src="https://res.cloudinary.com/stanza-living/image/upload/f_auto,q_auto/v1582114420/NewWebsite/cities/bengaluru.png"
+                                            width="60" height="60"></div>
+                                    <div class="city-name">Bengaluru</div>
+                                </div>
+                                <div class="city-slider-item cursor-pointer">
+                                    <div class="city-img hidden lg:inline-block"><img
+                                            src="https://res.cloudinary.com/stanza-living/image/upload/v1582114421/NewWebsite/cities/chennai.png"
+                                            width="60" height="60"></div>
+                                    <div class="city-name">Chennai</div>
+                                </div>
+                                <div class="city-slider-item cursor-pointer">
+                                    <div class="city-img hidden lg:inline-block"><img
+                                            src="https://res.cloudinary.com/stanza-living/image/upload/f_auto,q_auto/v1582114421/NewWebsite/cities/coimbatore.png"
+                                            width="60" height="60"></div>
+                                    <div class="city-name">Coimbatore</div>
+                                </div>
+                                <div class="city-slider-item cursor-pointer">
+                                    <div class="city-img hidden lg:inline-block"><img
+                                            src="https://res.cloudinary.com/stanza-living/image/upload/f_auto,q_auto/v1582114421/NewWebsite/cities/dehradun.png"
+                                            width="60" height="60"></div>
+                                    <div class="city-name">Dehradun</div>
+                                </div>
+                                <div class="city-slider-item cursor-pointer">
+                                    <div class="city-img hidden lg:inline-block"><img
+                                            src="https://res.cloudinary.com/stanza-living/image/upload/f_auto,q_auto/v1582114421/NewWebsite/cities/delhi.png"
+                                            width="60" height="60"></div>
+                                    <div class="city-name">Delhi</div>
+                                </div>
+                                <div class="city-slider-item cursor-pointer">
+                                    <div class="city-img hidden lg:inline-block"><img
+                                            src="https://res.cloudinary.com/stanza-living/image/upload/f_auto,q_auto/v1637904076/Website/CMS-Uploads/gadbjhmexjzadryrckds.png"
+                                            width="60" height="60"></div>
+                                    <div class="city-name">Mumbai</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="hero_section" class="d-flex justify-content-center flex-column">
+        <div class="container-sm-fluid container hero_section_container px-0">
+            <div class="row mx-0">
+                <div class="col-sm-12 col-lg-8 px-0 position-relative">
+                    <div id="slide_links_wrapper">
+                        <div class="img_sliding">
+                            <div class="hero_nav_mobile px-4 py-2">
+                                <div class="nav_img" id="hero_nav_img">
+                                    <img src="https://res.cloudinary.com/stanza-living/image/upload/v1672315258/Website%20v5/Logo/Stanza-Living-dark.gif"
+                                        alt="">
+                                </div>
+                            </div>
+                            <div class="sliding_img_1" id="sliding_img_1">
+                                <div class="black_filter">
+                                    <div class="sliding_img_1_content">
+                                        <h1>Let's find a <span class="hero_highlight">cozy</span> accommodation for
+                                            you!</h1>
+                                        <p>Book your hassle-free stay with us, based on what suits you best</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sliding_img_2" id="sliding_img_2">
+                                <div class="black_filter">
+                                    <div class="sliding_img_1_content">
+                                        <h1>Say hello to your
+                                            second home in
+                                            <span class="hero_highlight">
+                                                Mumbai!
+                                            </span>
+                                        </h1>
+                                        <p>A new city can sometimes feel too new, right?</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="searchbox_lg" class="d-none d-lg-flex align-items-center hero_searchbox_lg">
+                            <div class="select_property_type d-flex align-items-center">
+                                <div class="select_property_type_text">
+                                    <h6>Choose Property Type</h6>
+                                    <p>Select your living space
+                                    </p>
+                                </div>
+                                <span class="material-symbols-outlined down_angle">
+                                    expand_more
+                                </span>
+                                <div class="select_options" id="select_options">
+                                    <p>Modern Student Housing</p>
+                                    <p>Co-living for Professionals</p>
+                                    <p>Managed Apartments</p>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center position-relative">
+                                <div class="search_inputbox">
+                                    <h6>Find in and around</h6>
+                                    <input type="text" id="searchip" placeholder="Enter city / residence name"
+                                        autocomplete="off">
+                                </div>
+                                <div id="search_icon">
+                                    <i class="bi bi-search"></i>
+                                </div>
+                                <div id="search_suggestion">
+                                    <!-- append search suggestions here -->
+                                </div>
+                            </div>
+                        </div>
+                        <div id="slider_links">
+                            <a href="" id="slider_links_1"><i class=""></i>
+                            </a>
+                            <a href="" id="slider_links_2"><i class=""></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="mob_searchbox">
+                        <i class="bi bi-search"></i>
+                        <input type="text" placeholder="Search for your second home...">
+                    </div>
+                </div>
+                <div class="col-sm-12 col-lg-4 px-0">
+                    <div class="d-flex flex-column align-items-center pt-5 pt-lg-0">
+                        <div class="property_type student_housing">
+                            <div class="green_filter"></div>
+                            <div class="property_type_text">
+                                <h1>Modern Student Housing</h1>
+                                <div class="explore_btn">
+                                    <span class="material-symbols-outlined">
+                                        chevron_right
+                                    </span>
+                                    <p>Explore</p>
+                                </div>
+                                <div class="explore_btn_lg">
+                                    <span class="material-symbols-outlined">
+                                        arrow_forward
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="property_type co_living_housing">
+                            <div class="green_filter"></div>
+                            <div class="property_type_text">
+                                <h1>Co-living for Professionals</h1>
+                                <div class="explore_btn">
+                                    <span class="material-symbols-outlined">
+                                        chevron_right
+                                    </span>
+                                    <p>Explore</p>
+                                </div>
+                                <div class="explore_btn_lg">
+                                    <span class="material-symbols-outlined">
+                                        arrow_forward
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="property_type managed_apt_housing">
+                            <div class="green_filter"></div>
+                            <div class="property_type_text">
+                                <h1>Managed Apartments</h1>
+                                <div class="explore_btn">
+                                    <span class="material-symbols-outlined">
+                                        chevron_right
+                                    </span>
+                                    <p>Explore</p>
+                                </div>
+                                <div class="explore_btn_lg">
+                                    <span class="material-symbols-outlined">
+                                        arrow_forward
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="hero_section_icons" class="mt-3">
+            <div class="container-fluid">
+                <div class="d-flex justify-content-between align-items-center w-75 mx-auto py-3">
+                    <div class="d-flex justify-content-between align-items-center hero_icon">
+                        <i class="bi bi-buildings"></i>
+                        <div id="hero_section_text">
+                            <span>24+</span>
+                            Cities
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center hero_icon">
+                        <i class="bi bi-building"></i>
+                        <div id="hero_section_text">
+                            <span>450+</span>
+                            Residences
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center hero_icon">
+                        <span class="material-symbols-outlined">
+                            bed
+                        </span>
+                        <div id="hero_section_text">
+                            <span>70,000+</span>
+                            Beds
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features_section">
+        <div id="four_walls_roof" class="py-5">
+            <div id="four_wall_roof_text" class="py-3">
+                <h2><span class="light_green_hl">Not just</span> four walls and a roof</h2>
+                <p>Come over and experience how a place to stay can be so much more</p>
+            </div>
+            <div id="start_living_your_best_life">
+                <div class="container py-5">
+                    <div class="row py-5">
+                        <div class="col col-lg-7">
+                            <div class="row mx-0 justify-content-center">
+                                <div class="col-5 left_img">
+                                    <img src="https://www.stanzaliving.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fstanza-living%2Fimage%2Fupload%2Ff_auto%2Cq_auto%2Cw_540%2Fv1652203344%2FWebsite%2520v5%2FBestLife%2Fbuilding.jpg&w=1920&q=75"
+                                        alt="">
+                                </div>
+                                <div
+                                    class="col-5 right_img d-flex flex-column align-items-center justify-content-between">
+                                    <img src="https://www.stanzaliving.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fstanza-living%2Fimage%2Fupload%2Ff_auto%2Cq_auto%2Cw_540%2Fv1653558760%2FWebsite%2520v5%2FBestLife%2FSection_1_Pretoria_1.jpg&w=1920&q=75"
+                                        alt="" srcset="">
+                                    <img src="https://www.stanzaliving.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fstanza-living%2Fimage%2Fupload%2Ff_auto%2Cq_auto%2Cw_540%2Fv1656507903%2FWebsite%2520v5%2FBestLife%2Fhome_page_section_1.jpg&w=1920&q=75"
+                                        alt="" srcset="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 d-flex flex-column align-items-center justify-content-center">
+                            <div id="start_living_your_best_life_text">
+                                <h2>
+                                    Start living your best life
+                                    from <span class="light_green_hl">day one</span>
+                                </h2>
+                                <p>
+                                    Bring a box full of hopes, dreams, ambitions… and of course, your personal
+                                    belongings. Everything else - furniture, appliances, food - has already been taken
+                                    care of.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container p-3">
+            <div class="row">
+                <div class="col-12 col-lg-6 d-flex flex-column justify-content-center align-items-center">
+                    <div id="room_for_eveything_text">
+                        <h2>
+                            Step into a room that has
+                            <span class="light_green_hl">
+                                room for everything
+                            </span>
+                        </h2>
+                        <p>
+                            Your clothes and bag will not be fighting for space on the same chair. At Stanza Living,
+                            there's ample room for all your possessions. Even a framed photo of your family, for the
+                            rare occasions you miss home.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 py-5">
+                    <div id="room_for_eveything_img">
+                        <img src="images/3.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id=" tear_it_up" class="py-1">
+            <div id="tear_it_up">
+                <div class="container py-5">
+                    <div class="row py-5">
+                        <div class="col col-lg-6">
+                            <img src="images/4.png" alt="">
+                        </div>
+                        <div class="col-lg-4 d-flex flex-column align-items-center justify-content-center">
+                            <div id="start_living_your_best_life_text">
+                                <h2>
+                                    Take your daily list of
+                                    chores. And <span class="light_green_hl">tear it up</span>
+                                </h2>
+                                <p>
+                                    You have better things to do than wash your clothes, clean up your room and cook
+                                    your meals. So our team of pros will do them all for you.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container p-3">
+            <div class="row">
+                <div class="col-12 col-lg-6 d-flex flex-column justify-content-center align-items-center">
+                    <div id="common_area_text">
+                        <h2>
+                            Chill in a <span class="light_green_hl">common area</span>
+                            that's anything but common
+                        </h2>
+                        <p>
+                            Nope, we don't try to pass off a few plastic chairs and a TV as a common area. We've
+                            replaced them with sofas, bean bags and large-screen TVs. And we've also added gaming zones,
+                            fitness centres and chillout corners as a bonus.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 py-5">
+                    <div id="common_area_img">
+                        <img src="images/5.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINGERTIPS SECTION-->
+    <section id="fingertips_section">
+        <div class="container py-5">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-12 col-lg-6">
+                    <div id="fingertips_section_text">
+                        <h1>
+                            Always have us
+                            <span class="light_green_hl">at your fingertips</span>
+                        </h1>
+                        <h5 class="py-3">Tell us what you crave</h5>
+                        <p>Not only are our meals deliciously homely, they are also customisable. Pick and choose from
+                            our varied menu on the app and we'll serve it up, piping hot.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <img src="images/6.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEVER A DULL MOMENT -->
+    <section id="never_dull_moment_section" class="py-5">
+        <div id="never_dull_moment_section_text">
+            <h2><span class="light_green_hl">Never</span> a dull moment</h2>
+            <p>In your story, your stay with us will be the most memorable chapter.</p>
+        </div>
+        <div id="never_dull_moment_section_img">
+            <div class="py-4 d-flex align-items flex-wrap center justify-content-center never_dull_moment_section_img">
+                <div><img
+                        src="https://scontent.cdninstagram.com/v/t51.2885-15/312232996_169485052420737_109682518767318200_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=OOqSCm9G400AX-QJ5hz&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfBUlktPfd91ym6O8kdY89KEDKToPMlK0fotle5ILpttHA&oe=63BDE192"
+                        alt=""></div>
+                <div><img
+                        src="https://scontent.cdninstagram.com/v/t51.29350-15/312027055_631845775075668_5034420901528525932_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=vf9Mef7oeSwAX--3YNO&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfCtg9lPJWOT_F2UGymGhrQYZJN13jZMpq1awEGKm_suBw&oe=63BC5A45"
+                        alt=""></div>
+                <div><img
+                        src="https://scontent.cdninstagram.com/v/t51.2885-15/322999821_1191301798161393_7501868657440042279_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=d2h-98pQHckAX94jcH4&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfAK2w2t-cV4EAwr4iypEWi_sJx-ks_NbqzzWVAUFbYl5g&oe=63BE0AE5"
+                        alt=""></div>
+                <div><img
+                        src="https://scontent.cdninstagram.com/v/t51.29350-15/311116017_860867078253287_4429868536891554808_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=LPenh6DQDVoAX_fvMOo&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfBzoLceILGdibITg_0fiMLCOKt76DIo7en0x1MEu8icXA&oe=63BD8997"
+                        alt=""></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Spotlight Section -->
+    <section id="spotlight_section">
+        <div id="spotlight_section_text">
+            <h2>The <span class="light_green_hl">spotlight</span> on us</h2>
+            <p>We don't just make second homes. We make headlines as well.</p>
+        </div>
+        <div id="marquee_images" class="py-5">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <img src="https://res.cloudinary.com/stanza-living/image/upload/h_100,f_auto,q_auto/v1584370742/NewWebsite/new_forbes_2x.png"
+                        alt="">
+                </div>
+                <div>
+                    <img src="https://res.cloudinary.com/stanza-living/image/upload/h_102,f_auto,q_auto/v1584370704/NewWebsite/new_entrepreneur_2x.png"
+                        alt="">
+                </div>
+                <div>
+                    <img src="https://res.cloudinary.com/stanza-living/image/upload/h_100,f_auto,q_auto/v1584370930/NewWebsite/new_yourstory_2x.png"
+                        alt="">
+                </div>
+                <div>
+                    <img src="https://res.cloudinary.com/stanza-living/image/upload/h_176,f_auto,q_auto/v1584370857/NewWebsite/new_livemint_2x.png"
+                        alt="">
+                </div>
+                <div>
+                    <img src="https://res.cloudinary.com/stanza-living/image/upload/h_174,f_auto,q_auto/v1584370779/NewWebsite/new_fortune_2x.png"
+                        alt="">
+                </div>
+                <div>
+                    <img src="https://res.cloudinary.com/stanza-living/image/upload/h_174,f_auto,q_auto/v1584370825/NewWebsite/n_ew_inc42_2x.png"
+                        alt="">
+                </div>
+                <div>
+                    <img src="https://res.cloudinary.com/stanza-living/image/upload/h_100,f_auto,q_auto/v1584370658/NewWebsite/new_economic_2x.png"
+                        alt="">
+                </div>
+                <div>
+                    <img src="https://res.cloudinary.com/stanza-living/image/upload/h_100,f_auto,q_auto/v1584370904/NewWebsite/new_vccircle_2x.png"
+                        alt="">
+                </div>
+            </div>
+        </div>
+
+        <button id="read_more">Read More</button>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mt-4 pt-5 ps-5 pe-5 pb-2">
+        <div class="d-flex justify-content-between">
+            <div class="footer_brand_logo">
+                <img src="https://res.cloudinary.com/stanza-living/image/upload/w_182/v1652358946/Website%20v5/Logo/stanzalogo.png"
+                    alt="">
+            </div>
+            <div id="footer_links" class="d-none d-lg-flex justify-content-center">
+                <div class="d-flex flex-column">
+                    <a href="#">About Us</a>
+                    <a href="#">Team</a>
+                    <a href="#">Investor Relations</a>
+                    <a href="#">Media</a>
+                </div>
+                <div class="d-flex flex-column">
+                    <a href="#">Blogs</a>
+                    <a href="#">FAQs</a>
+                    <a href="#">Refer and Earn</a>
+                    <a href="#">House Rules</a>
+                </div>
+                <div class="d-flex flex-column">
+                    <a href="#">T&C</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Contact Us</a>
+                </div>
+                <div class="d-flex flex-column">
+                    <a href="#">COVID-19</a>
+                    <a href="#">Refunds</a>
+                    <a href="#">Partner with Us</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+            <div id="social_links">
+                <div class="d-flex justify-content-between align-items-center">
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-linkedin"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright d-flex justify-content-between align-items-center pt-5">
+            <p class="copyright_l">Copyright © 2022 | All Rights Reserved by Dtwelve Spaces Pvt Ltd. | Sitemap</p>
+            <p class="copyright_r">Images shown are for representational purposes only. Amenities depicted may or may
+                not form a part of
+                that individual property.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+        integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="module" src="index.js"></script>
+</body>
+
+</html>
+
+
+<!-- sdsd -->
