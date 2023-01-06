@@ -97,6 +97,12 @@ document.getElementById("close_btn").onclick = () => {
 }
 
 
+// closing search suggestions
+document.getElementById("hero_section").onclick = () => {
+    document.getElementById("search_suggestion").style.display = "none";
+}
+
+
 let getData = async () => {
     let res = await fetch(`http://localhost:3000/data`);
     let data = await res.json();
@@ -115,11 +121,9 @@ document.getElementById("searchip").oninput = async () => {
     let data = await getData();
     let Citydata = data.all_cities[0];
 
+
     const result = checkSubstring(ipboxval, Citydata);
-
-    appendSearchSuggestions(result);
-
-    console.log(result);
+    appendSearchSuggestions(result, Citydata);
 }
 
 
@@ -132,3 +136,77 @@ function checkSubstring(substring, obj) {
 }
 
 // appending search suggestions
+let timeoutId = null;
+
+let appendSearchSuggestions = async (result, city_data) => {
+    if (timeoutId) {
+        clearTimeout(timeoutId);
+    }
+    let suggestionBox = document.getElementById("search_suggestion");
+
+    timeoutId = setTimeout(async () => {
+        suggestionBox.textContent = "";
+
+        if (result.length != 0) {
+            let cityDataArr = city_data[result[0]];
+            let data = await getAlldata();
+            suggestionBox.style.display = "flex";
+            result.forEach(element => {
+                const CityName = document.createElement("p");
+                let str = element;
+                str = str.charAt(0).toUpperCase() + str.slice(1);
+
+                CityName.textContent = str;
+
+                const suggestionType = document.createElement("p");
+                suggestionType.textContent = "City";
+                suggestionType.style.color = "#61c3ae";
+
+                const cityData = document.createElement("div");
+                cityData.append(CityName, suggestionType);
+                cityData.style.display = "flex";
+                cityData.style.justifyContent = "space-between";
+                cityData.style.padding = "10px 15px";
+                cityData.classList.add("cityHover");
+
+                suggestionBox.append(cityData);
+            });
+
+            console.log(city_data);
+
+            for (let i = 0; i < 20; i++) {
+                let propertyType = cityDataArr[i].propertyEntityType
+
+                const CityName = document.createElement("p");
+                let str = cityDataArr[i].name + " , " + cityDataArr[i].cityName;
+                str = str.charAt(0).toUpperCase() + str.slice(1);
+
+                CityName.textContent = str;
+
+                const suggestionType = document.createElement("p");
+                suggestionType.textContent = propertyType.toLowerCase();
+                suggestionType.style.color = "#61c3ae";
+
+                const cityData = document.createElement("div");
+                cityData.append(CityName, suggestionType);
+                cityData.style.display = "flex";
+                cityData.style.justifyContent = "space-between";
+                cityData.style.padding = "10px 15px";
+                cityData.classList.add("cityHover");
+
+                suggestionBox.append(cityData);
+            }
+        }
+
+    }, 500);
+}
+
+
+// getting all_data array
+
+let getAlldata = async () => {
+    let res = await fetch(`http://localhost:3000/data`);
+    let data = await res.json();
+
+    return data;
+}
