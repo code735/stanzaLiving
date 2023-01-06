@@ -387,10 +387,81 @@ img {
     position: relative;
 }
 
+#room_for_eveything_text {
+    text-align: center;
+}
+
 .above_img {
     position: absolute;
     left: -50%;
 }
+
+#common_area_text {
+    text-align: center;
+}
+
+/* Fingertips Section */
+#fingertips_section {
+    text-align: center;
+    background: #dceceb;
+}
+
+#fingertips_section h1 {
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+#fingertips_section_text span {
+    font-size: 3rem;
+}
+
+#fingertips_section p {
+    color: black;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+/* Never a dull moment Section */
+#never_dull_moment_section_text {
+    text-align: center;
+}
+
+#never_dull_moment_section_text h2 {
+    font-weight: bold;
+}
+
+#never_dull_moment_section_text span {
+    font-size: 2.1rem;
+}
+
+#never_dull_moment_section_text p {
+    color: black;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.never_dull_moment_section_img>div {
+    width: 20%;
+}
+
+
+/* Spotlight section */
+#spotlight_section_text {
+    text-align: center;
+}
+
+#spotlight_section_text h2 {
+    font-weight: bold;
+}
+
+#spotlight_section_text span {
+    font-size: 2rem;
+}
+
+#spotlight_section_text p {
+    font-weight: 500;
+}
+
 
 /*----------------- 992px media query -------------------*/
 @media only screen and (min-width: 992px) {
@@ -650,6 +721,18 @@ img {
     #start_living_your_best_life_text {
         text-align: left;
         padding: 0;
+    }
+
+    #room_for_eveything_text {
+        text-align: left;
+    }
+
+    #common_area_text {
+        text-align: left;
+    }
+
+    #fingertips_section {
+        text-align: left;
     }
 
 }

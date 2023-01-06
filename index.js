@@ -83,6 +83,7 @@ document.querySelector(".select_property_type").addEventListener('click', () => 
 document.getElementById("features_section").onclick = () => {
     showAnimation = false;
 }
+
 /*------------------ Animations / Dynamic css ----------------------------*/
 
 
@@ -206,11 +207,4 @@ let appendSearchSuggestions = async (result, city_data) => {
 }
 
 
-// getting all_data array
 
-let getAlldata = async () => {
-    let res = await fetch(`http://localhost:3000/data`);
-    let data = await res.json();
-
-    return data;
-}
