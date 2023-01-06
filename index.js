@@ -91,6 +91,11 @@ ex_recidence_btn.onclick = () => {
     popup.style.display = "flex";
 }
 
+document.getElementById("close_btn").onclick = () => {
+    let popup = document.getElementById("explore_residence_popup");
+    popup.style.display = "none";
+}
+
 
 let getData = async () => {
     let res = await fetch(`http://localhost:3000/data`);
@@ -107,9 +112,19 @@ let searchBox = document.getElementById("searchip");
 document.getElementById("searchip").oninput = async () => {
     showAnimation = false;
     let ipboxval = searchBox.value;
-    let Citydata = await getData();
+    let data = await getData();
+    let Citydata = data.all_cities[0];
 
-    if (ipboxval.length >= 3) {
-        console.log(Citydata);
-    }
+    const result = checkSubstring(ipboxval, Citydata);
+    // console.log(Citydata[result]);
+    console.log(result);
+}
+
+
+function checkSubstring(substring, obj) {
+    const cityNames = Object.keys(obj);
+
+    const matchingNames = cityNames.filter(name => name.includes(substring));
+
+    return matchingNames;
 }
