@@ -79,6 +79,10 @@ document.querySelector(".select_property_type").addEventListener('click', () => 
     }
 });
 
+
+document.getElementById("features_section").onclick = () => {
+    showAnimation = false;
+}
 /*------------------ Animations / Dynamic css ----------------------------*/
 
 
