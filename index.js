@@ -116,7 +116,9 @@ document.getElementById("searchip").oninput = async () => {
     let Citydata = data.all_cities[0];
 
     const result = checkSubstring(ipboxval, Citydata);
-    // console.log(Citydata[result]);
+
+    appendSearchSuggestions(result);
+
     console.log(result);
 }
 
@@ -129,5 +131,4 @@ function checkSubstring(substring, obj) {
     return matchingNames;
 }
 
-
-// Hey
+// appending search suggestions

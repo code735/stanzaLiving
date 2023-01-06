@@ -550,6 +550,14 @@ img {
         box-shadow: 0px 0px 10px #242424;
         cursor: pointer;
     }
+
+    .search_inputbox {
+        position: relative;
+    }
+
+    #search_suggestion {
+        position: absolute;
+    }
 }
 
 
