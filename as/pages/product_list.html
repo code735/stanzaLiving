@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Listing</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="./product_list.css">
+
+</head>
+<body>
+    <div id="plp_main_container">
+
+        <div id="plp_directory">
+            Stanza Living / PG in Delhi
+        </div>
+
+        <div id="plp_main_filter">
+            <button id="filter_locality" onclick="showfunction(`locality`)" > Locality </button>
+            <button id="filter_budget" onclick="showfunction(`budget`)" > Budget </button>
+            <button id="filter_occupancy" onclick="showfunction(`occupancy`)" > Occupancy </button>
+            <button id="filter_gender" onclick="showfunction(`gender`)" > Gender</button>
+            <button id="filter_amenties" onclick="showfunction(`amneties`)">Amneties</button>
+            <span> | </span>
+            <button id="wishlist_btn" onclick="moveToWishlist()">My Wishlist</button>
+            <button>More Filters</button>
+            <button id="dropdown_sort"> Sort By : 
+                <select name="" id="" class="form-select form-select-sm" aria-label=".form-select-sm example">
+                    <option value="">Low to High</option>
+                    <option value="">High to Low</option>
+                    <option value="">Popularity</option>
+                </select>
+            </button>
+
+            <div id="dropdown_locality" > 
+                <div> <input type="text" id="dropdown_locality_input"> </div>
+                <div id="dropdown_locality_results"> </div>
+            </div>
+
+            <div id="dropdown_budget">
+                <h3> Select Range</h3>
+                <div>
+                    <label for="customRange1" class="form-label">Example range</label>
+                    <input type="range" class="form-range" id="customRange1">
+                    <br>
+                    <input type="text">
+                    <input type="text">
+                </div>
+
+                <div id="dropdown_save"> 
+                    <button> Clear</button>
+                    <button> Save </button>
+                </div>
+            </div>
+
+            <div id="dropdown_occupancy">
+                <div id="dropdown_occupancy_button">
+                    <button> Single </button>
+                    <button> Double</button>
+                    <button>Triple</button>
+                    <button>Quadruple</button>
+                    <button>Quintuple</button>
+                    <button>Dorm</button>
+                </div>
+                <hr>
+                <div id="dropdown_save"> 
+                    <button> Clear</button>
+                    <button> Save </button>
+                </div>
+            </div>
+
+            <div id="dropdown_gender"> 
+                <div id="dropdown_gender_button">
+                    <button>Male</button>
+                    <button>Female</button>
+                    <button>unisex</button>
+                </div>
+                <hr>
+                <div id="dropdown_save">
+                    <button> Clear</button>
+                    <button> Save </button>
+                </div>
+            </div>
+
+            <div id="dropdown_amneties">
+
+                <div id="dropdown_amneties_checkbox">
+
+                    <div>
+                    <input type="checkbox" id="" name="1" value="share_bupboard">
+                    <label for="1"> Attached Balcony</label>
+                    </div>
+
+                    <div>
+                    <input type="checkbox" id="" name="1" value="share_bupboard">
+                    <label for="1"> Air Conditioning</label>
+                    </div>
+
+                    <div>
+                    <input type="checkbox" id="" name="1" value="share_bupboard">
+                    <label for="1"> Window</label>
+                    </div>
+                    
+                    <div>
+                    <input type="checkbox" id="" name="1" value="share_bupboard">
+                    <label for="1"> Attached Washroom</label>
+                    </div>
+
+                    <div>
+                    <input type="checkbox" id="" name="1" value="share_bupboard">
+                    <label for="1"> Shared Cupboard</label>
+                    </div>
+
+                    <div>
+                    <input type="checkbox" id="" name="1" value="share_bupboard">
+                    <label for="1"> Storage Shelf</label>
+                    </div>
+
+                    <div>
+                    <input type="checkbox" id="" name="1" value="share_bupboard">
+                    <label for="1"> Desert Cooler</label>
+                    </div>
+                </div>
+                
+                <hr>
+                <div id="dropdown_save">
+                    <button> Clear</button>
+                    <button> Save </button>
+                </div>
+            </div>
+
+           
+        </div>
+
+        <div id="plp_search_query">
+            <h2> 37 PGs waiting to be yours in Delhi </h2>
+        </div>
+
+        <hr><hr>
+        <div id="plp_content">
+            <div id="plp_content_left_list">
+                
+                <!-- <div id="plp_content_list_1" class="plp_house_lists"> 
+
+                    <div id="plp_content_list_img" class="plp_house_img">
+                        <img src="https://res.cloudinary.com/stanza-living/image/upload/f_auto,q_auto,w_600/e_improve/e_sharpen:30/v1554802582/Website/Residences/Boston/3.jpg" alt="">
+                    </div>
+
+                    <div id="plp_content_list_deets" class="plp_house_deets">
+                        <div class="plp_house_deets_housename">
+                            <h3> Bostan House </h3>
+                            <span class="material-symbols-outlined"> favorite </span>
+                        </div>
+                        <p> North Campus</p>
+                        <div class="plp_house_deets_malefemale">
+                            <div>
+                                <span> Male </span>
+                                <span> | </span>
+                                <span> Double </span>
+                            </div>
+                            <button class="plp_house_deets_directions"> 
+                                <span class="material-symbols-outlined"> my_location </span>
+                                
+                                <span>View Directions</span> 
+                            </button>
+                        </div>
+                        <p>Amneties </p>
+                        <div class="plp_house_deets_amneties">
+                            <button> Air Conditioning</button>
+                            <button>Attached Washroom </button>
+                            <button>Spacious Cupboard</button>
+                            <button>Window</button>
+                        </div> 
+
+                        <div class="plp_house_deets_price">
+                            <div>
+                                <p> Starts from</p>
+                                <h3> 20,699/mo *</h3> 
+                            </div>
+
+                            <button>
+                                SCHEDULE VISIT
+                            </button>
+
+                            <button>
+                                UNLOCK DISCOUNT
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div id="plp_content_list_2" class="plp_house_lists">
+
+                    <div id="plp_content_list_img" class="plp_house_img">
+                        <img src="https://res.cloudinary.com/stanza-living/image/upload/f_auto,q_auto,w_600/e_improve/e_sharpen:30/v1554802582/Website/Residences/Boston/3.jpg" alt="">
+                    </div>
+
+                    <div id="plp_content_list_deets" class="plp_house_deets">
+                        <div class="plp_house_deets_housename">
+                            <h3> Bostan House </h3>
+                            <span class="material-symbols-outlined"> favorite </span>
+                        </div>
+                        <p> North Campus</p>
+                        <div>
+                            <span> Male </span>
+                            <span> | </span>
+                            <span> Double </span>
+                            <button> View Directions </button>
+                        </div>
+                        <p>Amneties </p>
+                        <div>
+                            <button> Air Conditioning</button>
+                            <button>Attached Washroom </button>
+                            <button>Spacious Cupboard</button>
+                            <button>Window</button>
+                        </div> 
+
+                        <div>
+                            <div>
+                                <p> Starts from</p>
+                                <h3> 20,699/mo *</h3> 
+                            </div>
+
+                            <button>
+                                SCHEDULE VISIT
+                            </button>
+
+                            <button>
+                                UNLOCK DISCOUNT
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div id="plp_content_list_3" class="plp_house_lists">
+
+                    <div id="plp_content_list_img" class="plp_house_img">
+                        <img src="https://res.cloudinary.com/stanza-living/image/upload/f_auto,q_auto,w_600/e_improve/e_sharpen:30/v1554802582/Website/Residences/Boston/3.jpg" alt="">
+                    </div>
+
+                    <div id="plp_content_list_deets" class="plp_house_deets">
+                        <div>
+                            <h3> Bostan House </h3>
+                            <span class="material-symbols-outlined"> favorite </span>
+                        </div>
+                        <p> North Campus</p>
+                        <div>
+                            <span> Male </span>
+                            <span> | </span>
+                            <span> Double </span>
+                            <button> View Directions </button>
+                        </div>
+                        <p>Amneties </p>
+                        <div>
+                            <button> Air Conditioning</button>
+                            <button>Attached Washroom </button>
+                            <button>Spacious Cupboard</button>
+                            <button>Window</button>
+                        </div> 
+
+                        <div>
+                            <div>
+                                <p> Starts from</p>
+                                <h3> 20,699/mo *</h3> 
+                            </div>
+
+                            <button>
+                                SCHEDULE VISIT
+                            </button>
+
+                            <button>
+                                UNLOCK DISCOUNT
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <hr>
+
+                <div id="plp_content_list_4" class="plp_house_lists">
+
+                    <div id="plp_content_list_img" class="plp_house_img">
+                        <img src="https://res.cloudinary.com/stanza-living/image/upload/f_auto,q_auto,w_600/e_improve/e_sharpen:30/v1554802582/Website/Residences/Boston/3.jpg" alt="">
+                    </div>
+
+                    <div id="plp_content_list_deets" class="plp_house_deets">
+                        <div>
+                            <h3> Bostan House </h3>
+                            <span class="material-symbols-outlined"> favorite </span>
+                        </div>
+                        <p> North Campus</p>
+                        <div>
+                            <span> Male </span>
+                            <span> | </span>
+                            <span> Double </span>
+                            <button> View Directions </button>
+                        </div>
+                        <p>Amneties </p>
+                        <div>
+                            <button> Air Conditioning</button>
+                            <button>Attached Washroom </button>
+                            <button>Spacious Cupboard</button>
+                            <button>Window</button>
+                        </div> 
+
+                        <div>
+                            <div>
+                                <p> Starts from</p>
+                                <h3> 20,699/mo *</h3> 
+                            </div>
+
+                            <button>
+                                SCHEDULE VISIT
+                            </button>
+
+                            <button>
+                                UNLOCK DISCOUNT
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+
+                        
+                <hr>
+
+                <div id="plp_content_list_5" class="plp_house_lists">
+
+                    <div id="plp_content_list_img" class="plp_house_img">
+                        <img src="https://res.cloudinary.com/stanza-living/image/upload/f_auto,q_auto,w_600/e_improve/e_sharpen:30/v1554802582/Website/Residences/Boston/3.jpg" alt="">
+                    </div>
+
+                    <div id="plp_content_list_deets" class="plp_house_deets">
+                        <div>
+                            <h3> Bostan House </h3>
+                            <span class="material-symbols-outlined"> favorite </span>
+                        </div>
+                        <p> North Campus</p>
+                        <div>
+                            <span> Male </span>
+                            <span> | </span>
+                            <span> Double </span>
+                            <button> View Directions </button>
+                        </div>
+                        <p>Amneties </p>
+                        <div>
+                            <button> Air Conditioning</button>
+                            <button>Attached Washroom </button>
+                            <button>Spacious Cupboard</button>
+                            <button>Window</button>
+                        </div> 
+
+                        <div>
+                            <div>
+                                <p> Starts from</p>
+                                <h3> 20,699/mo *</h3> 
+                            </div>
+
+                            <button>
+                                SCHEDULE VISIT
+                            </button>
+
+                            <button>
+                                UNLOCK DISCOUNT
+                            </button>
+
+                        </div>
+                    </div>
+                </div> -->
+
+            </div>
+            
+            <div id="plp_content_right_map">
+                <iframe id="map_iframe"  
+                    style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+        </div>
+
+
+    </div>
+    
+    <script src="./product_list.js"> </script>
+
+</body>
+</html>
