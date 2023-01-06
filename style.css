@@ -385,6 +385,7 @@ img {
         background-image: url('images/1-modified.png');
         background-size: contain;
         background-position: right;
+        width: 99%;
     }
 
     #sliding_img_2 {
@@ -551,12 +552,26 @@ img {
         cursor: pointer;
     }
 
-    .search_inputbox {
-        position: relative;
-    }
-
     #search_suggestion {
         position: absolute;
+        width: 123%;
+        left: -33px;
+        top: 130%;
+        background: white;
+        border-radius: 10px;
+        display: none;
+        flex-direction: column;
+        height: 30vh;
+        overflow-y: scroll;
+        box-shadow: 0px 0px 20px rgb(199 199 199);
+    }
+
+    #search_suggestion p {
+        font-size: 14px;
+    }
+
+    .cityHover:hover {
+        background: rgb(233 233 233);
     }
 }
 
