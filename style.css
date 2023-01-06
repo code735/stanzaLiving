@@ -80,7 +80,7 @@ img {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    transition: all 2s ease;
+    transition: all 1s ease;
 }
 
 .sliding_img_2 {
@@ -89,7 +89,7 @@ img {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    transition: all 2s ease;
+    transition: all 1s ease;
 }
 
 .black_filter {
@@ -319,6 +319,79 @@ img {
     transition: transform .5s;
 }
 
+.hero_icon span {
+    font-size: 2rem;
+    color: var(--light-green);
+}
+
+#hero_section_text span {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: black;
+}
+
+#hero_section_icons {
+    border-top: 1px solid #61c3ae6e;
+}
+
+.hero_icon {
+    gap: 15px;
+}
+
+.hero_icon i {
+    font-size: 2rem;
+    color: var(--light-green);
+}
+
+/* FEATURES SECTION */
+#features_section {
+    background: #e7f4f2;
+}
+
+#features_section h2 {
+    font-weight: bold;
+}
+
+#features_section h2 span {
+    font-size: 2rem;
+}
+
+#features_section p {
+    font-weight: 600;
+    color: rgb(66, 65, 65);
+    font-size: 1.1rem;
+}
+
+#four_walls_roof {
+    text-align: center;
+}
+
+.light_green_hl {
+    color: var(--light-green);
+}
+
+.right_img img {
+    border-radius: 10px;
+}
+
+#start_living_your_best_life_text {
+    text-align: center;
+    padding: 10% 5%;
+}
+
+#start_living_your_best_life_text span {
+    font-size: 2rem;
+}
+
+#room_for_eveything_img {
+    position: relative;
+}
+
+.above_img {
+    position: absolute;
+    left: -50%;
+}
+
 /*----------------- 992px media query -------------------*/
 @media only screen and (min-width: 992px) {
 
@@ -419,7 +492,7 @@ img {
     }
 
     .sliding_img_1_content {
-        padding-top: 3%;
+        padding-top: 5%;
         padding-bottom: 23%;
     }
 
@@ -573,6 +646,12 @@ img {
     .cityHover:hover {
         background: rgb(233 233 233);
     }
+
+    #start_living_your_best_life_text {
+        text-align: left;
+        padding: 0;
+    }
+
 }
 
 
