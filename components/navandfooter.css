@@ -147,6 +147,10 @@ footer>.d-flex {
     width: 13%;
 }
 
+.footer_brand_logo img {
+    object-fit: contain;
+}
+
 .copyright p {
     color: gray;
     font-size: .7rem;
