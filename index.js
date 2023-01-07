@@ -109,10 +109,10 @@ document.getElementById("hero_section").onclick = () => {
 
 
 let getData = async () => {
-    let res = await fetch(`http://localhost:3000/data`);
+    let res = await fetch(`http://localhost:5555/as/data/db.json`);
     let data = await res.json();
 
-    return data;
+    return data.data;
 }
 
 
@@ -126,6 +126,7 @@ document.getElementById("searchip").oninput = async () => {
     let data = await getData();
     let Citydata = data.all_cities[0];
 
+    console.log(Citydata);
 
     const result = checkSubstring(ipboxval, Citydata);
     appendSearchSuggestions(result, Citydata);
@@ -154,7 +155,6 @@ let appendSearchSuggestions = async (result, city_data) => {
 
         if (result.length != 0) {
             let cityDataArr = city_data[result[0]];
-            let data = await getAlldata();
             suggestionBox.style.display = "flex";
             result.forEach(element => {
                 const CityName = document.createElement("p");
@@ -173,6 +173,27 @@ let appendSearchSuggestions = async (result, city_data) => {
                 cityData.style.justifyContent = "space-between";
                 cityData.style.padding = "10px 15px";
                 cityData.classList.add("cityHover");
+                cityData.onclick = () => {
+                    let p_text = document.getElementById("select_value").textContent;
+                    let select_val = "";
+                    if (p_text == "Modern Student Housing") {
+                        select_val = "HOUSING";
+                    }
+                    else if (p_text == "Co-living for Professionals") {
+                        select_val = "COLIVING";
+                    }
+                    else if (p_text == "Managed Apartments") {
+                        select_val = "APARTMENT";
+                    }
+
+                    let filteredData = filterThis(cityDataArr, select_val);
+                    if (filteredData.length != 0) {
+                        console.log(filteredData);
+                    }
+                    else {
+                        console.log(cityDataArr);
+                    }
+                }
 
                 suggestionBox.append(cityData);
             });
@@ -207,4 +228,30 @@ let appendSearchSuggestions = async (result, city_data) => {
 }
 
 
+// select value setting
+let select_options_value = document.querySelectorAll(".select_options_p");
+let s_o_v_len = select_options_value.length;
 
+for (let i = 0; i < s_o_v_len; i++) {
+    select_options_value[i].onclick = () => {
+        document.getElementById("select_value").textContent = select_options_value[i].textContent;
+    }
+}
+
+
+let filterThis = (cityDataArr, selectVal) => {
+    // Create a new array to store the filtered data
+    let filteredData = [];
+
+    // Loop through the cityDataArr
+    for (let i = 0; i < cityDataArr.length; i++) {
+        // Check if the propertyEntityType property of the current element in the array matches the selectVal
+        if (cityDataArr[i].propertyEntityType === selectVal) {
+            // If it matches, add the element to the filteredData array
+            filteredData.push(cityDataArr[i]);
+        }
+    }
+
+    // Return the filtered data array
+    return filteredData;
+}
