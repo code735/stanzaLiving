@@ -1,0 +1,102 @@
+/* Navbar CSS */
+:root {
+    --light-green: #61c3ae;
+    --white: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+img {
+    width: 100%;
+}
+
+#navbar {
+    display: flex !important;
+    justify-content: space-between;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.brand_logo {
+    width: 8%;
+}
+
+.nav_links {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+#navbar a {
+    display: flex;
+    align-items: center;
+}
+
+.nav_links a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#explore_residence_popup {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.616);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#e_r_details {
+    background: white;
+    width: 50%;
+    padding: 20px 40px;
+    border-radius: 10px;
+    position: relative;
+}
+
+#close_btn {
+    position: absolute;
+    right: -12px;
+    top: -13px;
+    padding: 3px;
+    background: white;
+    padding-bottom: 0;
+    border-radius: 100px;
+    box-shadow: 0px 0px 10px #242424;
+    cursor: pointer;
+}
+
+#request_callback {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 20px;
+    background: #61c3ae;
+    border: none;
+    color: white;
+    border-radius: 10px;
+}
+
+#request_callback i {
+    color: var(--light-green);
+    background-color: var(--white);
+    padding: 4px 8px;
+    border-radius: 50px;
+}
+
+#request_callback a {
+    color: white;
+    font-size: .9rem;
+}
+
+/* Navbar CSS */
