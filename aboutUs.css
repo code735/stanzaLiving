@@ -1,0 +1,80 @@
+#whyBox div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#globalWhy1 :first-child{
+    display: block;
+    gap: 3em;
+}
+
+#globalWhy1{
+   padding: 3.7em;
+   
+}
+h1{
+    font-weight: bolder;
+    /* font-family: monospace; */
+}
+p{
+    font-size: 16px;
+}
+#globalWhy1 > div{
+    max-width: 50%;
+}
+img{
+    border-radius: 16px;
+    max-width: 100%;
+}
+#globalWhy1 > div > :nth-child(2){
+    color: #60c3ad;
+}
+
+#aboutUsHeading{
+    text-align: center;
+    font-weight: bolder;
+    font-size: 56px;
+    line-height: 64px;
+    font-family: monospace;
+}
+#aboutUsHeading > span{
+    color: #60c3ad;
+}
+#navBar{
+    display: flex;
+    /* justify-content: center; */
+    margin: auto;
+    width: 40%;
+    gap: 15px;
+    max-width: 100%;
+    height: 60px;
+   box-sizing: border-box;
+   border-radius: 30px;
+  
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+ 
+ }
+ #navBar div{
+    margin: auto;
+    
+        padding: 19px 0px 17px;
+        
+        font-family: Font-Book;
+       /* border-bottom: 2px; */
+       /* border: 2px solid black; */
+        font-size: 16px;
+        line-height: 22px;
+        flex: 1 1 0%;
+        text-align: center;
+        cursor: pointer;
+        white-space: nowrap;
+    
+ }
+ #display{
+   margin-top: 100px;
+ }
+
+ #whySecond{
+    display: block;
+    width: 50%;
+ }
