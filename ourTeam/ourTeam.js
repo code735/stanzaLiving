@@ -177,3 +177,4 @@ cardList[10].onmouseleave = () => {
 
 //  Navbar
 document.getElementById("nav").innerHTML = navComponent;
+document.getElementById("footer").innerHTML = footerComponent;
