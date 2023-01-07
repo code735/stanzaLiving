@@ -87,6 +87,9 @@ document.getElementById("features_section").onclick = () => {
 /*------------------ Animations / Dynamic css ----------------------------*/
 
 
+// city data localStorage
+var citiesArrayForList = JSON.parse(localStorage.getItem("citiesArr")) || [];
+
 // hero section pop-up
 
 let ex_recidence_btn = document.getElementById("exlpore_residence_link");
@@ -197,9 +200,13 @@ let appendSearchSuggestions = async (result, city_data) => {
                     let filteredData = filterThis(cityDataArr, select_val);
                     if (filteredData.length != 0) {
                         console.log(filteredData);
+                        localStorage.setItem("citiesArr", JSON.stringify(filteredData));
+                        location.href = "as/pages/product_list.html";
                     }
                     else {
+                        localStorage.setItem("citiesArr", JSON.stringify(cityDataArr))
                         console.log(cityDataArr);
+                        location.href = "as/pages/product_list.html";
                     }
                 }
 
