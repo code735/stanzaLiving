@@ -100,3 +100,67 @@ img {
 }
 
 /* Navbar CSS */
+
+
+/* Footer css */
+
+
+/* Footer */
+footer {
+    background: #232728;
+}
+
+footer>.d-flex {
+    width: 90%;
+    margin: auto;
+}
+
+#footer_links {
+    gap: 20px;
+}
+
+#footer_links a {
+    text-decoration: none;
+    font-weight: 400;
+    font-size: .9rem;
+    color: white;
+}
+
+#footer_links .d-flex {
+    gap: 10px;
+    margin: 0;
+}
+
+#social_links .d-flex {
+    gap: 20px;
+}
+
+#social_links a {
+    color: white;
+}
+
+#social_links a i {
+    font-size: 1.5rem;
+}
+
+.footer_brand_logo {
+    width: 13%;
+}
+
+.copyright p {
+    color: gray;
+    font-size: .7rem;
+    width: 40%;
+}
+
+.copyright_r {
+    text-align: right;
+}
+
+.copyright_l {
+    text-align: left;
+}
+
+
+
+/* footer css */
