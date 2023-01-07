@@ -109,7 +109,10 @@ document.getElementById("hero_section").onclick = () => {
 
 
 let getData = async () => {
-    let res = await fetch(`http://localhost:5555/as/data/db.json`);
+    let hostname = location.hostname;
+    let url = `http://${hostname}/as/data/db.json`;
+    console.log(url);
+    let res = await fetch(url);
     let data = await res.json();
 
     return data.data;
