@@ -35,6 +35,92 @@
         <!-- append navbar here -->
     </header>
 
+    <!-- Breadcrumb -->
+    <div id="breadcrumb" class="px-5 mx-3">
+        <p id="breadcrumb_text"></p>
+    </div>
+
+
+    <!-- House Details & Schedule a Visit-->
+    <section id="details_map">
+        <div class="d-flex justify-content-center align-items-center">
+            <div id="details">
+                <div id="details_text">
+                    <div class="d-flex align-items-center">
+                        <h2 id="house_name">
+                            <!-- name append -->
+                        </h2>
+                        <div id="gender">
+                            <!-- gender append -->
+                        </div>
+                    </div>
+                    <h6 id="full_addr">
+                        <!-- full  address append -->
+                    </h6>
+                </div>
+                <div id="carousel">
+                    <div id="slides">
+                        <div class="slide active"><img src="" alt="" id="img_1"></div>
+                        <div class="slide"><img src="" alt="" id="img_2"></div>
+                        <div class="slide"><img src="" alt="" id="img_3"></div>
+                        <div class="slide"><img src="" alt="" id="img_4"></div>
+                        <div class="slide"><img src="" alt="" id="img_5"></div>
+                    </div>
+                    <a href="#" class="prev">
+                        <i class="bi bi-caret-left"></i>
+                    </a>
+                    <a href="#" class="next">
+                        <i class="bi bi-caret-right"></i>
+                    </a>
+                    <div id="dots">
+                        <span class="dot active" onclick="currentSlide(1)"></span>
+                        <span class="dot inactive" onclick="currentSlide(2)"></span>
+                        <span class="dot inactive" onclick="currentSlide(3)"></span>
+                        <span class="dot inactive" onclick="currentSlide(4)"></span>
+                        <span class="dot inactive" onclick="currentSlide(5)"></span>
+                    </div>
+                </div>
+                <h6>Starts from</h6>
+                <div class="d-flex align-items-center">
+                    <h1>₹</h1>
+                    <h1 id="price"></h1>
+                    <h1>/mo*</h1>
+                </div>
+                <h6>*Denotes starting price exclusive of GST. Prices may vary with room occupancy and attributes.</h6>
+
+                <div id="details_info">
+                    <div id="available_occupancies" class="py-4">
+                        <h4>Available Occupancies</h4>
+                        <div class="py-3 d-flex align-items-center" id="occupy_append">
+                            <!-- Available Occupancies append -->
+                        </div>
+                    </div>
+
+                    <div id="available_amenities" class="py-4">
+                        <h4>Amenities</h4>
+                        <div class="py-3 d-flex align-items-center flex-wrap" id="amenities_append">
+                            <!-- Available Amenities append -->
+                        </div>
+                    </div>
+
+                    <div id="services" class="py-4">
+                        <h4>Services</h4>
+                        <div class="py-3 d-flex align-items-center flex-wrap" id="services_append">
+                            <!-- Available Services append -->
+                        </div>
+                    </div>
+
+                    <div id="description">
+                        <h4>Description</h4>
+                        <h5 id="desc_text"></h5>
+                    </div>
+                </div>
+            </div>
+            <div id="schedule_a_visit">
+
+            </div>
+        </div>
+    </section>
 
 
     <!-- Footer  -->
