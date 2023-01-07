@@ -71,5 +71,52 @@ let navComponent = `<div id="navbar" class="py-4 d-flex justify-content-between 
 </div>
 </div>`;
 
+let footerComponent = `<footer class="mt-4 pt-5 ps-5 pe-5 pb-2">
+<div class="d-flex justify-content-between">
+    <div class="footer_brand_logo">
+        <img src="https://res.cloudinary.com/stanza-living/image/upload/w_182/v1652358946/Website%20v5/Logo/stanzalogo.png"
+            alt="">
+    </div>
+    <div id="footer_links" class="d-none d-lg-flex justify-content-center">
+        <div class="d-flex flex-column">
+            <a href="#">About Us</a>
+            <a href="#">Team</a>
+            <a href="#">Investor Relations</a>
+            <a href="#">Media</a>
+        </div>
+        <div class="d-flex flex-column">
+            <a href="#">Blogs</a>
+            <a href="#">FAQs</a>
+            <a href="#">Refer and Earn</a>
+            <a href="#">House Rules</a>
+        </div>
+        <div class="d-flex flex-column">
+            <a href="#">T&C</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Careers</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="d-flex flex-column">
+            <a href="#">COVID-19</a>
+            <a href="#">Refunds</a>
+            <a href="#">Partner with Us</a>
+            <a href="#">Cookie Policy</a>
+        </div>
+    </div>
+    <div id="social_links">
+        <div class="d-flex justify-content-between align-items-center">
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+        </div>
+    </div>
+</div>
+<div class="copyright d-flex justify-content-between align-items-center pt-5">
+    <p class="copyright_l">Copyright © 2022 | All Rights Reserved by Dtwelve Spaces Pvt Ltd. | Sitemap</p>
+    <p class="copyright_r">Images shown are for representational purposes only. Amenities depicted may or may
+        not form a part of
+        that individual property.</p>
+</div>
+</footer>`;
 
-export { navComponent };
+export { navComponent, footerComponent };
