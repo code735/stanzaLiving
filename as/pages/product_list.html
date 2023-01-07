@@ -7,6 +7,7 @@
     <title>Product Listing</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="./product_list.css">
+    <link rel="stylesheet" href="./budget_slider.css">
 
 </head>
 <body>
@@ -26,60 +27,82 @@
             <button id="wishlist_btn" onclick="moveToWishlist()">My Wishlist</button>
             <button>More Filters</button>
             <button id="dropdown_sort"> Sort By : 
-                <select name="" id="" class="form-select form-select-sm" aria-label=".form-select-sm example">
-                    <option value="">Low to High</option>
-                    <option value="">High to Low</option>
-                    <option value="">Popularity</option>
+                <select name="" id="sort_data_dropdown" class="form-select form-select-sm" aria-label=".form-select-sm example" onchange="sortData()">
+                    <option value="ascending">Low to High</option>
+                    <option value="descending">High to Low</option>
+                    <option value="popularity">Popularity</option>
                 </select>
             </button>
 
             <div id="dropdown_locality" > 
                 <div> <input type="text" id="dropdown_locality_input"> </div>
                 <div id="dropdown_locality_results"> </div>
+                <hr>
+                <div class="dropdown_save" id="locality_save"> 
+                    <button id="locality_save_clearbtn"> Clear</button>
+                    <button id="locality_save_savebtn"> Save </button>
+                </div>
             </div>
 
             <div id="dropdown_budget">
                 <h3> Select Range</h3>
                 <div>
-                    <label for="customRange1" class="form-label">Example range</label>
-                    <input type="range" class="form-range" id="customRange1">
-                    <br>
-                    <input type="text">
-                    <input type="text">
+                    <!-- <label for="customRange1" class="form-label">Example range</label>
+                    <input type="range" class="form-range" id="customRange1"> -->
+
+                        <div class="price-input">
+                            <div class="field">
+                                <span>Min</span>
+                                <input type="number" class="input-min" value="2000">
+                            </div>
+                            <div class="separator">-</div>
+                            <div class="field">
+                                <span>Max</span>
+                                <input type="number" class="input-max" value="50000">
+                            </div>
+                        </div>
+                        <div class="slider">
+                            <div class="progress"></div>
+                        </div>
+                        <div class="range-input">
+                            <input type="range" class="range-min" min="0" max="50000" value="1000" step="100" id="budget_input_min">
+                            <input type="range" class="range-max" min="0" max="50000" value="12000" step="100" id="budget_input_max">
+                        </div>
+                        
                 </div>
 
-                <div id="dropdown_save"> 
-                    <button> Clear</button>
-                    <button> Save </button>
+                <div class="dropdown_save"> 
+                    <button id="budget_save_clearbtn"> Clear</button>
+                    <button id="budget_save_savebtn"> Save </button>
                 </div>
             </div>
 
             <div id="dropdown_occupancy">
                 <div id="dropdown_occupancy_button">
-                    <button> Single </button>
-                    <button> Double</button>
-                    <button>Triple</button>
-                    <button>Quadruple</button>
-                    <button>Quintuple</button>
-                    <button>Dorm</button>
+                    <button onclick="fill_selected_occupancy_array()" class="all_occupancy_buttons">Single</button>
+                    <button onclick="fill_selected_occupancy_array()" class="all_occupancy_buttons">Double</button>
+                    <button onclick="fill_selected_occupancy_array()" class="all_occupancy_buttons">Triple</button>
+                    <button onclick="fill_selected_occupancy_array()" class="all_occupancy_buttons">Quadruple</button>
+                    <button onclick="fill_selected_occupancy_array()" class="all_occupancy_buttons">Quintuple</button>
+                    <button onclick="fill_selected_occupancy_array()" class="all_occupancy_buttons">Dorm</button>
                 </div>
                 <hr>
-                <div id="dropdown_save"> 
-                    <button> Clear</button>
-                    <button> Save </button>
+                <div class="dropdown_save"> 
+                    <button id="occupancy_save_clearbtn"> Clear</button>
+                    <button id="occupancy_save_savebtn"> Save </button>
                 </div>
             </div>
 
             <div id="dropdown_gender"> 
                 <div id="dropdown_gender_button">
-                    <button>Male</button>
-                    <button>Female</button>
-                    <button>unisex</button>
+                    <button onclick="fill_selected_gender_array()" class="all_gender_buttons">Male</button>
+                    <button onclick="fill_selected_gender_array()" class="all_gender_buttons">Female</button>
+                    <button onclick="fill_selected_gender_array()" class="all_gender_buttons">Unisex</button>
                 </div>
                 <hr>
-                <div id="dropdown_save">
-                    <button> Clear</button>
-                    <button> Save </button>
+                <div class="dropdown_save">
+                    <button id="gender_save_clearbtn"> Clear</button>
+                    <button id="gender_save_savebtn"> Save </button>
                 </div>
             </div>
 
@@ -88,45 +111,45 @@
                 <div id="dropdown_amneties_checkbox">
 
                     <div>
-                    <input type="checkbox" id="" name="1" value="share_bupboard">
+                    <input type="checkbox" id="" name="1" value="Attached Balcony" onchange="fill_selected_amneties_array()" class="all_amneties_checkbox">
                     <label for="1"> Attached Balcony</label>
                     </div>
 
                     <div>
-                    <input type="checkbox" id="" name="1" value="share_bupboard">
+                    <input type="checkbox" id="" name="1" value="Air Conditioning" onchange="fill_selected_amneties_array()" class="all_amneties_checkbox">
                     <label for="1"> Air Conditioning</label>
                     </div>
 
                     <div>
-                    <input type="checkbox" id="" name="1" value="share_bupboard">
+                    <input type="checkbox" id="" name="1" value="Window" onchange="fill_selected_amneties_array()" class="all_amneties_checkbox">
                     <label for="1"> Window</label>
                     </div>
                     
                     <div>
-                    <input type="checkbox" id="" name="1" value="share_bupboard">
+                    <input type="checkbox" id="" name="1" value="Attached Washroom" onchange="fill_selected_amneties_array()" class="all_amneties_checkbox">
                     <label for="1"> Attached Washroom</label>
                     </div>
 
                     <div>
-                    <input type="checkbox" id="" name="1" value="share_bupboard">
+                    <input type="checkbox" id="" name="1" value="Shared Cupboard" onchange="fill_selected_amneties_array()" class="all_amneties_checkbox">
                     <label for="1"> Shared Cupboard</label>
                     </div>
 
                     <div>
-                    <input type="checkbox" id="" name="1" value="share_bupboard">
+                    <input type="checkbox" id="" name="1" value="Storage Shelf" onchange="fill_selected_amneties_array()" class="all_amneties_checkbox">
                     <label for="1"> Storage Shelf</label>
                     </div>
 
                     <div>
-                    <input type="checkbox" id="" name="1" value="share_bupboard">
+                    <input type="checkbox" id="" name="1" value="Desert Cooler" onchange="fill_selected_amneties_array()" class="all_amneties_checkbox">
                     <label for="1"> Desert Cooler</label>
                     </div>
                 </div>
                 
                 <hr>
-                <div id="dropdown_save">
-                    <button> Clear</button>
-                    <button> Save </button>
+                <div class="dropdown_save">
+                    <button id="amneties_save_clearbtn"> Clear</button>
+                    <button id="amneties_save_savebtn"> Save </button>
                 </div>
             </div>
 
@@ -134,10 +157,10 @@
         </div>
 
         <div id="plp_search_query">
-            <h2> 37 PGs waiting to be yours in Delhi </h2>
+            <h2> <span id="number_of_search_results" >37 </span> PGs waiting to be yours in Delhi </h2>
         </div>
 
-        <hr><hr>
+        <hr>
         <div id="plp_content">
             <div id="plp_content_left_list">
                 
@@ -390,6 +413,7 @@
     </div>
     
     <script src="./product_list.js"> </script>
+    <script src="./budget_slider.js"></script>
 
 </body>
 </html>

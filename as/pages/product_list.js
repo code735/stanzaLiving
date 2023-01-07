@@ -9,6 +9,7 @@ let getData = async() => {
     let datastream = await fetch(url)
     console.log(datastream, "dtastream ----")
     let data = await datastream.json()
+    //globalData = data
     return data
 }
 
@@ -44,14 +45,16 @@ function createMapUrl(elem){
 
 // populatefunction 
 
-let populateHouseList = async() => {
+let populateHouseList = async(data) => {
 
-    let data = await getData()
     //console.log(data, "data mil chuka hai doston !!!!!!!!!!!!")
     
     let listContainer = document.querySelector("#plp_content_left_list")
     listContainer.textContent = ""
-    
+    let number_of_search_results = gett("number_of_search_results")
+    number_of_search_results.textContent = ""
+    number_of_search_results.textContent = data.length
+    //console.log(typeof(data), data, "-----------------------------------------------------------------------------------")
     let count = 0;
     data.some( (elem) => {
 
@@ -160,15 +163,15 @@ let populateHouseList = async() => {
                 house_deets_amneties.textContent = "Amneties"
 
                 let house_deets_tray2 = createe("div")
-
-                    for(let feature of elem.features){
-                        if(feature.enabled == true){
-                            let feature_btn = createe("button")
-                            feature_btn.textContent = feature.name
-                            house_deets_tray2.append(feature_btn)
-                        } 
+                    if(elem.feature != null){
+                        for(let feature of elem.features){
+                            if(feature.enabled == true){
+                                let feature_btn = createe("button")
+                                feature_btn.textContent = feature.name
+                                house_deets_tray2.append(feature_btn)
+                            } 
+                        }
                     }
-
                 let house_deets_tray3 = createe("div")
 
                     let house_deets_tray3_price = createe("div")
@@ -200,14 +203,21 @@ let populateHouseList = async() => {
 
     count += 1
 
-    locality_dropdown_landmarks.set( elem.micromarketName, 1)
     })
-            
-    populate_locality_dropdown()
+        
             
 }
 
-populateHouseList()
+let globalData 
+
+async function callFirstTime(){
+    globalData = await getData()
+    populateHouseList(globalData)
+}
+
+callFirstTime()
+// console.log(globalData, "yaaaaaaaaaa")
+
 
 // ---------------------------------- filter section -------------------------------------------------------
 
@@ -220,8 +230,21 @@ function populate_locality_dropdown(){
         console.log(i)
         let btn = createe("button")
         btn.textContent = i[0]
+        btn.classList.add("all_locality_buttons")
         btn.addEventListener("click", function(){
+            let locality_name = btn.textContent
+            let indexx = locality_selected_array.indexOf(locality_name)
 
+            if(indexx > -1 && indexx < locality_selected_array.length ){
+                btn.style.backgroundColor = "rgb(240,240,240)"
+                locality_selected_array.splice( indexx, 1)
+            }
+            else{
+                btn.style.backgroundColor = "gray"
+                locality_selected_array.push(locality_name)
+            }
+
+            console.log(locality_selected_array)
         })
         resultdiv.append(btn)
         
@@ -233,13 +256,28 @@ function populate_locality_dropdown(){
 
 }
 
+async function createMapforLocality(){
+    let data = await getData()
+
+    for(var i of data){
+        locality_dropdown_landmarks.set( i.micromarketName, 1)
+    }
+    console.log(locality_dropdown_landmarks, "yeah man here")
+    populate_locality_dropdown()
+}
+
+createMapforLocality()
+
 let show = 0
 function showfunction(category){
+    closeAllfilters()
     console.log("category --------------", category)
     let showdiv = gett(`dropdown_${category}`)
     if(show == 0){
         console.log("1")
+        
         showdiv.style.display = "block"
+        
         show = 1
         return
     }
@@ -248,5 +286,275 @@ function showfunction(category){
         showdiv.style.display = "none"
         show = 0
         return
+    }
+
+    
+}
+
+//  individual filters -----------------
+
+//locality filter 
+
+let locality_selected_array = []
+
+locality_save_savebtn = gett("locality_save_savebtn")
+locality_save_clearbtn = gett("locality_save_clearbtn")
+
+locality_save_clearbtn.addEventListener("click", function(){
+    // by now locality_seleected_array should have all the selected buttons 
+})
+
+locality_save_savebtn.addEventListener("click" , function(){
+    closeAllfilters()
+    filterLocality(locality_selected_array , globalData)
+})
+
+function closeAllfilters(){
+    gett("dropdown_locality").style.display = "none"
+    gett("dropdown_occupancy").style.display = "none"
+    gett("dropdown_budget").style.display = "none"
+    gett("dropdown_gender").style.display = "none"
+    gett("dropdown_amneties").style.display = "none"
+}
+
+function filterLocality( arr_location , dat){
+    
+    let filteredData = dat.filter( function(elem){
+        for(var i of arr_location){
+            //console.log(elem.micromarketName , i, "comparison kar rahe hai" )
+            if(elem.micromarketName == i){
+                return elem
+            }
+        }
+    })
+
+    console.log(filteredData)
+    populateHouseList(filteredData)
+
+    //clear array 
+    locality_selected_array = []
+
+    //make css of all clikced buttons normal
+    clearFilterButtonsCSS(document.querySelectorAll(".all_locality_buttons"))
+}
+
+function clearFilterButtonsCSS(xx){
+    //console.log(xx, "ye xXXX hai")
+
+    for(var i of xx){
+        i.style.backgroundColor = "rgb(240,240,240)"
+    }
+}
+// budget filter -----------------------------
+
+console.log(gett("budget_save_savebtn"))
+gett("budget_save_savebtn").addEventListener("click", function(){
+    closeAllfilters()
+    let minpricee = gett("budget_input_min").value
+    let maxpricee =  gett("budget_input_max").value
+
+    if(minpricee != '' && maxpricee != '' && minpricee != null && maxpricee != null){
+        showInBudget(minpricee, maxpricee)
+    }
+})
+
+function showInBudget(start ,end){
+    console.log(start, end, "these are my price filters")
+
+    let filteredData = globalData.filter(function(e){
+        if(e.startingPrice >= start && e.startingPrice < end){
+            return e
+        }
+    })
+
+    populateHouseList(filteredData)
+
+
+}
+
+
+
+
+
+//  occuapncy filter ----------------------------------------------
+
+let occupancy_selected_array = []
+
+function fill_selected_occupancy_array(){
+    buttontext = event.target.textContent
+    let btn = event.target
+    let indexx = occupancy_selected_array.indexOf(buttontext) 
+    if(indexx > -1){
+        btn.style.backgroundColor = "rgb(240,240,240)"
+        occupancy_selected_array.splice(indexx , 1)
+    }
+    else{
+        btn.style.backgroundColor = "grey"
+        occupancy_selected_array.push(buttontext)
+    }
+}
+
+gett("occupancy_save_savebtn").addEventListener("click", function(){
+    closeAllfilters()
+    filterOccupancy(occupancy_selected_array , globalData)
+})
+
+function filterOccupancy(filterarr, data){
+    console.log(filterarr, "??????????")
+    filteredData = data.filter(function(e){
+        for(var occupancyType of filterarr){
+            for(var y of e.residenceOccupancies){
+                console.log(y.soldOut,  y.occupancyName , occupancyType)
+                if(y.soldOut == false && y.occupancyName.split(" ")[0] == occupancyType){
+                    return e
+                }
+            }
+        }
+    })
+
+    console.log(filteredData)
+
+    populateHouseList(filteredData)
+
+    occupancy_selected_array = []
+
+    //make css of all clikced buttons normal
+    clearFilterButtonsCSS(document.querySelectorAll(".all_occupancy_buttons"))
+}
+
+// gender filter -----------------------
+
+let gender_selected_array = []
+
+function fill_selected_gender_array(){
+    let btn = event.target
+    indexx = gender_selected_array.indexOf(btn.textContent)
+
+    if(indexx > -1){
+        btn.style.backgroundColor = "rgb(240,240,240)"
+        gender_selected_array.splice(indexx, 1)
+    }
+    else{
+        gender_selected_array.push(btn.textContent)
+        btn.style.backgroundColor = "grey"
+    }
+}
+
+gett("gender_save_savebtn").addEventListener("click", function(){
+    closeAllfilters()
+    filterGender(gender_selected_array, globalData)
+})
+
+function filterGender(filterarr, data){
+
+    let filteredData = data.filter(function(e){
+        for(var genderr of filterarr){
+            // console.log(genderr, e.genderName)
+            if(e.genderName == genderr){
+                return e
+            }
+        }
+    })
+
+    populateHouseList(filteredData)
+
+    gender_selected_array = []
+
+    clearFilterButtonsCSS(document.querySelectorAll(".all_gender_buttons"))
+}
+//amneties filter ----------------------------
+
+let amneties_selected_array = []
+
+function fill_selected_amneties_array(){
+
+    let checkboxTxt = event.target.value
+    let indexx = amneties_selected_array.indexOf(checkboxTxt)
+
+    if(indexx > -1){
+        // element already present 
+
+    }
+    else{
+        amneties_selected_array.push(checkboxTxt)
+    }
+}
+
+gett("amneties_save_savebtn").addEventListener("click" , function(){
+    closeAllfilters()
+    filterAmneties(amneties_selected_array, globalData)
+})
+
+function filterAmneties(filterarr, data){
+    let filteredData = data.filter(function(e){
+        for(var amnetyType of filterarr){
+            // console.log(e.features , "features")
+            if(e.features != null){
+                for(var y of e.features){
+                    if(y.enabled == true && y.name == amnetyType)
+                        return e
+                }
+            }
+            else{
+                console.log(e, "yahan pe null tha feature")
+            }
+        }
+    })
+
+    console.log(filteredData)
+
+    populateHouseList(filteredData)
+
+    amneties_selected_array = []
+
+    clearAmnetiesCheckboxValues(document.querySelectorAll(".all_amneties_checkbox"))
+}
+
+function clearAmnetiesCheckboxValues(amneties_checboxes){
+    console.log(amneties_checboxes, "all the menties vhecboxes")
+    for(var i of amneties_checboxes){
+        i.checked = false
+    }
+}
+
+
+// -------------------------------------------------- sort functionality -----------------------------------------------------------------------------------// 
+
+function sortData(){
+    let sorttype = gett("sort_data_dropdown")
+    console.log(sorttype.value)
+    if(sorttype.value == "ascending"){
+        // get from localstorage 
+        //console.log(globalData, "before sort")
+        globalData.sort(function(x , y){
+            if(x.startingPrice > y.startingPrice)
+                return 1
+            else if(x.startingPrice < y.startingPrice)
+                return -1
+            else
+                return 0
+        })
+        // console.log(globalData, "after sort")
+        populateHouseList(globalData)
+    }
+    else if(sorttype.value == "descending"){
+        // console.log(globalData, "before sort")
+        globalData.sort(function(x , y){
+            if(x.startingPrice > y.startingPrice)
+                return -1
+            else if(x.startingPrice < y.startingPrice)
+                return 1
+            else
+                return 0
+        })
+        // console.log(globalData, "after sort")
+        populateHouseList(globalData)
+    }
+    else if(sorttype.value == "popularity"){
+
+        populateHouseList(globalData)
+    }
+    else{
+        console.log("wrong sort type mate")
     }
 }

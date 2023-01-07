@@ -158,7 +158,7 @@
     display : none;
     position: absolute;
     width : 400px;
-    height : 300px;
+    height : 350px;
     border-radius: 20px;
     background-color: white;
     top : 110%;
@@ -198,6 +198,7 @@
     top : 110%;
     left : 15vw;
     padding : 15px;
+    z-index: 5000;
 }
 
 /*  filter occupancy ---------------- */
@@ -210,6 +211,7 @@
     background-color: white;
     border-radius: 20px;
     padding : 15px;
+    z-index: 5000;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
@@ -225,14 +227,14 @@
     border: medium;
 }
 
-#dropdown_save{
+.dropdown_save{
     margin-top: 10px;
     display : flex;
     flex-direction: row;
     justify-content: flex-end;
 }
 
-#dropdown_save > button{
+.dropdown_save > button{
     padding : 15px;
     border: none;
     border-radius: 20px;
@@ -251,6 +253,7 @@
     background-color: white;
     left : 30vw;
     width : 30%;
+    z-index: 5000;
 }
 
 #dropdown_gender_button  {
