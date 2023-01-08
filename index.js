@@ -17,12 +17,44 @@ window.addEventListener('scroll', () => {
     }
 });
 
+let slideFlag = true;
 // slide on click hero section
+function scrollImgSliding() {
+    let slide_link2 = document.getElementById("slider_links_2");
+    let slide_link1 = document.getElementById("slider_links_1");
+    if (slideFlag) {
+        let imgSliding = document.querySelector('.img_sliding');
+        imgSliding.scrollBy({
+            left: 1000,
+            top: 0,
+            behavior: 'smooth'
+        });
+        slide_link2.style.border = "1px solid #61c3ae";
+        slide_link1.style.border = "none";
+        slideFlag = false;
+    }
+    else {
+        slide_link1.style.border = "1px solid #61c3ae";
+        slide_link2.style.border = "none";
+        let imgSliding = document.querySelector('.img_sliding');
+        imgSliding.scrollBy({
+            left: -1000,
+            top: 0,
+            behavior: 'smooth'
+        });
+        slideFlag = true;
+    }
+}
+
+setInterval(scrollImgSliding, 2000); // scroll every 2 seconds
+
 document.getElementById("slider_links_2").onclick = () => {
     let slide_link2 = document.getElementById("slider_links_2");
     let slide_link1 = document.getElementById("slider_links_1");
+    let imgSliding = document.querySelector('.img_sliding');
 
-    slide_link2.href = "#sliding_img_2";
+    slide_link2.href = "#";
+    imgSliding.scrollBy(1000, 0);
     slide_link2.style.border = "1px solid #61c3ae";
 
     slide_link1.style.border = "none";
@@ -31,59 +63,14 @@ document.getElementById("slider_links_2").onclick = () => {
 document.getElementById("slider_links_1").onclick = () => {
     let slide_link2 = document.getElementById("slider_links_2");
     let slide_link1 = document.getElementById("slider_links_1");
+    let imgSliding = document.querySelector('.img_sliding');
 
-    slide_link1.href = "#sliding_img_1";
+    slide_link1.href = "#";
+    imgSliding.scrollBy(-1000, 0);
     slide_link1.style.border = "1px solid #61c3ae";
 
     slide_link2.style.border = "none";
 }
-
-// sliding animation
-let slidingflag = false;
-function showSlidingAnimation() {
-    if (slidingflag) {
-        let slide_link2 = document.getElementById("slider_links_2");
-        slide_link2.click();
-        slidingflag = false;
-    }
-    else {
-        let slide_link1 = document.getElementById("slider_links_1");
-        slide_link1.click();
-        slidingflag = true;
-    }
-}
-let intervalId;
-let showAnimation = true;
-
-intervalId = setInterval(() => {
-    if (showAnimation) {
-        showSlidingAnimation();
-    }
-}, 2000);
-
-let selectAnimationFlag = true;
-document.querySelector(".select_property_type").addEventListener('click', () => {
-    if (selectAnimationFlag) {
-        showAnimation = false;
-        document.querySelector(".down_angle").classList.add('rotate');
-        document.querySelector(".down_angle").classList.remove('rotateBack');
-        document.getElementById("select_options").style.display = "block";
-        selectAnimationFlag = false;
-    }
-    else {
-        showAnimation = true;
-        document.querySelector(".down_angle").classList.add('rotateBack');
-        document.getElementById("select_options").style.display = "none";
-        document.querySelector(".down_angle").classList.remove('rotate');
-        selectAnimationFlag = true;
-    }
-});
-
-
-document.getElementById("features_section").onclick = () => {
-    showAnimation = false;
-}
-
 /*------------------ Animations / Dynamic css ----------------------------*/
 
 
@@ -114,7 +101,7 @@ document.getElementById("hero_section").onclick = () => {
 // https://code735.github.io/stanzaLiving/as/data/db.json github link
 let getData = async () => {
     let hostname = location.hostname;
-    let url = `http://${hostname}:5555/as/data/db.json`;
+    let url = `https://${hostname}/stanzaLiving/as/data/db.json`;
     console.log(url);
     let res = await fetch(url);
     let data = await res.json();
@@ -128,7 +115,6 @@ let searchBox = document.getElementById("searchip");
 // searching 
 
 document.getElementById("searchip").oninput = async () => {
-    showAnimation = false;
     let ipboxval = searchBox.value;
     let data = await getData();
     let Citydata = data.all_cities[0];

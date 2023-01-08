@@ -130,6 +130,7 @@ img {
     gap: 10px;
     margin: 20px;
     margin-left: 5%;
+    bottom: 30px;
 }
 
 #slider_links a {
@@ -281,7 +282,7 @@ img {
 #request_callback {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
     padding: 0 20px;
     background: #61c3ae;
     border: none;
@@ -292,14 +293,16 @@ img {
 
 #request_callback a {
     color: white;
-    font-size: .9rem;
+    font-size: 1rem;
+    font-weight: bold;
 }
 
 #request_callback i {
     color: var(--light-green);
     background-color: var(--white);
-    padding: 4px 8px;
+    padding: 0px 4px;
     border-radius: 50px;
+    font-size: 1rem;
 }
 
 .nav_links a {
