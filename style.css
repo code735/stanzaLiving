@@ -808,7 +808,14 @@ footer>.d-flex {
 
 }
 
+#phoneNumber {
+    padding: 0 10px !important;
+}
 
+#phoneNumber input {
+    padding: 20px 5px !important;
+}
 
-
-/* Hello */
+#phoneNumber img {
+    width: 10%;
+}

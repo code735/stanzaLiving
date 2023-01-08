@@ -84,11 +84,13 @@ let ex_recidence_btn = document.getElementById("exlpore_residence_link");
 ex_recidence_btn.onclick = () => {
     let popup = document.getElementById("explore_residence_popup");
     popup.style.display = "flex";
+    document.querySelector('body').style.overflow = "hidden";
 }
 
 document.getElementById("close_btn").onclick = () => {
     let popup = document.getElementById("explore_residence_popup");
     popup.style.display = "none";
+    document.querySelector('body').style.overflow = "auto";
 }
 
 
@@ -263,4 +265,12 @@ let filterThis = (cityDataArr, selectVal) => {
 
     // Return the filtered data array
     return filteredData;
+}
+
+
+
+// signup sign in 
+
+document.getElementById("request_callback").onclick = () => {
+    document.getElementById("parent").style.display = "block";
 }
