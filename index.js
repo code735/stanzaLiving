@@ -53,8 +53,11 @@ document.getElementById("slider_links_2").onclick = () => {
     let slide_link1 = document.getElementById("slider_links_1");
     let imgSliding = document.querySelector('.img_sliding');
 
-    slide_link2.href = "#";
-    imgSliding.scrollBy(1000, 0);
+    imgSliding.scrollBy({
+        left: 1000,
+        top: 0,
+        behavior: 'smooth'
+    });
     slide_link2.style.border = "1px solid #61c3ae";
 
     slide_link1.style.border = "none";
@@ -65,8 +68,11 @@ document.getElementById("slider_links_1").onclick = () => {
     let slide_link1 = document.getElementById("slider_links_1");
     let imgSliding = document.querySelector('.img_sliding');
 
-    slide_link1.href = "#";
-    imgSliding.scrollBy(-1000, 0);
+    imgSliding.scrollBy({
+        left: -1000,
+        top: 0,
+        behavior: 'smooth'
+    });
     slide_link1.style.border = "1px solid #61c3ae";
 
     slide_link2.style.border = "none";
@@ -271,6 +277,33 @@ let filterThis = (cityDataArr, selectVal) => {
 
 // signup sign in 
 
+let loggedInUser = localStorage.getItem("loggedInUser") || "Log In";
+document.getElementById("after_login").textContent = loggedInUser;
+let loginBtn = document.getElementById("after_login").textContent;
+
 document.getElementById("request_callback").onclick = () => {
-    document.getElementById("parent").style.display = "block";
+    let loginBtn = document.getElementById("after_login").textContent;
+    if (loginBtn != "Log In") {
+        document.getElementById("logout").style.display = "flex";
+        document.querySelector("body").style.overflow = "hidden";
+    }
+    else {
+        document.getElementById("parent").style.display = "block";
+    }
+}
+
+
+
+document.getElementById("logout_close_btn").onclick = () => {
+    document.getElementById("after_login").textContent = loggedInUser;
+    document.getElementById("logout").style.display = "none";
+    document.querySelector("body").style.overflow = "auto";
+}
+
+document.getElementById("logout_confirmed").onclick = () => {
+    loggedInUser = "Log In";
+    localStorage.setItem("loggedInUser", loggedInUser);
+    document.getElementById("logout").style.display = "none";
+    document.querySelector("body").style.overflow = "auto";
+    document.getElementById("after_login").textContent = loggedInUser;
 }
