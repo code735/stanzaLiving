@@ -244,7 +244,21 @@ let appendSearchSuggestions = async (result, city_data) => {
     }, 500);
 }
 
-
+let rptatingFlag = true;
+document.querySelector("#select_property_type").onclick = () => {
+    if (rptatingFlag) {
+        document.getElementById("select_options").style.display = "block";
+        document.getElementById("expanding_angle").classList.add("rotate");
+        document.getElementById("expanding_angle").classList.remove("rotateBack");
+        rptatingFlag = false;
+    }
+    else {
+        document.getElementById("select_options").style.display = "none";
+        document.getElementById("expanding_angle").classList.remove("rotate");
+        document.getElementById("expanding_angle").classList.add("rotateBack");
+        rptatingFlag = true;
+    }
+}
 // select value setting
 let select_options_value = document.querySelectorAll(".select_options_p");
 let s_o_v_len = select_options_value.length;
