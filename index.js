@@ -307,3 +307,23 @@ document.getElementById("logout_confirmed").onclick = () => {
     document.querySelector("body").style.overflow = "auto";
     document.getElementById("after_login").textContent = loggedInUser;
 }
+
+
+// Know More
+
+document.getElementById("know_more").onmouseover = () => {
+    document.getElementById("know_more_options").style.display = "block";
+}
+
+document.getElementById("know_more").onmouseleave = () => {
+    document.getElementById("know_more_options").style.display = "none";
+}
+
+
+document.getElementById("know_more_options").onmouseover = () => {
+    document.getElementById("know_more_options").style.display = "block";
+}
+
+document.getElementById("know_more_options").onmouseleave = () => {
+    document.getElementById("know_more_options").style.display = "none";
+}
