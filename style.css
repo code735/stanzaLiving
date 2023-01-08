@@ -571,7 +571,26 @@ footer>.d-flex {
     }
 
     .green_filter {
+        z-index: 2;
         background: none;
+        padding: 20px;
+        transition: all 1s ease;
+    }
+
+    .green_filter:hover {
+        background: rgb(52, 111, 98);
+        background: linear-gradient(97.73deg, rgba(39, 153, 128, 0.8) 0%, rgba(41, 45, 50, 0.8) 86.17%);
+    }
+
+    .green_filter p {
+        font-weight: 500;
+        color: white;
+        text-transform: capitalize;
+    }
+
+
+    .green_hover {
+        transition: all 0.5s ease-in-out;
     }
 
     .explore_btn {
@@ -611,6 +630,7 @@ footer>.d-flex {
 
     .property_type {
         width: 94%;
+        position: relative;
     }
 
     #slider_links a i {
@@ -726,9 +746,9 @@ footer>.d-flex {
 
     #explore_residence_popup {
         width: 100%;
-        height: 100%;
+        height: 100vh;
         background-color: rgba(0, 0, 0, 0.616);
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         z-index: 1;
@@ -759,7 +779,7 @@ footer>.d-flex {
         position: absolute;
         right: -12px;
         top: -13px;
-        padding: 3px;
+        padding: 4px 5px 0px;
         background: white;
         padding-bottom: 0;
         border-radius: 100px;
