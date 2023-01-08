@@ -341,3 +341,42 @@ document.getElementById("know_more_options").onmouseover = () => {
 document.getElementById("know_more_options").onmouseleave = () => {
     document.getElementById("know_more_options").style.display = "none";
 }
+
+
+let g_fltr1 = document.getElementById("green_filter1");
+
+
+g_fltr1.onmouseover = () => {
+    g_fltr1.innerHTML = `
+       <p>New-age hostels with all the amenities & vibrant living spaces.</p>`;
+}
+
+g_fltr1.onmouseleave = () => {
+    g_fltr1.innerHTML = "";
+}
+
+let g_fltr2 = document.getElementById("green_filter2");
+
+
+g_fltr2.onmouseover = () => {
+    g_fltr2.innerHTML = `
+       <p>Chill hostel-style residences that are close to your office.Co-living for Profession.</p>`;
+}
+
+g_fltr2.onmouseleave = () => {
+    g_fltr2.innerHTML = "";
+}
+
+let g_fltr3 = document.getElementById("green_filter3");
+
+g_fltr3.onmouseover = () => {
+    g_fltr3.style.transition = "all 0.5s ease-in-out";
+
+    g_fltr3.innerHTML = `
+       <p>Chill hostel-style residences that are close to your office.Co-living for Profession.</p>`;
+}
+
+g_fltr3.onmouseleave = () => {
+    g_fltr3.innerHTML = "";
+}
+
