@@ -14,7 +14,7 @@ function displayWhy(){
                </div> 
                
                 <div>
-                <img src="https://www.stanzaliving.com/assets/about-us-pattern.png" alt="">
+                <img src="https://www.stanzaliving.com/assets/about-us-pattern.png" class="pattern" alt="">
                    <img src="https://www.stanzaliving.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fstanza-living%2Fimage%2Fupload%2Fw_800%2Fv1653991914%2FWebsite%2520v5%2FAbout_Us%2Fabout-us-image1.jpg&w=1920&q=75" alt="">
                    
                    </div>
@@ -31,11 +31,11 @@ function displayWhy(){
            </div>
        </div>
       
-           <img src="https://www.stanzaliving.com/assets/about-us-pattern.png" alt="">
+           <img src="https://www.stanzaliving.com/assets/about-us-pattern.png" style="position:absolute" alt="">
        
        </div>
        <div>
-       <div>
+       <div class="upper_map_text">
            <h1>You moved to a new city,</h1>
            <h1>so we moved there too</h1>
            <p>Today, we've come a long way - from the two residences in Delhi to an impressive 450+ residences in more than 24+ cities across the country, and we promise we'll soon be ready to welcome you in many more.</p>
@@ -46,63 +46,22 @@ function displayWhy(){
        </div>
        <div>
            <div>
-               <div>
-                   <h1>You need friends in a new city, <span id="h1sec">so 2,000+ people came together</span></h1>
+               <div class="your_friends_text">
+                   <h1>You need friends in a new city, <span id="h1sec"><br>so 2,000+ people came together</span></h1>
                    <p>The dream only Anindya and Sandeep once shared has now found a niche in the hearts of 2,000+ individuals who wake up in the morning just to ensure Stanza Living delivers on the promise made to you.
-                       <a href="/teams.html">Meet the Dreamweavers</a>
                    </p>
+                   <a href="/teams.html">Meet the Dreamweavers</a>
                </div>
                <div>
                    <img src="https://www.stanzaliving.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fstanza-living%2Fimage%2Fupload%2Fw_800%2Fv1654882093%2FWebsite%2520v5%2FAbout_Us%2Fabout-us3.jpg&w=1920&q=75" alt="">
                </div>
            </div>
        </div>
-       <div>
-            <h1>You inspire our work, <span>so the world notices it too</span></h1>  
-           <div>
-               <div>
-                   <p>
-                       <span>ET Now Global Real Estate Congress</span>
-                       <span>2020</span>
-                   </p>
-                   <img src="https://res.cloudinary.com/stanza-living/image/upload/w_500/v1653991901/Website%20v5/About_Us/about-us-awards.png" alt="">
-               </div>
-               <div>
-                   <p>
-                       <span>LinkedIn Top 25 Startups of India </span>
-                       <span>2019</span>
-                   </p>
-                   <img src="https://res.cloudinary.com/stanza-living/image/upload/w_500/v1653991901/Website%20v5/About_Us/about-us-awards.png" alt="">
-               </div>
-               <div>
-                   <p>
-                       <span>Businessworld 40 Under 40 Leaders</span>
-                       <span>2019</span>
-                   </p>
-                   <img src="https://res.cloudinary.com/stanza-living/image/upload/w_500/v1653991901/Website%20v5/About_Us/about-us-awards.png" alt="">
-               </div>
-               <div>
-                   <p>
-                       <span>Entrepreneur India's 35 under 35, Class of</span>
-                       <span>2018</span>
-                   </p>
-                   <img src="https://res.cloudinary.com/stanza-living/image/upload/w_500/v1653991901/Website%20v5/About_Us/about-us-awards.png" alt="">
-               </div>
-               <div>
-                   <p>
-                       <span>ET Now Global Real Estate Congress</span>
-                       <span>2020</span>
-                   </p>
-                   <img src="https://res.cloudinary.com/stanza-living/image/upload/w_500/v1653991901/Website%20v5/About_Us/about-us-awards.png" alt="">
-               </div>
-               <div>
-                   <p>
-                       <span>Businessworld 40 Under 40 Leaders</span>
-                       <span>2019</span>
-                   </p>
-                   <img src="https://res.cloudinary.com/stanza-living/image/upload/w_500/v1653991901/Website%20v5/About_Us/about-us-awards.png" alt="">
-               </div>
-           </div>
+       <div class="inspire_work">
+            <h1>You inspire our work, <br><span>so the world notices it too</span></h1>  
+           
+            <img src="Screenshot (146).png" alt="">
+          
        </div>
    </div>`
    document.getElementById("why").style.color = "#60c3ad";
