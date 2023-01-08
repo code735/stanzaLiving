@@ -1,0 +1,185 @@
+#whyBox{
+    display: flex;
+    flex-direction: column;
+    gap: 107px;
+}
+#whyBox div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#globalWhy1 :first-child{
+    display: block;
+    gap: 3em;
+}
+
+#globalWhy1 p{
+    margin: 10px 5%;
+}
+h1{
+    font-weight: bolder;
+    /* font-family: monospace; */
+    padding: 0;
+    margin: 0 5%;
+}
+p{
+    font-size: 16px;
+}
+#globalWhy1 > div{
+    max-width: 50%;
+}
+img{
+    border-radius: 16px;
+    max-width: 100%;
+}
+#globalWhy1 > div > :nth-child(2){
+    color: #60c3ad;
+}
+
+#aboutUsHeading{
+    text-align: center;
+    font-weight: bolder;
+    font-size: 56px;
+    line-height: 64px;
+    font-family: monospace;
+    padding-bottom: 2%;
+}
+#aboutUsHeading > span{
+    color: #60c3ad;
+}
+#navBar{
+    display: flex;
+    /* justify-content: center; */
+    margin: auto;
+    width: 40%;
+    gap: 15px;
+    max-width: 100%;
+    height: 60px;
+   box-sizing: border-box;
+   border-radius: 30px;
+   padding: 0 21px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+ 
+ }
+ #navBar div{
+    margin: auto;
+    
+        padding: 19px 0px 17px;
+        
+        font-family: Font-Book;
+       /* border-bottom: 2px; */
+       /* border: 2px solid black; */
+        font-size: 16px;
+        line-height: 22px;
+        flex: 1 1 0%;
+        text-align: center;
+        cursor: pointer;
+        white-space: nowrap;
+    
+ }
+ #display{
+   margin-top: 100px;
+ }
+
+  #whySecond{
+    display: block !important;
+    width: 50%;
+    padding: 0 5%;
+ } 
+
+ #globalWhy2{
+    display: block !important;
+ }
+ #whySecond :nth-child(2){
+    color: #60c3ad;
+ }
+ #whyBox h1{
+  font-size: 36px;
+  line-height: 44px;
+  text-align: start;
+ }
+ #whyBox :nth-child(3){
+   /* background-color: #60c3ad; */
+    display: block;
+    align-items: centerl;
+ }
+ #whyBox > :nth-child(3) div{
+    display: block;
+    /* background-color: #60c3ad; */
+    width: 80%;
+    text-align: center; 
+    margin: auto;
+    margin-top: 7%;
+ }
+
+ #whyBox > :nth-child(3) div p{
+    font-size: 1.3rem;
+ }
+ #whyBox > :nth-child(3) div :nth-child(2){
+    color: #60c3ad;
+    
+ }
+
+ #whyBox > :nth-child(3) div h1{
+    text-align: center;
+ }
+ #h1sec{
+   color: #60c3ad;
+ }
+ #whyBox > :nth-child(4){
+    display: block !important;    
+ }
+
+.pattern{
+    position: absolute;
+    left: 41%;
+    z-index: -1;
+}
+ 
+#whySecond h1{
+    margin: 0;
+}
+ 
+
+#bodyMain{
+    padding: 0 5%;
+}
+
+.upper_map_text{
+    width: 44% !important;
+}
+
+.your_friends_text{
+    flex-direction: column;
+    align-items: flex-start !important;
+    width: 58%;
+}
+
+.your_friends_text h1{
+    margin: 0;
+}
+
+.your_friends_text p{
+    font-size: 1.3rem;
+}
+
+.your_friends_text a{
+    font-size: 1.6rem;
+    color: #60c3ad;
+}
+
+.inspire_work{
+    flex-direction: column;
+}
+
+.inspire_work h1{
+    text-align: center;
+}
+
+.inspire_work h1 span{
+    color: #60c3ad;
+}
+/* #whatsApp{
+    display: flex;
+    margin-left: 90%;
+} */
