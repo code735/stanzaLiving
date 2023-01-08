@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="Schedule.css">
+
+</head>
+<div id="parent">
+    <div id="popup">
+        <div class="close_btn"><i class="bi bi-x-lg"></i></div>
+        <div id="Partnerwithus">
+            <div id="ScheduleAvisit">
+                <h5 class="headText">Schedule a Visit</h5>
+            </div>
+            <div id="UnlockDiscount">
+                <h5 class="headText">Unlock Discount</h5>
+            </div>
+            
+        </div>
+        <div id="bodyBox">
+            <form>
+                <div id="nameContainer">
+                    <input style="  width: 100%;" type="text" placeholder="First Name">
+                    <input style="  width: 100%;" type="text" placeholder="Last Name">
+                </div>
+                <div id="phoneNumber">
+                    <img src="https://www.stanzaliving.com/assets/indian-mob.svg" alt="">
+                    <span>+91</span>
+                    <input type="tel" placeholder="Enter your mobile number">
+                </div>
+                <h5>I am a</h5>
+                <div id="workP">
+                    
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            Working Professional
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            Student
+                        </label>
+                      </div>
+                </div>
+                <div id="Select">
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Duration of your stay</option>
+                        <option value="1">Less than 3 months</option>
+                        <option value="2">3-6 months</option>
+                        <option value="3">More than 6 months</option>
+                      </select>
+                </div>
+                <h5>When are you planning to visit?</h5>
+                <div id="Clander">
+                    <div id="dates">
+                                <div class="date">
+                                    <strong style="width: 50px;" id="date1">08 Jan</strong>
+                                    <span id="day1">Sun</span>
+                                </div>
+                                <div class="date">
+                                    <strong style="width: 50px;" id="date2">09 Jan</strong>
+                                    <span id="day2">Mon</span>
+                                </div>
+                                <div class="date">
+                                    <strong style="width: 50px;" id="date3">10 Jan</strong>
+                                    <span id="day3">Tue</span>
+                                </div>
+                    </div>
+                    <div id="Clanderlogo">
+                        <div id="Clogo"><i style="color: #78d1be;" class="bi bi-calendar4"></i></div>
+                        <span>Select Date</span>
+                    </div>
+                </div>
+                <div id="TimeSlote">
+                    <h5>What is your preferred time slot?</h5>
+                    <div id="slotes">
+                        <div class="slote">9-12 PM</div>
+                        <div class="slote">12-3 PM</div>
+                        <div class="slote">3-6 PM</div>
+                        <div class="slote">6-9 PM</div>
+                    </div>
+                </div>
+               
+            </form>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+                <span>I have read and agreed to the<a style="font-weight: bolder;"
+                        href="https://www.stanzaliving.com/terms-and-conditions"> terms and conditions</a> and <a style="font-weight: bolder;"href="https://www.stanzaliving.com/privacy-policy"> privacy policy</a> and hereby confirm to proceed.</span>
+            </label>
+        </div>
+
+        <div id="action">
+            <button id="Submit">Schedule a Visit</button>
+        </div>
+    </div>
+    <div id="popup2">
+        <div class="close_btn"><i class="bi bi-x-lg"></i></div>
+        <div id="Partnerwithus">
+            <div id="ScheduleAvisits">
+                <h5 class="headText">Schedule a Visit</h5>
+            </div>
+            <div id="UnlockDiscounts">
+                <h5 class="headText">Unlock Discount</h5>
+            </div>
+            
+        </div>
+        <div id="bodyBox">
+            <form>
+                <div id="nameContainer">
+                    <input style="  width: 100%;" type="text" placeholder="First Name">
+                    <input style="  width: 100%;" type="text" placeholder="Last Name">
+                </div>
+                <div id="phoneNumber">
+                    <img src="https://www.stanzaliving.com/assets/indian-mob.svg" alt="">
+                    <span>+91</span>
+                    <input id="telNumber" type="tel" placeholder="Enter your mobile number">
+                </div>
+                <h5>I am a</h5>
+                <div id="workP">
+                    
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            Working Professional
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            Student
+                        </label>
+                      </div>
+                </div>
+                <div id="emailId">
+                    <input type="email" placeholder="Email ID">
+                </div>
+                <div id="SelectOccupancyAndGender">
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Select Occupancy</option>
+                        <option value="1">Single Occupancy</option>
+                        <option value="2">Double Occupancy</option>
+                      </select>
+                      <select class="form-select" aria-label="Default select example">
+                        <option selected>Select Gender</option>
+                        <option value="1">Male</option>
+                        <option value="2">Female</option>
+                      </select>
+                </div>
+                <div id="clander">
+                    <input type="date" id="dateCha" name="SelectDate">
+                    <div id="Clogo"><i style="color: #78d1be;" class="bi bi-calendar4"></i></div>
+                    
+                </div>
+                <div id="referalCode">
+                    <input type="text" placeholder="Enter Referral Code ( Optional )">
+                </div>
+                
+                
+                
+            </form>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+                <span>I have read and agreed to the <a style="font-weight: bolder;"
+                        href="https://www.stanzaliving.com/terms-and-conditions">terms & conditions</a> of unlock discount and hereby confirm to proceed.</span>
+            </label>
+        </div>
+
+        <div id="action">
+            <button id="Submit1">Unlock Discount</button>
+        </div>
+    </div>
+
+</div>
+<body>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+        <script src="Schedule.js"></script>
+</body>
+
+</html>
