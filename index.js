@@ -115,7 +115,6 @@ let searchBox = document.getElementById("searchip");
 // searching 
 
 document.getElementById("searchip").oninput = async () => {
-    showAnimation = false;
     let ipboxval = searchBox.value;
     let data = await getData();
     let Citydata = data.all_cities[0];
