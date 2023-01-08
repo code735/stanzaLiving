@@ -857,3 +857,26 @@ footer>.d-flex {
     border-radius: 50px;
     cursor: pointer;
 }
+
+.know_more_parent {
+    position: relative;
+    display: flex;
+}
+
+#know_more_options {
+    position: absolute;
+    width: 140%;
+    top: 100%;
+    z-index: 1;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0px 14px 20px #7a767671;
+    display: none;
+}
+
+#know_more_options a {
+    padding: 5px 0;
+    font-weight: 400;
+    color: rgb(95, 95, 95);
+}
