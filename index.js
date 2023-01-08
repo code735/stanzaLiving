@@ -101,7 +101,7 @@ document.getElementById("hero_section").onclick = () => {
 // https://code735.github.io/stanzaLiving/as/data/db.json github link
 let getData = async () => {
     let hostname = location.hostname;
-    let url = `http://${hostname}/as/data/db.json`;
+    let url = `https://${hostname}/stanzaLiving/as/data/db.json`;
     console.log(url);
     let res = await fetch(url);
     let data = await res.json();
