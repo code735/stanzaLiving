@@ -1,5 +1,6 @@
 
 let wishlisted_house_array
+
 let getData = () => {
 
     // -------------JUST FOR TESTING-----------------------
@@ -23,7 +24,6 @@ function gett(id) {
 
 const API_KEY = `AIzaSyBpZPN1MYtjDBvj_pi8O0dMLMf_qldiRas`
 let map_element = gett("map_iframe")
-map_element.src = `https://www.google.com/maps/embed/v1/place?key=${API_KEY}&q=Stanza+Licing,Amsterdam+House,Electronic+City+Phase+1`
 
 
 
@@ -51,6 +51,7 @@ let populateHouseList = (data) => {
     listContainer.textContent = ""
 
     // might causse problme --------------------------------
+
     let main_div = gett("plp_content")
     main_div.style.display = "flex"
     // might cause problme ------------------------------------
@@ -343,31 +344,31 @@ let populateHouseList = (data) => {
 
 }
 
-function isElementAlreadyinLocalStorage(e){
-    let count = -1
-    for(var i of wishlisted_house_array){
-        count += 1
-        console.log(i.name , e.name)
-        if(i.name == e.name && i.residenceId == e.residenceId){
-            return count
-        }
-    }
-    count += 1
-    return count
+// function isElementAlreadyinLocalStorage(e){
+//     let count = -1
+//     for(var i of wishlisted_house_array){
+//         count += 1
+//         console.log(i.name , e.name)
+//         if(i.name == e.name && i.residenceId == e.residenceId){
+//             return count
+//         }
+//     }
+//     count += 1
+//     return count
 
-    return false
-}
-let globalData
+//     return false
+// }
 
-async function callFirstTime() {
-    globalData = getData()
-    console.log("global data wishlist ", globalData)
-    populateHouseList(globalData)
+
+function callFirstTime() {
+    wishlisted_house_array = getData()
+    // console.log("global data wishlist ", globalData)
+    populateHouseList(wishlisted_house_array)
 }
 
-function get_pg_in_cityname(){
-    return globalData[0].cityName
-}
+// function get_pg_in_cityname(){
+//     return globalData[0].cityName
+// }
 
 callFirstTime()
 // console.log(globalData, "yaaaaaaaaaa")
