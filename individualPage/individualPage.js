@@ -265,3 +265,8 @@ document.getElementById("ScheduleAvisits").addEventListener("click", function ()
 document.getElementById("Submit").onclick = () => {
     document.querySelector(".parent").style.display = "flex";
 }
+
+
+document.getElementById("Submit1").onclick = () => {
+    location.href = "../PaymentPage/Payment.html";
+}
