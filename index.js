@@ -91,12 +91,18 @@ ex_recidence_btn.onclick = () => {
     let popup = document.getElementById("explore_residence_popup");
     popup.style.display = "flex";
     document.querySelector('body').style.overflow = "hidden";
+    document.getElementById("green_filter1").style.zIndex = "-1";
+    document.getElementById("green_filter2").style.zIndex = "-1";
+    document.getElementById("green_filter3").style.zIndex = "-1";
 }
 
 document.getElementById("close_btn").onclick = () => {
     let popup = document.getElementById("explore_residence_popup");
     popup.style.display = "none";
     document.querySelector('body').style.overflow = "auto";
+    document.getElementById("green_filter1").style.zIndex = "2";
+    document.getElementById("green_filter2").style.zIndex = "2";
+    document.getElementById("green_filter3").style.zIndex = "2";
 }
 
 
@@ -300,6 +306,9 @@ document.getElementById("request_callback").onclick = () => {
     if (loginBtn != "Log In") {
         document.getElementById("logout").style.display = "flex";
         document.querySelector("body").style.overflow = "hidden";
+        document.getElementById("green_filter1").style.zIndex = "-1";
+        document.getElementById("green_filter2").style.zIndex = "-1";
+        document.getElementById("green_filter3").style.zIndex = "-1";
     }
     else {
         document.getElementById("parent").style.display = "block";
@@ -312,6 +321,9 @@ document.getElementById("logout_close_btn").onclick = () => {
     document.getElementById("after_login").textContent = loggedInUser;
     document.getElementById("logout").style.display = "none";
     document.querySelector("body").style.overflow = "auto";
+    document.getElementById("green_filter1").style.zIndex = "2";
+    document.getElementById("green_filter2").style.zIndex = "2";
+    document.getElementById("green_filter3").style.zIndex = "2";
 }
 
 document.getElementById("logout_confirmed").onclick = () => {
@@ -320,6 +332,9 @@ document.getElementById("logout_confirmed").onclick = () => {
     document.getElementById("logout").style.display = "none";
     document.querySelector("body").style.overflow = "auto";
     document.getElementById("after_login").textContent = loggedInUser;
+    document.getElementById("green_filter1").style.zIndex = "2";
+    document.getElementById("green_filter2").style.zIndex = "2";
+    document.getElementById("green_filter3").style.zIndex = "2";
 }
 
 
@@ -346,37 +361,49 @@ document.getElementById("know_more_options").onmouseleave = () => {
 let g_fltr1 = document.getElementById("green_filter1");
 
 
-g_fltr1.onmouseover = () => {
+g_fltr1.onmouseenter = () => {
+    document.getElementById("green_filter1_text").style.color = "#beb6bd";
     g_fltr1.innerHTML = `
        <p>New-age hostels with all the amenities & vibrant living spaces.</p>`;
+    document.querySelector(".ex_btn_1").style.visibility = "hidden";
 }
 
 g_fltr1.onmouseleave = () => {
     g_fltr1.innerHTML = "";
+    document.getElementById("green_filter1_text").style.color = "black";
+    document.querySelector(".ex_btn_1").style.visibility = "visible";
 }
 
 let g_fltr2 = document.getElementById("green_filter2");
 
 
-g_fltr2.onmouseover = () => {
+g_fltr2.onmouseenter = () => {
+    document.getElementById("green_filter2_text").style.color = "#beb6bd";
     g_fltr2.innerHTML = `
        <p>Chill hostel-style residences that are close to your office.Co-living for Profession.</p>`;
+    document.querySelector(".ex_btn_2").style.visibility = "hidden";
+
 }
 
 g_fltr2.onmouseleave = () => {
     g_fltr2.innerHTML = "";
+    document.getElementById("green_filter2_text").style.color = "black";
+    document.querySelector(".ex_btn_2").style.visibility = "visible";
 }
 
 let g_fltr3 = document.getElementById("green_filter3");
 
-g_fltr3.onmouseover = () => {
+g_fltr3.onmouseenter = () => {
     g_fltr3.style.transition = "all 0.5s ease-in-out";
-
+    document.getElementById("green_filter3_text").style.color = "#beb6bd";
     g_fltr3.innerHTML = `
-       <p>Chill hostel-style residences that are close to your office.Co-living for Profession.</p>`;
+       <p>Fully-furnished spaces with all essential amenities and zero capital investment.</p>`;
+    document.querySelector(".ex_btn_3").style.visibility = "hidden";
 }
 
 g_fltr3.onmouseleave = () => {
     g_fltr3.innerHTML = "";
+    document.querySelector(".ex_btn_3").style.visibility = "visible";
+    document.getElementById("green_filter3_text").style.color = "black";
 }
 
