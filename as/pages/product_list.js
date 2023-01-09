@@ -332,14 +332,14 @@ let populateHouseList = (data) => {
                     house_deets_tray3_btn1.textContent = "SCHEDULE A VISIT"
                     house_deets_tray3_btn1.classList.add("house_deets_tray3_btn1")
                     house_deets_tray3_btn1.addEventListener("click", function(){
-                        gett("fadedParent").style.display = "block"
+                        gett("parent").style.display = "block"
                     })
 
                     let house_deets_tray3_btn2 = createe("button")
                     house_deets_tray3_btn2.textContent = "UNLOCK DISCOUNT"
                     house_deets_tray3_btn2.classList.add("house_deets_tray3_btn2")
                     house_deets_tray3_btn2.addEventListener("click", function(){
-                        gett("fadedParent").style.display = "block"
+                        gett("parent").style.display = "block"
                     
                     })
 
@@ -732,8 +732,8 @@ function sortData() {
 
 // popup button close 
 
-gett("close_btn_popup").addEventListener("click", function(){
-    gett("fadedParent").style.display = "none"
+gett("close_btn").addEventListener("click", function(){
+    gett("parent").style.display = "none"
 
 })
 
