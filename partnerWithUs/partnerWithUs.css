@@ -2,9 +2,15 @@
     margin: 0;
     padding: 0;
 }
+img{
+    width: auto !important;
+}
+.brand_logo img{
+    width: 100% !important;
+}
 #headPattern{
     position: absolute;
-    top: 0px;
+    top: 100px;
     left: 0px;
     z-index: 0;
 }
@@ -17,7 +23,7 @@
 #container{
     background: rgb(230,243,242);
     background: linear-gradient(180deg, rgba(230,243,242,1) 0%, rgba(252,252,252,1) 20%, rgba(252,252,252,1) 80%, rgba(230,243,242,1) 100%);    
-    height: 1fr;
+    /* height: 1fr; */
     padding: 25px;
 }
 .headItem{
@@ -64,8 +70,11 @@
     top: 0;
     height: 100vh;
 }
+
 .invertedComma{
+    font-size: 100%;
     color: #60c3ad;
+    
 }
 #headOfContainer{
     text-align: center;
@@ -95,6 +104,7 @@
     margin-bottom: 20px;
 }
 .highlightGreen{
+    font-size: 100%;
     color: #60c3ad;
 }
 .divText{
@@ -143,8 +153,8 @@
 }
 .pimg img{
     border-radius: 25px;
-    width: 100%;
-    height: 100%;
+    width: 100% !important; 
+    height: 100% !important;
 }
 #Accomodation{
     display: flex;
@@ -176,6 +186,7 @@
     background-color: white;
     margin-bottom: 200px;
 }
+
 .contactUs3{
     display: flex;
     justify-content: space-between;

@@ -1,3 +1,6 @@
+import { navComponent, footerComponent } from "../components/searchbox.js";
+
+
 let click  = document.querySelectorAll(".btn");
 click[0].addEventListener("click",function(){
   console.log("test");
@@ -39,3 +42,5 @@ function colorChange(){
    emails.addEventListener("input",colorChange);
    CheckBox.addEventListener("input",colorChange);
   
+   document.getElementById("nav").innerHTML = navComponent;
+   document.querySelector("footer").innerHTML = footerComponent;
