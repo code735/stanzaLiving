@@ -56,10 +56,6 @@ let populateHouseList = (data) => {
     main_div.style.display = "flex"
     // might cause problme ------------------------------------
 
-    let number_of_search_results = gett("wl_total_number")
-    number_of_search_results.textContent = ""
-    number_of_search_results.textContent = "( " + data.length +" results )"
-
     // let pg_in_cityname = gett("pg_in_cityname")
     // pg_in_cityname.textContent = ""
     // pg_in_cityname.textContent = get_pg_in_cityname()
@@ -101,6 +97,10 @@ let populateHouseList = (data) => {
 
         return
     }
+
+    let number_of_search_results = gett("wl_total_number")
+    number_of_search_results.textContent = ""
+    number_of_search_results.textContent = "( " + data.length +" results )"
 
     let count = 0;
     data.some((elem) => {
