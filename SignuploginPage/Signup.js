@@ -1,3 +1,7 @@
+let loggedInUser = localStorage.getItem("loggedInUser") || "Log In";
+document.getElementById("after_login").textContent = loggedInUser;
+let loginBtn = document.getElementById("after_login");
+
 document.getElementById("loginPage").addEventListener("click", function () {
   document.getElementById("popup").style.display = "none";
   document.getElementById("popup2").style.display = "block";
@@ -62,6 +66,9 @@ function logIn() {
   for (let i = 0; i < ins.length; i++) {
     if (ins[i].mobile == data && ins[i].password == password) {
       alert("Success login")
+      let loggedInUserval = ins[i].Firstname;
+      localStorage.setItem("loggedInUser", loggedInUserval);
+      document.getElementById("after_login").textContent = loggedInUser;
       location.href = "../index.html";
       flag = 1;
       document.getElementById("parent").style.display = "none";
