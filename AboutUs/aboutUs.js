@@ -50,7 +50,7 @@ function displayWhy(){
                    <h1>You need friends in a new city, <span id="h1sec"><br>so 2,000+ people came together</span></h1>
                    <p>The dream only Anindya and Sandeep once shared has now found a niche in the hearts of 2,000+ individuals who wake up in the morning just to ensure Stanza Living delivers on the promise made to you.
                    </p>
-                   <a href="/teams.html">Meet the Dreamweavers</a>
+                   <a href="../ourTeam/ourTeam.html">Meet the Dreamweavers</a>
                </div>
                <div>
                    <img src="https://www.stanzaliving.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fstanza-living%2Fimage%2Fupload%2Fw_800%2Fv1654882093%2FWebsite%2520v5%2FAbout_Us%2Fabout-us3.jpg&w=1920&q=75" alt="">
@@ -142,17 +142,18 @@ function displayHow(){
     displayDiv.innerHTML = `<div id="howBox">
     <div>
         <div>
-            <h1>We designed the backdrop of your life</h1>
+            <h1>We designed the backdrop of <span>your life</span></h1>
             <p>The sofa in the lounge will make you see your bestie and you arguing about whose day was more hectic. The bed in your room will give you a picture of where you'll be scrolling through insta stories. The microwave in the pantry will make you imagine slurping on a piping hot bowl of noodles in the middle of the night. Simply put, you'll see a bit of your life in every spot of the residence. And a place that does that is home</p>
         </div>
         <div>
             <img src="https://www.stanzaliving.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fstanza-living%2Fimage%2Fupload%2Fv1654681234%2FWebsite%2520v5%2FAbout_Us%2Fhow1.jpg&w=1920&q=75" alt="">
         </div>
     </div>
+     <img src="https://www.stanzaliving.com/assets/about-us-pattern.png" style="position:absolute" alt="">
     <div>
         <div>
             <h1>It’s unique</h1>
-            <h1>It’s our signature style</h1>
+            <h1 class = "colourHead">It’s our signature style</h1>
         </div>
         <div>
             <p>The buildings that become our residences come in different shapes and sizes. And aren't we glad about that? That way, we can retain their distinct architecture while infusing them with our design philosophy. So that every Stanza Living residence stays unique and yet is uniquely Stanza Living.</p>
@@ -164,30 +165,32 @@ function displayHow(){
            <img src="https://www.stanzaliving.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fstanza-living%2Fimage%2Fupload%2Fv1654681234%2FWebsite%2520v5%2FAbout_Us%2Fhow2.jpg&w=1920&q=75" alt=""> 
         </div>
         <div>
-            <h1>The inspiration behind it? You.</h1>
+            <h1>The inspiration behind it? <span>You.</span></h1>
             <p>From something as apparent as the number of drawers in your wardrobe, to something as neglected as the perfect illumination of the lights in the corridors, every aspect of our residence design is detailed to add comfort and convenience to your everyday life. That's the kind of thought you deserve, and we put it into it</p>
         </div>
     </div>
+    <img src="https://www.stanzaliving.com/assets/about-us-pattern.png" style="position:absolute" alt="">
     <div>
         <div>
-            A splash of teal here. A touch of yellow there. And many other happy shades in between. Wherever you look, you'll see the balance of ageless comfort with a 2020s vibe. The interiors here will put a smile on your face, even when you come back home after a stressful day
+           <p> A splash of teal here. A touch of yellow there. And many other happy shades in between. Wherever you look, you'll see the balance of ageless comfort with a 2020s vibe. The interiors here will put a smile on your face, even when you come back home after a stressful day</p>
         </div>
         <div>
-            <h1>It reflects your colours. Your stories.</h1>
+            <h1 >It reflects your colours. <span class = "colourHead">Your stories.</span></h1>
         </div>
     </div>
     <div>
         <div>
-            <h1>There’s more room in your room</h1>
+            <h1>There’s <span>more room</span> in your room</h1>
             <p>Good news! Your belongings will no longer wrestle for the same space. They can happily coexist in your spacious, fully-furnished room. And when you venture out of your room, the resting area, gaming and entertainment zone and dining area will further add a lot of life to your daily life.</p>
         </div>
         <div>
             <img src="https://www.stanzaliving.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fstanza-living%2Fimage%2Fupload%2Fv1654681234%2FWebsite%2520v5%2FAbout_Us%2Fhow3.jpg&w=1920&q=75" alt="" >
         </div>
     </div>
+    <img src="https://www.stanzaliving.com/assets/about-us-pattern.png" style="position:absolute" alt="">
     <div>
         <div>
-            <h1>Quality that speaks for itself</h1>
+            <h1><span class = "colourHead">Quality</span> that speaks for itself</h1>
         </div>
         <div>
             <p>Take it for granted that the lighting fixtures won't fail when you're tiptoeing to the dining area for a midnight snack. And we test our furniture for sturdiness, anticipating you slumping into it on certain days. But don't just go by our assurance. See and experience it for yourself before giving your nod of approval.</p>
