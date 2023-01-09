@@ -406,4 +406,3 @@ g_fltr3.onmouseleave = () => {
     document.querySelector(".ex_btn_3").style.zIndex = "3";
     document.getElementById("green_filter3_text").style.color = "black";
 }
-
