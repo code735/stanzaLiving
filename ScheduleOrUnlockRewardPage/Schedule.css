@@ -1,0 +1,360 @@
+#parent{
+    width: 100%;
+    overflow-y: scroll;
+    justify-content: center;
+    align-items: center;
+    background: #00000082;
+    /* display: none; */
+    position: fixed;
+    z-index: 200;
+    left: 0;
+    top: 0;
+    padding: 5% 0;
+    height: 100vh;
+}
+#bodyBox{
+    padding: 35px;
+    margin: auto;
+    border: 1px solid #60c3ad ;
+    border-radius: 15px;
+    background: rgb(211,238,232);
+background: linear-gradient(195deg, rgba(211,238,232,1) 0%, rgba(255,255,255,1) 78%);
+margin-bottom: 25px;
+
+}
+#Partnerwithus{
+    display: flex;
+    justify-content: space-between;
+    padding: 3px;
+    border: 1px solid #e1e1e1;
+    border-radius: 30px;
+    margin-bottom: 30px;
+
+}
+#popup{
+    padding: 15px;
+    border-radius: 10px;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 39%;
+    margin: auto;
+    background-color: #ffffff;
+    
+}
+#phoneNumber{
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    border: 1px solid #e1e1e1;
+    background-color: white;
+    margin-bottom: 35px;
+    padding: 10px;
+}
+#phoneNumber:hover{
+    border: 1px solid #60c3ad;
+}
+#phoneNumber input{
+    padding-left: 12px;
+    width: 100%;
+    height: 15px;
+    border: none;
+    border-left: 1px solid #e1e1e1 ;
+    outline: none;
+}
+#emailId input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e1e1e1 ;
+    border-radius: 8px;
+    outline: none;
+    
+}
+#emailId{
+    margin-bottom: 25px;
+    
+}
+.close{
+    border: none;
+    background: none;
+    margin-top: -10px;
+   height: 5%;
+   width: 10%;
+}
+.close i{
+    font-size: 30px;
+    
+}
+#clander{
+    margin-top: 25px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    border: 1px solid #e1e1e1;
+    background-color: white;
+    margin-bottom: 35px;
+    padding: 10px;
+
+}
+#dateCha{
+    padding-left: 12px;
+    width: 100%;
+    height: 15px;
+    border: none;
+    outline: none;
+    color: #e1e1e1;
+    /* color: transparent;   */
+    /* display: none; */
+}
+#referalCode{
+    /* margin-top: 25px; */
+    border-radius: 8px;
+    border: 1px solid #e1e1e1;
+    background-color: white;
+    margin-bottom: 35px;
+    padding: 10px;
+}
+#referalCode > input{
+    padding-left: 12px;
+    width: 100%;
+    height: 20px;
+    border: none;
+    /* border-left: 1px solid #e1e1e1 ; */
+    outline: none;
+}
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+.close_btn{
+    position: absolute;
+    right: -9px;
+    top: -19px;
+    background: white;
+    padding: 5px 9px;
+    border-radius: 21px;
+    box-shadow: 0px 7px 20px #bfbdbd;
+}
+.headText{
+    font-size: 20px;
+    font-weight: 400;
+}
+#ScheduleAvisit{
+    cursor: pointer;
+    padding: 5px 50px 5px  50px;
+    border-radius: 30px;
+    background: #60c3ad;
+    color: white;
+}
+#ScheduleAvisits{
+    cursor: pointer;
+    padding: 5px 50px 5px  50px;
+    border-radius: 30px;
+    background: #60c3ad;
+    color: white;
+}
+#UnlockDiscount{
+    cursor: pointer;
+    padding: 5px 50px 5px  50px;
+    border-radius: 30px;
+    background: #60c3ad; 
+    color: white
+}
+#UnlockDiscounts{
+    cursor: pointer;
+    padding: 5px 50px 5px  50px;
+    border-radius: 30px;
+    background: #60c3ad; 
+    color: white
+}
+.password input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e1e1e1 ;
+    border-radius: 8px;
+    outline: none;
+    
+}
+.password input:hover{
+    border: 1px solid #60c3ad;
+}
+.password{
+    margin-bottom: 35px;
+    
+}
+#nameContainer{
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    margin-bottom: 35px;
+  
+}
+#nameContainer input{
+        padding: 10px;
+        border: none;
+        border: 1px solid #e1e1e1;
+        border-radius: 8px;
+        outline: none;
+}
+#nameContainer input:hover{
+    border: 1px solid #60c3ad;
+}
+#selectType{
+
+    margin-bottom: 35px;
+}
+
+.form-check span{
+    font-size: 15px;
+}
+.form-check a{
+    color: #60c3ad;
+    text-decoration: none;
+}
+.form-check{
+    margin-bottom: 15px;
+}
+#action{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 25px;
+}
+#Submit{
+    width: 100%;
+    padding: 10px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    background-color: #60c3ad;
+    font-weight: 500;
+    
+}
+#Submit1{
+    width: 100%;
+    padding: 10px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    background-color: #60c3ad;
+    font-weight: 500;
+    /* font-size: 25px; */
+    
+}
+#shiftTologin{
+    margin-top: 15px;
+    margin-bottom: -15px;
+}
+#loginPage{
+    color: #60c3ad;
+    font-weight: bolder;
+    cursor: pointer;
+}
+#popup2{
+    padding: 15px;
+    display: none;
+    border-radius: 10px;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 39%;
+    margin: auto;
+    background-color: #ffffff;
+}
+#SignUpPage{
+    color: #60c3ad;
+    font-weight: bolder;
+    cursor: pointer;
+}
+#workP{
+    margin-top: 20px;
+    display: flex;
+    gap: 35px;
+    margin-bottom: 10px;
+}
+#dates{
+    /* border: 1px solid black; */
+    display: flex;
+    padding: 5px;
+    gap: 25px;
+}
+#Clander{
+    margin-top: 25px;
+    display: flex;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+.date{
+    cursor: pointer;
+    background-color: white;
+    border-radius: 7px;
+    border: 1px solid #e1e1e1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:    0 20px 0 20px;
+}
+
+#Clanderlogo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#Clanderlogo span{
+    font-size: 11px;
+}
+#Clogo{
+    background-color: white;
+    padding: 5px;
+    border-radius: 13px;
+}
+#slotes{
+    display: flex;
+    gap: 25px;
+}
+.slote{
+    cursor: pointer;
+    margin-top: 20px;
+    border: 1px solid #e1e1e1;
+    padding: 6px 12px 6px 12px;
+    border-radius: 20px;
+}
+#Select{
+    margin-bottom: 25px;
+}
+.form-select{
+    padding: 12px;
+}
+#TimeSlote{
+    margin-bottom: 25px;
+}
+#SelectOccupancyAndGender{
+    display: flex;
+    gap: 35px;
+}
+#firsttag{
+    display: flex;
+    gap: 25px;
+}
+#secondtag{
+    display: flex;
+    gap: 25px;
+}
+#thirdtag{
+    display: flex;
+    gap: 25px;
+}
+#dasedBox{
+    padding: 25px;
+    border: 1px dashed ;
+    margin-bottom: 25px;
+    border-radius: 10px;
+}

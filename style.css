@@ -21,6 +21,14 @@ img {
     width: 100%;
 }
 
+body::-webkit-scrollbar {
+    background: white;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--light-green);
+}
+
 /* NAVBAR SECTTION */
 
 /* mobile navbar */
@@ -130,6 +138,7 @@ img {
     gap: 10px;
     margin: 20px;
     margin-left: 5%;
+    bottom: 30px;
 }
 
 #slider_links a {
@@ -281,7 +290,7 @@ img {
 #request_callback {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
     padding: 0 20px;
     background: #61c3ae;
     border: none;
@@ -292,14 +301,16 @@ img {
 
 #request_callback a {
     color: white;
-    font-size: .9rem;
+    font-size: 1rem;
+    font-weight: bold;
 }
 
 #request_callback i {
     color: var(--light-green);
     background-color: var(--white);
-    padding: 4px 8px;
+    padding: 0px 4px;
     border-radius: 50px;
+    font-size: 1rem;
 }
 
 .nav_links a {
@@ -568,7 +579,26 @@ footer>.d-flex {
     }
 
     .green_filter {
+        z-index: 2;
         background: none;
+        padding: 20px;
+        transition: all 1s ease;
+    }
+
+    .green_filter:hover {
+        background: rgb(52, 111, 98);
+        background: linear-gradient(97.73deg, rgba(39, 153, 128, 0.8) 0%, rgba(41, 45, 50, 0.8) 86.17%);
+    }
+
+    .green_filter p {
+        font-weight: 500;
+        color: white;
+        text-transform: capitalize;
+    }
+
+
+    .green_hover {
+        transition: all 0.5s ease-in-out;
     }
 
     .explore_btn {
@@ -598,7 +628,6 @@ footer>.d-flex {
         background-image: url('images/1-modified.png');
         background-size: contain;
         background-position: right;
-        width: 99%;
     }
 
     #sliding_img_2 {
@@ -609,6 +638,7 @@ footer>.d-flex {
 
     .property_type {
         width: 94%;
+        position: relative;
     }
 
     #slider_links a i {
@@ -718,15 +748,19 @@ footer>.d-flex {
         padding: 13px 20px;
     }
 
+    .select_options_p:hover {
+        background: #ececec;
+    }
+
     .hero_section_container {
         width: 90%;
     }
 
     #explore_residence_popup {
         width: 100%;
-        height: 100%;
+        height: 100vh;
         background-color: rgba(0, 0, 0, 0.616);
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         z-index: 1;
@@ -740,6 +774,25 @@ footer>.d-flex {
         text-align: center;
     }
 
+    #popular_cities>.d-flex {
+        gap: 5px;
+    }
+
+    .city-slider-item {
+        background: white;
+        padding: 20px 17px;
+        width: 118px;
+        border-radius: 60px;
+        transition: all .2s ease;
+    }
+
+
+    .city-slider-item:hover {
+        background-color: #cccccc;
+    }
+
+
+
     #e_r_details h6 {
         font-weight: bold;
         text-align: center;
@@ -747,7 +800,6 @@ footer>.d-flex {
 
     #e_r_details {
         background: white;
-        width: 50%;
         padding: 20px 40px;
         border-radius: 10px;
         position: relative;
@@ -757,7 +809,7 @@ footer>.d-flex {
         position: absolute;
         right: -12px;
         top: -13px;
-        padding: 3px;
+        padding: 4px 5px 0px;
         background: white;
         padding-bottom: 0;
         border-radius: 100px;
@@ -806,7 +858,75 @@ footer>.d-flex {
 
 }
 
+#phoneNumber {
+    padding: 0 !important;
+}
 
+#phoneNumber input {
+    padding: 20px 5px !important;
+}
 
+#phoneNumber img {
+    width: 10%;
+}
 
-/* Hello */
+#logout {
+    display: none;
+    background: #000000d1;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#logout_msg {
+    background: white;
+    padding: 2%;
+    border-radius: 5px;
+    position: relative;
+}
+
+#logout button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    background: var(--light-green);
+}
+
+#logout_close_btn {
+    position: absolute;
+    right: -15px;
+    top: -15px;
+    background-color: white;
+    padding: 5px 8px;
+    box-shadow: 0px 0px 20px gray;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.know_more_parent {
+    position: relative;
+    display: flex;
+}
+
+#know_more_options {
+    position: absolute;
+    width: 140%;
+    top: 100%;
+    z-index: 1;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0px 14px 20px #7a767671;
+    display: none;
+}
+
+#know_more_options a {
+    padding: 5px 0;
+    font-weight: 400;
+    color: rgb(95, 95, 95);
+}

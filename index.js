@@ -17,12 +17,47 @@ window.addEventListener('scroll', () => {
     }
 });
 
+let slideFlag = true;
 // slide on click hero section
+function scrollImgSliding() {
+    let slide_link2 = document.getElementById("slider_links_2");
+    let slide_link1 = document.getElementById("slider_links_1");
+    if (slideFlag) {
+        let imgSliding = document.querySelector('.img_sliding');
+        imgSliding.scrollBy({
+            left: 1000,
+            top: 0,
+            behavior: 'smooth'
+        });
+        slide_link2.style.border = "1px solid #61c3ae";
+        slide_link1.style.border = "none";
+        slideFlag = false;
+    }
+    else {
+        slide_link1.style.border = "1px solid #61c3ae";
+        slide_link2.style.border = "none";
+        let imgSliding = document.querySelector('.img_sliding');
+        imgSliding.scrollBy({
+            left: -1000,
+            top: 0,
+            behavior: 'smooth'
+        });
+        slideFlag = true;
+    }
+}
+
+setInterval(scrollImgSliding, 2000); // scroll every 2 seconds
+
 document.getElementById("slider_links_2").onclick = () => {
     let slide_link2 = document.getElementById("slider_links_2");
     let slide_link1 = document.getElementById("slider_links_1");
+    let imgSliding = document.querySelector('.img_sliding');
 
-    slide_link2.href = "#sliding_img_2";
+    imgSliding.scrollBy({
+        left: 1000,
+        top: 0,
+        behavior: 'smooth'
+    });
     slide_link2.style.border = "1px solid #61c3ae";
 
     slide_link1.style.border = "none";
@@ -31,59 +66,17 @@ document.getElementById("slider_links_2").onclick = () => {
 document.getElementById("slider_links_1").onclick = () => {
     let slide_link2 = document.getElementById("slider_links_2");
     let slide_link1 = document.getElementById("slider_links_1");
+    let imgSliding = document.querySelector('.img_sliding');
 
-    slide_link1.href = "#sliding_img_1";
+    imgSliding.scrollBy({
+        left: -1000,
+        top: 0,
+        behavior: 'smooth'
+    });
     slide_link1.style.border = "1px solid #61c3ae";
 
     slide_link2.style.border = "none";
 }
-
-// sliding animation
-let slidingflag = false;
-function showSlidingAnimation() {
-    if (slidingflag) {
-        let slide_link2 = document.getElementById("slider_links_2");
-        slide_link2.click();
-        slidingflag = false;
-    }
-    else {
-        let slide_link1 = document.getElementById("slider_links_1");
-        slide_link1.click();
-        slidingflag = true;
-    }
-}
-let intervalId;
-let showAnimation = true;
-
-intervalId = setInterval(() => {
-    if (showAnimation) {
-        showSlidingAnimation();
-    }
-}, 2000);
-
-let selectAnimationFlag = true;
-document.querySelector(".select_property_type").addEventListener('click', () => {
-    if (selectAnimationFlag) {
-        showAnimation = false;
-        document.querySelector(".down_angle").classList.add('rotate');
-        document.querySelector(".down_angle").classList.remove('rotateBack');
-        document.getElementById("select_options").style.display = "block";
-        selectAnimationFlag = false;
-    }
-    else {
-        showAnimation = true;
-        document.querySelector(".down_angle").classList.add('rotateBack');
-        document.getElementById("select_options").style.display = "none";
-        document.querySelector(".down_angle").classList.remove('rotate');
-        selectAnimationFlag = true;
-    }
-});
-
-
-document.getElementById("features_section").onclick = () => {
-    showAnimation = false;
-}
-
 /*------------------ Animations / Dynamic css ----------------------------*/
 
 
@@ -97,11 +90,19 @@ let ex_recidence_btn = document.getElementById("exlpore_residence_link");
 ex_recidence_btn.onclick = () => {
     let popup = document.getElementById("explore_residence_popup");
     popup.style.display = "flex";
+    document.querySelector('body').style.overflow = "hidden";
+    document.getElementById("green_filter1").style.zIndex = "-1";
+    document.getElementById("green_filter2").style.zIndex = "-1";
+    document.getElementById("green_filter3").style.zIndex = "-1";
 }
 
 document.getElementById("close_btn").onclick = () => {
     let popup = document.getElementById("explore_residence_popup");
     popup.style.display = "none";
+    document.querySelector('body').style.overflow = "auto";
+    document.getElementById("green_filter1").style.zIndex = "2";
+    document.getElementById("green_filter2").style.zIndex = "2";
+    document.getElementById("green_filter3").style.zIndex = "2";
 }
 
 
@@ -114,7 +115,7 @@ document.getElementById("hero_section").onclick = () => {
 // https://code735.github.io/stanzaLiving/as/data/db.json github link
 let getData = async () => {
     let hostname = location.hostname;
-    let url = `http://${hostname}:5555/as/data/db.json`;
+    let url = `https://code735.github.io/stanzaLiving/as/data/db.json`;
     console.log(url);
     let res = await fetch(url);
     let data = await res.json();
@@ -128,7 +129,6 @@ let searchBox = document.getElementById("searchip");
 // searching 
 
 document.getElementById("searchip").oninput = async () => {
-    showAnimation = false;
     let ipboxval = searchBox.value;
     let data = await getData();
     let Citydata = data.all_cities[0];
@@ -250,7 +250,21 @@ let appendSearchSuggestions = async (result, city_data) => {
     }, 500);
 }
 
-
+let rptatingFlag = true;
+document.querySelector("#select_property_type").onclick = () => {
+    if (rptatingFlag) {
+        document.getElementById("select_options").style.display = "block";
+        document.getElementById("expanding_angle").classList.add("rotate");
+        document.getElementById("expanding_angle").classList.remove("rotateBack");
+        rptatingFlag = false;
+    }
+    else {
+        document.getElementById("select_options").style.display = "none";
+        document.getElementById("expanding_angle").classList.remove("rotate");
+        document.getElementById("expanding_angle").classList.add("rotateBack");
+        rptatingFlag = true;
+    }
+}
 // select value setting
 let select_options_value = document.querySelectorAll(".select_options_p");
 let s_o_v_len = select_options_value.length;
@@ -278,3 +292,118 @@ let filterThis = (cityDataArr, selectVal) => {
     // Return the filtered data array
     return filteredData;
 }
+
+
+
+// signup sign in 
+
+let loggedInUser = localStorage.getItem("loggedInUser") || "Log In";
+document.getElementById("after_login").textContent = loggedInUser;
+let loginBtn = document.getElementById("after_login").textContent;
+
+document.getElementById("request_callback").onclick = () => {
+    let loginBtn = document.getElementById("after_login").textContent;
+    if (loginBtn != "Log In") {
+        document.getElementById("logout").style.display = "flex";
+        document.querySelector("body").style.overflow = "hidden";
+        document.getElementById("green_filter1").style.zIndex = "-1";
+        document.getElementById("green_filter2").style.zIndex = "-1";
+        document.getElementById("green_filter3").style.zIndex = "-1";
+    }
+    else {
+        document.getElementById("parent").style.display = "block";
+    }
+}
+
+
+
+document.getElementById("logout_close_btn").onclick = () => {
+    document.getElementById("after_login").textContent = loggedInUser;
+    document.getElementById("logout").style.display = "none";
+    document.querySelector("body").style.overflow = "auto";
+    document.getElementById("green_filter1").style.zIndex = "2";
+    document.getElementById("green_filter2").style.zIndex = "2";
+    document.getElementById("green_filter3").style.zIndex = "2";
+}
+
+document.getElementById("logout_confirmed").onclick = () => {
+    loggedInUser = "Log In";
+    localStorage.setItem("loggedInUser", loggedInUser);
+    document.getElementById("logout").style.display = "none";
+    document.querySelector("body").style.overflow = "auto";
+    document.getElementById("after_login").textContent = loggedInUser;
+    document.getElementById("green_filter1").style.zIndex = "2";
+    document.getElementById("green_filter2").style.zIndex = "2";
+    document.getElementById("green_filter3").style.zIndex = "2";
+}
+
+
+// Know More
+
+document.getElementById("know_more").onmouseover = () => {
+    document.getElementById("know_more_options").style.display = "block";
+}
+
+document.getElementById("know_more").onmouseleave = () => {
+    document.getElementById("know_more_options").style.display = "none";
+}
+
+
+document.getElementById("know_more_options").onmouseover = () => {
+    document.getElementById("know_more_options").style.display = "block";
+}
+
+document.getElementById("know_more_options").onmouseleave = () => {
+    document.getElementById("know_more_options").style.display = "none";
+}
+
+
+let g_fltr1 = document.getElementById("green_filter1");
+
+
+g_fltr1.onmouseenter = () => {
+    document.getElementById("green_filter1_text").style.color = "#beb6bd";
+    g_fltr1.innerHTML = `
+       <p>New-age hostels with all the amenities & vibrant living spaces.</p>`;
+    document.querySelector(".ex_btn_1").style.visibility = "hidden";
+}
+
+g_fltr1.onmouseleave = () => {
+    g_fltr1.innerHTML = "";
+    document.getElementById("green_filter1_text").style.color = "black";
+    document.querySelector(".ex_btn_1").style.visibility = "visible";
+}
+
+let g_fltr2 = document.getElementById("green_filter2");
+
+
+g_fltr2.onmouseenter = () => {
+    document.getElementById("green_filter2_text").style.color = "#beb6bd";
+    g_fltr2.innerHTML = `
+       <p>Chill hostel-style residences that are close to your office.Co-living for Profession.</p>`;
+    document.querySelector(".ex_btn_2").style.visibility = "hidden";
+
+}
+
+g_fltr2.onmouseleave = () => {
+    g_fltr2.innerHTML = "";
+    document.getElementById("green_filter2_text").style.color = "black";
+    document.querySelector(".ex_btn_2").style.visibility = "visible";
+}
+
+let g_fltr3 = document.getElementById("green_filter3");
+
+g_fltr3.onmouseenter = () => {
+    g_fltr3.style.transition = "all 0.5s ease-in-out";
+    document.getElementById("green_filter3_text").style.color = "#beb6bd";
+    g_fltr3.innerHTML = `
+       <p>Fully-furnished spaces with all essential amenities and zero capital investment.</p>`;
+    document.querySelector(".ex_btn_3").style.visibility = "hidden";
+}
+
+g_fltr3.onmouseleave = () => {
+    g_fltr3.innerHTML = "";
+    document.querySelector(".ex_btn_3").style.visibility = "visible";
+    document.getElementById("green_filter3_text").style.color = "black";
+}
+
