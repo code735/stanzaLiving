@@ -365,13 +365,13 @@ g_fltr1.onmouseenter = () => {
     document.getElementById("green_filter1_text").style.color = "#beb6bd";
     g_fltr1.innerHTML = `
        <p>New-age hostels with all the amenities & vibrant living spaces.</p>`;
-    document.querySelector(".ex_btn_1").style.visibility = "hidden";
+    document.querySelector(".ex_btn_1").style.zIndex = "3";
 }
 
 g_fltr1.onmouseleave = () => {
     g_fltr1.innerHTML = "";
     document.getElementById("green_filter1_text").style.color = "black";
-    document.querySelector(".ex_btn_1").style.visibility = "visible";
+    document.querySelector(".ex_btn_1").style.zIndex = "0";
 }
 
 let g_fltr2 = document.getElementById("green_filter2");
@@ -381,14 +381,14 @@ g_fltr2.onmouseenter = () => {
     document.getElementById("green_filter2_text").style.color = "#beb6bd";
     g_fltr2.innerHTML = `
        <p>Chill hostel-style residences that are close to your office.Co-living for Profession.</p>`;
-    document.querySelector(".ex_btn_2").style.visibility = "hidden";
+    document.querySelector(".ex_btn_2").style.zIndex = "3";
 
 }
 
 g_fltr2.onmouseleave = () => {
     g_fltr2.innerHTML = "";
     document.getElementById("green_filter2_text").style.color = "black";
-    document.querySelector(".ex_btn_2").style.visibility = "visible";
+    document.querySelector(".ex_btn_2").style.zIndex = "0";
 }
 
 let g_fltr3 = document.getElementById("green_filter3");
@@ -398,12 +398,12 @@ g_fltr3.onmouseenter = () => {
     document.getElementById("green_filter3_text").style.color = "#beb6bd";
     g_fltr3.innerHTML = `
        <p>Fully-furnished spaces with all essential amenities and zero capital investment.</p>`;
-    document.querySelector(".ex_btn_3").style.visibility = "hidden";
+    document.querySelector(".ex_btn_3").style.zIndex = "3";
 }
 
 g_fltr3.onmouseleave = () => {
     g_fltr3.innerHTML = "";
-    document.querySelector(".ex_btn_3").style.visibility = "visible";
+    document.querySelector(".ex_btn_3").style.zIndex = "3";
     document.getElementById("green_filter3_text").style.color = "black";
 }
 

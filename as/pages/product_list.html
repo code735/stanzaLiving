@@ -15,12 +15,13 @@
     
     <link rel="stylesheet" href="./product_list.css">
     <link rel="stylesheet" href="./budget_slider.css">
-    
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
     <link rel="stylesheet" href="../../components/navandfooter.css">
+    <link rel="stylesheet" href="./schedule_visit_popup.css">
 </head>
 
 <body>
@@ -102,19 +103,19 @@
     <div id="plp_main_container">
 
         <div id="plp_directory">
-            Stanza Living / PG in Delhi
+            <a href = "../../index.html" id="plp_directory_return_to_main_page"> Stanza Living </a> / PG in <span id="pg_in_cityname">Delhi</span>
         </div>
 
         <div id="plp_main_filter">
-            <button id="filter_locality" onclick="showfunction(`locality`)"> Locality </button>
-            <button id="filter_budget" onclick="showfunction(`budget`)"> Budget </button>
-            <button id="filter_occupancy" onclick="showfunction(`occupancy`)"> Occupancy </button>
-            <button id="filter_gender" onclick="showfunction(`gender`)"> Gender</button>
-            <button id="filter_amenties" onclick="showfunction(`amneties`)">Amneties</button>
+            <button id="filter_locality" onclick="showfunction(`locality`)"> <span> Locality </span> <i class="fa-solid fa-angle-down fa-xs filters_drop_arrows"></i> </button>
+            <button id="filter_budget" onclick="showfunction(`budget`)"> <span> Budget </span><i class="fa-solid fa-angle-down fa-xs filters_drop_arrows"></i> </button>
+            <button id="filter_occupancy" onclick="showfunction(`occupancy`)"> <span> Occupancy </span> <i class="fa-solid fa-angle-down fa-xs filters_drop_arrows"></i> </button>
+            <button id="filter_gender" onclick="showfunction(`gender`)"> <span> Gender </span><i class="fa-solid fa-angle-down fa-xs filters_drop_arrows"></i></button>
+            <button id="filter_amenties" onclick="showfunction(`amneties`)"><span> Amneties </span><i class="fa-solid fa-angle-down fa-xs filters_drop_arrows"></i></button>
             <span> | </span>
-            <button id="wishlist_btn" onclick="moveToWishlist()">My Wishlist</button>
-            <button>More Filters</button>
-            <button id="dropdown_sort"> Sort By :
+            <button id="wishlist_btn" onclick="moveToWishlist()">My Wishlist <i class="fa-solid fa-angle-right fa-xs filters_drop_arrows"></i> </button>
+            <button> <span> More Filters </span><i class="fa-solid fa-angle-down fa-xs filters_drop_arrows"></i> </button>
+            <button id="dropdown_sort" > Sort by :
                 <select name="" id="sort_data_dropdown" class="form-select form-select-sm"
                     aria-label=".form-select-sm example" onchange="sortData()">
                     <option value="ascending">Low to High</option>
@@ -124,7 +125,7 @@
             </button>
 
             <div id="dropdown_locality">
-                <div> <input type="text" id="dropdown_locality_input"> </div>
+                <!-- <div> <input type="text" id="dropdown_locality_input"> </div> -->
                 <div id="dropdown_locality_results"> </div>
                 <hr>
                 <div class="dropdown_save" id="locality_save">
@@ -255,10 +256,9 @@
         </div>
 
         <div id="plp_search_query">
-            <h2> <span id="number_of_search_results"> </span> PGs waiting to be yours in <span id="cityname_of_search_results"></span></h2>
+            <h2> <span id="number_of_search_results"> </span> PGs waiting to be yours in <span id="cityname_of_search_results"></span> </h2>
         </div>
 
-        <hr>
         <div id="plp_content">
             <div id="plp_content_left_list">
 
@@ -508,11 +508,141 @@
 
 
     </div>
+
+    <div id="background_faded_div">
+        <div id="fadedParent">
+            <div id="popup">
+                <div id="Partnerwithus">
+                    <h5 id="headText">Sign Up</h5>
+                    <button class="close" id="close_btn_popup"><i class="bi bi-x"></i></button>
+                </div>
+                <div id="bodyBox">
+                    <form>
+                        <div id="nameContainer">
+                            <input style="  width: 100%;" type="text" placeholder="First Name">
+                            <input style="  width: 100%;" type="text" placeholder="Last Name">
+                        </div>
+                        <div id="phoneNumber">
+                            <img src="https://www.stanzaliving.com/assets/indian-mob.svg" alt="">
+                            <span>+91</span>
+                            <input type="tel" placeholder="Enter your mobile number">
+                        </div>
+                        <div class="password">
+                            <input id="passwordE" type="password" placeholder="Enter password">
+                        </div>
+                        <div class="password">
+                            <input id="paswordC" type="password" placeholder="Confirm password">
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                <span>By clicking on the button, I agree to the <a style="font-weight: bolder;"
+                                        href="https://www.stanzaliving.com/terms-and-conditions">Terms &
+                                        Conditions</a></span>
+                            </label>
+                        </div>
+    
+                        <div id="action">
+                            <button id="Submit">Sign Up</button>
+                        </div>
+                        <div id="shiftTologin">
+                            <p>Already have a account?<span id="loginPage"> login</span></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- <div id="popup2">
+                <div id="Partnerwithus">
+                    <h5 id="headText">Log In</h5>
+                    <button class="close"><i class="bi bi-x"></i></button>
+                </div>
+                <div id="bodyBox">
+                    <form>
+                        <div id="phoneNumber">
+                            <img src="https://www.stanzaliving.com/assets/indian-mob.svg" alt="">
+                            <span>+91</span>
+                            <input id="telNumber" type="tel" placeholder="Enter your mobile number">
+                        </div>
+                        <div class="password">
+                            <input id="loginPassword" type="password" placeholder="Enter password">
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                <span>By clicking on the button, I agree to the <a style="font-weight: bolder;"
+                                        href="https://www.stanzaliving.com/terms-and-conditions">Terms &
+                                        Conditions</a></span>
+                            </label>
+                        </div>
+    
+                        <div id="action">
+                            <button id="Submit1">Log In</button>
+                        </div>
+                        <div id="shiftTologin">
+                            <p>Don't have a account?<span id="SignUpPage">Sign up</span></p>
+                        </div>
+                    </form>
+                </div>
+            </div> -->
+    
+        </div>
+    </div>
+
+    <footer class="mt-4 pt-5 ps-5 pe-5 pb-2">
+        <div class="d-flex justify-content-between">
+            <div class="footer_brand_logo">
+                <img src="https://res.cloudinary.com/stanza-living/image/upload/w_182/v1652358946/Website%20v5/Logo/stanzalogo.png"
+                    alt="">
+            </div>
+            <div id="footer_links" class="d-none d-lg-flex justify-content-center">
+                <div class="d-flex flex-column">
+                    <a href="#">About Us</a>
+                    <a href="#">Team</a>
+                    <a href="#">Investor Relations</a>
+                    <a href="#">Media</a>
+                </div>
+                <div class="d-flex flex-column">
+                    <a href="#">Blogs</a>
+                    <a href="#">FAQs</a>
+                    <a href="#">Refer and Earn</a>
+                    <a href="#">House Rules</a>
+                </div>
+                <div class="d-flex flex-column">
+                    <a href="#">T&C</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Contact Us</a>
+                </div>
+                <div class="d-flex flex-column">
+                    <a href="#">COVID-19</a>
+                    <a href="#">Refunds</a>
+                    <a href="#">Partner with Us</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+            <div id="social_links">
+                <div class="d-flex justify-content-between align-items-center">
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-linkedin"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright d-flex justify-content-between align-items-center pt-5">
+            <p class="copyright_l">Copyright © 2022 | All Rights Reserved by Dtwelve Spaces Pvt Ltd. | Sitemap</p>
+            <p class="copyright_r">Images shown are for representational purposes only. Amenities depicted may or may
+                not form a part of
+                that individual property.</p>
+        </div>
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
     <script src="./product_list.js"> </script>
     <script src="./budget_slider.js"></script>
+    <!-- <script src="./schedule_visit_popup.js"></script> -->
+    <script src="https://kit.fontawesome.com/53dd2c8df1.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

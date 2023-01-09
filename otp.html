@@ -1,0 +1,129 @@
+<html>
+
+<head>
+    <title>Enter Otp</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        /* Add some style to the page */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .otp_verifyAndCLose {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid gray;
+        }
+
+        #button {
+            background: #61c3ae;
+        }
+
+        .parent {
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #00000045;
+        }
+
+        .otp-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .otp-form input {
+            font-size: 20px;
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            width: 50px;
+            text-align: center;
+        }
+
+        .otp-form button {
+            font-size: 20px;
+            padding: 10px;
+            margin: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .error {
+            color: red;
+        }
+
+        #pop_up {
+            background: white;
+            border-radius: 10px;
+            padding: 4px 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div id="pop_up">
+            <div class="otp_verifyAndCLose">
+                <h1>OTP Verification</h1>
+                <div id="close_btn">
+                    <span class="material-symbols-outlined">
+                        close
+                    </span>
+                </div>
+            </div>
+            <form class="otp-form">
+                <p>We need to confirm your mobile number</p>
+                <div id="input_boxes">
+                    <label for="otp1">Enter OTP:</label>
+                    <input type="text" id="otp1" name="otp1" maxlength="1" onkeyup="moveToNext(this, 'otp2')">
+                    <input type="text" id="otp2" name="otp2" maxlength="1" onkeyup="moveToNext(this, 'otp3')">
+                    <input type="text" id="otp3" name="otp3" maxlength="1" onkeyup="moveToNext(this, 'otp4')">
+                    <input type="text" id="otp4" name="otp4" maxlength="1" onkeyup="moveToNext(this, 'otp5')">
+                    <input type="text" id="otp5" name="otp5" maxlength="1" onkeyup="moveToNext(this, 'otp6')">
+                    <input type="text" id="otp6" name="otp6" maxlength="1" onkeyup="moveToNext(this, 'button')">
+                </div>
+                <button id="button" onclick="verifyOTP()">Verify OTP</button>
+            </form>
+        </div>
+        <div id="error" class="error"></div>
+    </div>
+    <script>
+        // Add JavaScript to move the focus to the next input box
+        function moveToNext(current, next) {
+            if (current.value.length === 1) {
+                document.getElementById(next).focus();
+            }
+        }
+
+        // Add JavaScript to verify the OTP
+        function verifyOTP() {
+            event.preventDefault();
+            // Get the OTP value from the input fields
+            var otp = "";
+            for (var i = 1; i <= 6; i++) {
+                otp += document.getElementById("otp" + i).value;
+            }
+
+            // Check if the OTP is correct
+            if (otp === "123456") {
+                // OTP is correct, show success message
+                document.getElementById("error").innerHTML = "OTP is correct!";
+            } else {
+                // OTP is incorrect, show error message
+                document.getElementById("error").innerHTML = "OTP is incorrect. Please try again.";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
