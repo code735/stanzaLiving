@@ -12,12 +12,12 @@ console.log("inside the javascrpt file ")
 let getData = async () => {
 
     // -------------JUST FOR TESTING--------------------------
-        let url = `http://localhost:3000/bangalore`
-        let datastream = await fetch(url)
-        let data = await datastream.json()
+        // let url = `http://localhost:3000/bangalore`
+        // let datastream = await fetch(url)
+        // let data = await datastream.json()
 
     //------------------------------------
-    //var data = JSON.parse(localStorage.getItem("citiesArr")) || [];
+    let data = JSON.parse(localStorage.getItem("citiesArr")) || [];
 
     return data;
 }
@@ -56,23 +56,53 @@ function createMapUrl(elem) {
 
 // populatefunction 
 
-let populateHouseList = async (data) => {
+let populateHouseList = (data) => {
 
     //console.log(data, "data mil chuka hai doston !!!!!!!!!!!!")
 
     let listContainer = document.querySelector("#plp_content_left_list")
     listContainer.textContent = ""
 
-    // ------------------- populate the span element that displays number of house in data
+    // might causse problme --------------------------------
+    let main_div = gett("plp_content")
+    main_div.style.display = "flex"
+    // might cause problme ------------------------------------
+
     let number_of_search_results = gett("number_of_search_results")
     number_of_search_results.textContent = ""
     number_of_search_results.textContent = data.length
 
-    //--------------------populate the span element that displays city name
+    let pg_in_cityname = gett("pg_in_cityname")
+    pg_in_cityname.classList.add("make_font_small")
+    pg_in_cityname.textContent = ""
+    pg_in_cityname.textContent = get_pg_in_cityname()
+
+    console.log("is data nul ", data)
+    if(data == [] || data == null || data == undefined || data.length == 0){
+
+        gett("plp_search_query").style.display = "none"
+
+        let main_div = gett("plp_content")
+        main_div.textContent = ""
+        main_div.style.display = "block"
+
+        console.log("yooooooooo")
+        let no_result_found_msg = createe("h2")
+        no_result_found_msg.textContent = "No Results Found"
+
+        main_div.append(no_result_found_msg)
+
+        let no_result_found_img = createe("img")
+        no_result_found_img.src = "./sad_face.png"
+        no_result_found_img.classList.add("sad_face_emoji")
+        main_div.append(no_result_found_img)
+
+        return
+    }
     let cityname_of_search_results = gett("cityname_of_search_results")
     cityname_of_search_results.textContent = ""
-    cityname_of_search_results.textContent = data[0].cityName
-    //console.log(typeof(data), data, "-----------------------------------------------------------------------------------")
+    cityname_of_search_results.textContent = get_pg_in_cityname()
+
     let count = 0;
     data.some((elem) => {
 
@@ -132,12 +162,17 @@ let populateHouseList = async (data) => {
                     })
                     // mouse click, navigate to next page , individual house page
                     house_deets_name_h3.addEventListener("click", function(){
-                        localStorage.setItem( "individual_house", JSON.stringify(elem))
-                        window.location.href = "./individual_product_page.html"
+                        local_storage_object = {
+                            "product" : elem
+                        }
+                        
+                        localStorage.setItem( "individual", JSON.stringify(local_storage_object))
+                        window.location.href = "../../individualPage/individualPage.html"
                     })
 
                     let house_deets_name_fav_btn = createe("span")
-                    house_deets_name_fav_btn.innerHTML = `<span class="material-symbols-outlined" id="wishlist_heart_button"> favorite </span>`
+                    house_deets_name_fav_btn.innerHTML = `<i class="fa-regular fa-heart fa-lg"></i>`
+                    house_deets_name_fav_btn.classList.add("wishlist_heart_button")
                     house_deets_name_fav_btn.addEventListener("click", function(){
                         console.log("entered wishlist heart", elem)
 
@@ -146,20 +181,16 @@ let populateHouseList = async (data) => {
                         if( indexx == -1 || indexx >= wishlisted_house_array.length){
                             wishlisted_house_array.push(elem)
                             localStorage.setItem("wishlisted_house_array", JSON.stringify(wishlisted_house_array))
-                            house_deets_name_fav_btn.style.color = "green"
-                            house_deets_name_fav_btn.style.backgroundColor = "grey"
+                            house_deets_name_fav_btn.innerHTML = `<i class="fa-solid fa-heart fa-lg" ></i>`
                         }
                         else{
                             let indexx = wishlisted_house_array.indexOf(elem)
                             wishlisted_house_array.splice(indexx, 1)
                             localStorage.setItem("wishlisted_house_array", JSON.stringify(wishlisted_house_array))
-                            house_deets_name_fav_btn.style.color = "black"
-                            house_deets_name_fav_btn.style.backgroundColor = "white"
+                            house_deets_name_fav_btn.innerHTML = `<i class="fa-regular fa-heart fa-lg" ></i>`
 
                         }
                         
-                        // house_deets_name_fav_btn.innerHTML = ""
-                        // house_deets_name_fav_btn.innerHTML = `<span class="material-symbols-outlined"> favorite </span>`
                     })
 
                 house_deets_name.append(house_deets_name_h3, house_deets_name_fav_btn)
@@ -300,10 +331,17 @@ let populateHouseList = async (data) => {
                     let house_deets_tray3_btn1 = createe("button")
                     house_deets_tray3_btn1.textContent = "SCHEDULE A VISIT"
                     house_deets_tray3_btn1.classList.add("house_deets_tray3_btn1")
+                    house_deets_tray3_btn1.addEventListener("click", function(){
+                        gett("parent").style.display = "block"
+                    })
 
                     let house_deets_tray3_btn2 = createe("button")
                     house_deets_tray3_btn2.textContent = "UNLOCK DISCOUNT"
                     house_deets_tray3_btn2.classList.add("house_deets_tray3_btn2")
+                    house_deets_tray3_btn2.addEventListener("click", function(){
+                        gett("parent").style.display = "block"
+                    
+                    })
 
                 house_deets_tray3.append(house_deets_tray3_price, house_deets_tray3_btn1, house_deets_tray3_btn2)
                 house_deets_tray3.classList.add("house_deets_tray3")
@@ -342,6 +380,10 @@ let globalData
 async function callFirstTime() {
     globalData = await getData()
     populateHouseList(globalData)
+}
+
+function get_pg_in_cityname(){
+    return globalData[0].cityName
 }
 
 callFirstTime()
@@ -429,6 +471,8 @@ let locality_save_clearbtn = gett("locality_save_clearbtn")
 
 locality_save_clearbtn.addEventListener("click", function () {
     // by now locality_seleected_array should have all the selected buttons 
+    locality_selected_array = []
+    let locality_dropdown_btn_list = document.querySelectorAll("dropdown_locality_results > button")
 })
 
 locality_save_savebtn.addEventListener("click", function () {
@@ -531,7 +575,7 @@ function filterOccupancy(filterarr, data) {
     filteredData = data.filter(function (e) {
         for (var occupancyType of filterarr) {
             for (var y of e.residenceOccupancies) {
-                console.log(y.soldOut, y.occupancyName, occupancyType)
+                // console.log(y.soldOut, y.occupancyName, occupancyType)
                 if (y.soldOut == false && y.occupancyName.split(" ")[0] == occupancyType) {
                     return e
                 }
@@ -684,4 +728,17 @@ function sortData() {
     else {
         console.log("wrong sort type mate")
     }
+}
+
+// popup button close 
+
+gett("close_btn").addEventListener("click", function(){
+    gett("parent").style.display = "none"
+
+})
+
+// move to wishlist page ...........
+
+function moveToWishlist(){
+    window.location.href = "./wishlist.html"
 }
