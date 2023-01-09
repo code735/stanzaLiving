@@ -1,0 +1,10 @@
+#whyBox div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#aboutUsHeading{
+    text-align: center;
+    font-weight: inherit;
+    font-size: 5.6rem
+}

@@ -303,9 +303,15 @@ img{
 }
 #homePage span{
     font-weight: 100;
-    
+    color: #60c3ad;
 }
 #bodyMain{
     background: rgb(233,255,252);
     background: linear-gradient(180deg, rgba(233,255,252,1) 2%, rgba(255,255,255,1) 7%);
 }
+#aboutUsHeading{
+    margin-top: 10%;
+}
+/* #homePage{
+    margin-top: 15%;
+} */

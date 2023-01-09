@@ -143,7 +143,7 @@ let populateHouseList = (data) => {
                     console.log("same hi hai bhia -----------------")
                     return
                 }
-                //map_element.src = linkk
+                map_element.src = linkk
             })
 
                 // house deets - house name // koyto house // medan house
