@@ -33,7 +33,17 @@ function gett(id) {
 
 // -----------------------------------------global variable declaration section -------------------------------------
 
-const API_KEY = `AIzaSyBpZPN1MYtjDBvj_pi8O0dMLMf_qldiRas`
+//const API_KEY = `AIzaSyBpZPN1MYtjDBvj_pi8O0dMLMf_qldiRas`
+
+
+// mohit's API KEY -------------------------------------------------------------------
+
+const API_KEY = `AIzaSyAJKVm7amAlXYxSr9VG8KkyNTF4pW9jBio`
+
+
+//mohits API key -----------------------------------------------------------------------
+
+
 let map_element = gett("map_iframe")
 // map_element.src = "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d687.6662667361319!2d77.64445335605313!3d12.841477280455933!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd92704396db640bf!2sStanza%20Living%20Amsterdam%20House!5e0!3m2!1sen!2sin!4v1672959720217!5m2!1sen!2sin"
 map_element.src = `https://www.google.com/maps/embed/v1/place?key=${API_KEY}&q=Stanza+Licing,Amsterdam+House,Electronic+City+Phase+1`

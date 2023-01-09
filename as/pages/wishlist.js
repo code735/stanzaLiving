@@ -22,7 +22,14 @@ function gett(id) {
 
 // -----------------------------------------global variable declaration section -------------------------------------
 
-const API_KEY = `AIzaSyBpZPN1MYtjDBvj_pi8O0dMLMf_qldiRas`
+//const API_KEY = `AIzaSyBpZPN1MYtjDBvj_pi8O0dMLMf_qldiRas`
+
+// mohit API page ----------------------------------------------------------------------------
+
+const API_KEY = `AIzaSyAJKVm7amAlXYxSr9VG8KkyNTF4pW9jBio`
+
+//mohit APi page -----------------------------------------------------------------------------
+
 let map_element = gett("map_iframe")
 
 
