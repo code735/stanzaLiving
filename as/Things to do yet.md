@@ -20,3 +20,7 @@ when doing sort, shouldwe get data from local storage or globalData
 
 individual_house - for going from listing page to individual page 
 wishlisted_house_array - all the houses that are wishlisted
+
+<!--  -->
+
+button col;or chnage - schedule visit 
