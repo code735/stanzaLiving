@@ -106,7 +106,8 @@ margin-bottom: 25px;
     height: 15px;
     border: none;
     outline: none;
-    color: transparent;
+    color: #e1e1e1;
+    /* color: transparent;   */
     /* display: none; */
 }
 #referalCode{
@@ -338,4 +339,22 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 #SelectOccupancyAndGender{
     display: flex;
     gap: 35px;
+}
+#firsttag{
+    display: flex;
+    gap: 25px;
+}
+#secondtag{
+    display: flex;
+    gap: 25px;
+}
+#thirdtag{
+    display: flex;
+    gap: 25px;
+}
+#dasedBox{
+    padding: 25px;
+    border: 1px dashed ;
+    margin-bottom: 25px;
+    border-radius: 10px;
 }
