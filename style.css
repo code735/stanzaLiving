@@ -285,6 +285,7 @@ body::-webkit-scrollbar-thumb {
 
 .explore_btn_lg {
     display: none;
+    position: relative;
 }
 
 #request_callback {
@@ -608,6 +609,7 @@ footer>.d-flex {
     .explore_btn_lg {
         padding-top: 2%;
         display: block;
+        width: 22%;
     }
 
     .explore_btn_lg span {
@@ -917,7 +919,7 @@ footer>.d-flex {
     position: absolute;
     width: 140%;
     top: 100%;
-    z-index: 1;
+    z-index: 3;
     padding: 10px;
     border-radius: 10px;
     background-color: white;

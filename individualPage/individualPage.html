@@ -15,7 +15,8 @@
 
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
-
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <!-- stylesheet -->
     <link rel="stylesheet" href="individualPage.css">
 
@@ -42,8 +43,8 @@
 
 
     <!-- House Details & Schedule a Visit-->
-    <section id="details_map">
-        <div class="d-flex justify-content-center align-items-center">
+    <section id="details_map" class="p-5">
+        <div class="d-flex justify-content-between">
             <div id="details">
                 <div id="details_text">
                     <div class="d-flex align-items-center">
@@ -91,7 +92,7 @@
                 <div id="details_info">
                     <div id="available_occupancies" class="py-4">
                         <h4>Available Occupancies</h4>
-                        <div class="py-3 d-flex align-items-center" id="occupy_append">
+                        <div class="py-3 d-flex align-items-center flex-wrap" id="occupy_append">
                             <!-- Available Occupancies append -->
                         </div>
                     </div>
@@ -114,10 +115,234 @@
                         <h4>Description</h4>
                         <h5 id="desc_text"></h5>
                     </div>
+
+                    <div id="general_rules" class="py-3">
+                        <h4>General Rules</h4>
+                        <ul>
+                            <li>No animals or pets will be brought inside the House by any person.</li>
+                            <li>Political or religious gatherings will not be permitted at the residence without the
+                                consent of the Stanza Living local residence management.</li>
+                            <li>Stanza Living reserves the right to make spot checks on the Houses and rooms without
+                                having to give prior notice to the residents.</li>
+                            <li>Stanza Living will not be responsible for any packages/parcels received at the House.
+                                Residents are requested to coordinate and collect their packages as soon as they reach
+                                the House from the delivery person.</li>
+                            <li>Electricians, contractors, or any other service personnel may enter rooms as necessary
+                                in the course of their duty under the supervision of the Stanza Living Representatives.
+                                The Stanza Living Representative shall ensure that all such activity is done in a manner
+                                that respects the privacy and dignity of the residents.</li>
+                            <li>The Stanza Living Representatives reserve the right to move residents to other rooms if
+                                there is a necessity or emergency.</li>
+                            <li>The Stanza Living team reserves the right to revise the rules and regulations from time
+                                to time and will keep the residents informed of any changes through notices. Ignorance
+                                of any such amendments to the rules will not be accepted as an excuse for any breach of
+                                rules and regulations.</li>
+                            <li>Stanza Living provides a set of consumables for the entertainment/games area, including
+                                remote batteries and accessories for games/sports like darts, dice, cue sticks, rackets,
+                                etc. The residents are responsible for maintaining these consumables in good condition.
+                                Any loss or damage to the consumables will be borne by the resident responsible for such
+                                loss or damage.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div id="schedule_a_visit">
+                <div id="parent">
+                    <div id="popup">
+                        <div id="Partnerwithus">
+                            <div id="ScheduleAvisit">
+                                <h5 class="headText">Schedule a Visit</h5>
+                            </div>
+                            <div id="UnlockDiscount">
+                                <h5 class="headText">Unlock Discount</h5>
+                            </div>
 
+                        </div>
+                        <div id="bodyBox">
+                            <form>
+                                <div id="nameContainer">
+                                    <input style="  width: 100%;" type="text" placeholder="First Name">
+                                    <input style="  width: 100%;" type="text" placeholder="Last Name">
+                                </div>
+                                <div id="phoneNumber">
+                                    <img src="https://www.stanzaliving.com/assets/indian-mob.svg" alt="">
+                                    <span>+91</span>
+                                    <input type="tel" placeholder="Enter your mobile number">
+                                </div>
+                                <h5>I am a</h5>
+                                <div id="workP">
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="flexRadioDefault1">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                            Working Professional
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="flexRadioDefault1">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                            Student
+                                        </label>
+                                    </div>
+                                </div>
+                                <div id="Select">
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>Duration of your stay</option>
+                                        <option value="1">Less than 3 months</option>
+                                        <option value="2">3-6 months</option>
+                                        <option value="3">More than 6 months</option>
+                                    </select>
+                                </div>
+                                <h5>When are you planning to visit?</h5>
+                                <div id="Clander">
+                                    <div id="dates">
+                                        <div class="date">
+                                            <strong style="width: 50px;" id="date1">08 Jan</strong>
+                                            <span id="day1">Sun</span>
+                                        </div>
+                                        <div class="date">
+                                            <strong style="width: 50px;" id="date2">09 Jan</strong>
+                                            <span id="day2">Mon</span>
+                                        </div>
+                                        <div class="date">
+                                            <strong style="width: 50px;" id="date3">10 Jan</strong>
+                                            <span id="day3">Tue</span>
+                                        </div>
+                                    </div>
+                                    <div id="Clanderlogo">
+                                        <div id="Clogo"><i style="color: #78d1be;" class="bi bi-calendar4"></i></div>
+                                        <span>Select Date</span>
+                                    </div>
+                                </div>
+                                <div id="TimeSlote">
+                                    <h5>What is your preferred time slot?</h5>
+                                    <div id="slotes">
+                                        <div class="slote">9-12 PM</div>
+                                        <div class="slote">12-3 PM</div>
+                                        <div class="slote">3-6 PM</div>
+                                        <div class="slote">6-9 PM</div>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                <span>I have read and agreed to the<a style="font-weight: bolder;"
+                                        href="https://www.stanzaliving.com/terms-and-conditions"> terms and
+                                        conditions</a> and <a style="font-weight: bolder;"
+                                        href="https://www.stanzaliving.com/privacy-policy"> privacy policy</a> and
+                                    hereby confirm to proceed.</span>
+                            </label>
+                        </div>
+
+                        <div id="action">
+                            <button id="Submit">Schedule a Visit</button>
+                        </div>
+                    </div>
+                    <div id="popup2">
+                        <div id="Partnerwithus">
+                            <div id="ScheduleAvisits">
+                                <h5 class="headText">Schedule a Visit</h5>
+                            </div>
+                            <div id="UnlockDiscounts">
+                                <h5 class="headText">Unlock Discount</h5>
+                            </div>
+
+
+                        </div>
+                        <div id="dasedBox">
+                            <div id="firsttag">
+                                <img style="width: 10%;height: 10%;" src="./LOGOS/firstLogoPng.png" alt="">
+                                <p>If you like a residence or apartment, make an initial payment of just
+                                    ₹1,000/-</p>
+                            </div>
+                            <div id="secondtag">
+                                <img style="width: 10%;height: 10%;" src="./LOGOS/SecondLogo.png" alt="">
+                                <p>This will unlock a ₹1,000/- discount that you can avail on completing
+                                    your booking</p>
+                            </div>
+                            <div id="thirdtag">
+                                <img style="width: 10%;height: 10%;" src="./LOGOS/thirdLogo.png" alt="">
+                                <p>But if you change your mind anytime, you can get your money back (no questions asked)
+                                </p>
+                            </div>
+                        </div>
+                        <div id="bodyBox">
+                            <form>
+                                <div id="nameContainer">
+                                    <input style="  width: 100%;" type="text" placeholder="First Name">
+                                    <input style="  width: 100%;" type="text" placeholder="Last Name">
+                                </div>
+                                <div id="phoneNumber">
+                                    <img src="https://www.stanzaliving.com/assets/indian-mob.svg" alt="">
+                                    <span>+91</span>
+                                    <input id="telNumber" type="tel" placeholder="Enter your mobile number">
+                                </div>
+                                <h5>I am a</h5>
+                                <div id="workP">
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="flexRadioDefault1">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                            Working Professional
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="flexRadioDefault1">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                            Student
+                                        </label>
+                                    </div>
+                                </div>
+                                <div id="emailId">
+                                    <input type="email" placeholder="Email ID">
+                                </div>
+                                <div id="SelectOccupancyAndGender">
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>Select Occupancy</option>
+                                        <option value="1">Single Occupancy</option>
+                                        <option value="2">Double Occupancy</option>
+                                    </select>
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>Select Gender</option>
+                                        <option value="1">Male</option>
+                                        <option value="2">Female</option>
+                                    </select>
+                                </div>
+                                <div id="clander">
+                                    <input type="date" id="dateCha" name="SelectDate"
+                                        placeholder="Expected Move-in Date">
+                                    <div id="Clogo"><i style="color: #78d1be;" class="bi bi-calendar4"></i></div>
+
+                                </div>
+                                <div id="referalCode">
+                                    <input type="text" placeholder="Enter Referral Code ( Optional )">
+                                </div>
+
+
+
+                            </form>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                <span>I have read and agreed to the <a style="font-weight: bolder;"
+                                        href="https://www.stanzaliving.com/terms-and-conditions">terms & conditions</a>
+                                    of unlock discount and hereby confirm to proceed.</span>
+                            </label>
+                        </div>
+
+                        <div id="action">
+                            <button id="Submit1">Unlock Discount</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -128,10 +353,67 @@
         <!-- footer will append here -->
     </div>
 
+    <!-- pop_up -->
+    <div class="parent">
+        <div id="pop_up">
+            <div class="otp_verifyAndCLose">
+                <h1 style="
+                font-size: 1.5rem;
+                font-weight: bold;
+            ">OTP Verification</h1>
+                <div id="close_btn">
+                    <span class="material-symbols-outlined">
+                        close
+                    </span>
+                </div>
+            </div>
+            <form class="otp-form">
+                <p>We need to confirm your mobile number</p>
+                <div id="input_boxes">
+                    <label for="otp1">Enter OTP:</label>
+                    <input type="text" id="otp1" name="otp1" maxlength="1" onkeyup="moveToNext(this, 'otp2')">
+                    <input type="text" id="otp2" name="otp2" maxlength="1" onkeyup="moveToNext(this, 'otp3')">
+                    <input type="text" id="otp3" name="otp3" maxlength="1" onkeyup="moveToNext(this, 'otp4')">
+                    <input type="text" id="otp4" name="otp4" maxlength="1" onkeyup="moveToNext(this, 'otp5')">
+                    <input type="text" id="otp5" name="otp5" maxlength="1" onkeyup="moveToNext(this, 'otp6')">
+                    <input type="text" id="otp6" name="otp6" maxlength="1" onkeyup="moveToNext(this, 'button')">
+                </div>
+                <button id="button" onclick="verifyOTP()">Verify OTP</button>
+            </form>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
     <script type="module" src="individualPage.js"></script>
+    <script>
+        // Add JavaScript to move the focus to the next input box
+        function moveToNext(current, next) {
+            if (current.value.length === 1) {
+                document.getElementById(next).focus();
+            }
+        }
+
+        // Add JavaScript to verify the OTP
+        function verifyOTP() {
+            event.preventDefault();
+            // Get the OTP value from the input fields
+            var otp = "";
+            for (var i = 1; i <= 6; i++) {
+                otp += document.getElementById("otp" + i).value;
+            }
+
+            // Check if the OTP is correct
+            if (otp === "123456") {
+                // OTP is correct, show success message
+                location.href = "../EndPage/EndPage.html";
+            } else {
+                // OTP is incorrect, show error message
+                alert("OTP Is incorrect");
+            }
+        }
+    </script>
 </body>
 
 </html>
