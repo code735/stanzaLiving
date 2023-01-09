@@ -66,7 +66,7 @@ function logIn() {
   for (let i = 0; i < ins.length; i++) {
     if (ins[i].mobile == data && ins[i].password == password) {
       alert("Success login")
-      let loggedInUserval = document.getElementById("telNumber").value;
+      let loggedInUserval = ins[i].Firstname;
       localStorage.setItem("loggedInUser", loggedInUserval);
       document.getElementById("after_login").textContent = loggedInUser;
       location.href = "../index.html";

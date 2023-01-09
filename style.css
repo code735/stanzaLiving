@@ -21,6 +21,14 @@ img {
     width: 100%;
 }
 
+body::-webkit-scrollbar {
+    background: white;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--light-green);
+}
+
 /* NAVBAR SECTTION */
 
 /* mobile navbar */
@@ -740,6 +748,10 @@ footer>.d-flex {
         padding: 13px 20px;
     }
 
+    .select_options_p:hover {
+        background: #ececec;
+    }
+
     .hero_section_container {
         width: 90%;
     }
@@ -762,6 +774,25 @@ footer>.d-flex {
         text-align: center;
     }
 
+    #popular_cities>.d-flex {
+        gap: 5px;
+    }
+
+    .city-slider-item {
+        background: white;
+        padding: 20px 17px;
+        width: 118px;
+        border-radius: 60px;
+        transition: all .2s ease;
+    }
+
+
+    .city-slider-item:hover {
+        background-color: #cccccc;
+    }
+
+
+
     #e_r_details h6 {
         font-weight: bold;
         text-align: center;
@@ -769,7 +800,6 @@ footer>.d-flex {
 
     #e_r_details {
         background: white;
-        width: 50%;
         padding: 20px 40px;
         border-radius: 10px;
         position: relative;
