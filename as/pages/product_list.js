@@ -732,8 +732,8 @@ function sortData() {
 
 // popup button close 
 
-gett("close_btn_popup").addEventListener("click", function(){
-    gett("fadedParent").style.display = "none"
+gett("close_btn").addEventListener("click", function(){
+    gett("parent").style.display = "none"
 
 })
 
