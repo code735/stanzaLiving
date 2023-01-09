@@ -98,6 +98,7 @@ let populateHouseList = (data) => {
         return
     }
 
+    map_element.src = createMapUrl(data[0])
     let number_of_search_results = gett("wl_total_number")
     number_of_search_results.textContent = ""
     number_of_search_results.textContent = "( " + data.length +" results )"
@@ -138,7 +139,7 @@ let populateHouseList = (data) => {
                     console.log("same hi hai bhia -----------------")
                     return
                 }
-                //map_element.src = linkk
+                map_element.src = linkk
             })
 
                 // house deets - house name // koyto house // medan house
