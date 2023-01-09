@@ -1,0 +1,297 @@
+#parent{
+    width: 100%;
+    overflow-y: scroll;
+    justify-content: center;
+    align-items: center;
+   
+    /* display: none; */
+    position: fixed;
+    z-index: 200;
+    left: 0;
+    top: 0;
+    padding: 5% 0;
+    height: 100vh;
+}
+#bodyBox{
+    padding: 35px;
+    margin: auto;
+    background-color: white;
+margin-bottom: -25px;
+
+}
+#Partnerwithus{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    background-color: #5ebb9f;
+
+    
+
+}
+#popup{
+   border: 1px solid #5ebb9f;
+   box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 39%;
+    margin: auto;
+    background-color: #ffffff;
+    
+}
+#phoneNumber{
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    border: 1px solid #e1e1e1;
+    background-color: white;
+    margin-bottom: 35px;
+    padding: 10px;
+}
+#phoneNumber:hover{
+    border: 1px solid #60c3ad;
+}
+#phoneNumber input{
+    padding-left: 12px;
+    width: 100%;
+    height: 15px;
+    border: none;
+    border-left: 1px solid #e1e1e1 ;
+    outline: none;
+}
+#emailId input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e1e1e1 ;
+    border-radius: 8px;
+    outline: none;
+    
+}
+#emailId{
+    margin-bottom: 25px;
+    
+}
+#close{
+    border: none;
+    background: none;
+    margin-top: -10px;
+   height: 5%;
+   width: 10%;
+}
+#close i{
+    font-size: 30px;
+    color: white;
+    
+}
+#clander{
+    margin-top: 25px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    border: 1px solid #e1e1e1;
+    background-color: white;
+    margin-bottom: 35px;
+    padding: 10px;
+
+}
+#dateCha{
+    padding-left: 12px;
+    width: 100%;
+    height: 15px;
+    border: none;
+    outline: none;
+    color: #e1e1e1;
+    /* color: transparent;   */
+    /* display: none; */
+}
+#referalCode{
+    /* margin-top: 25px; */
+    border-radius: 8px;
+    border: 1px solid #e1e1e1;
+    background-color: white;
+    margin-bottom: 35px;
+    padding: 10px;
+}
+#referalCode > input{
+    padding-left: 12px;
+    width: 100%;
+    height: 20px;
+    border: none;
+    /* border-left: 1px solid #e1e1e1 ; */
+    outline: none;
+}
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+.close_btn{
+    position: absolute;
+    right: -9px;
+    top: -19px;
+    background: white;
+    padding: 5px 9px;
+    border-radius: 21px;
+    box-shadow: 0px 7px 20px #bfbdbd;
+}
+#headText{
+    font-size: 25px;
+    font-weight: 600;
+    color: white;
+}
+#ScheduleAvisit{
+    cursor: pointer;
+    padding: 5px 50px 5px  50px;
+    border-radius: 30px;
+    background: #60c3ad;
+    color: white;
+}
+#ScheduleAvisits{
+    cursor: pointer;
+    padding: 5px 50px 5px  50px;
+    border-radius: 30px;
+    background: #60c3ad;
+    color: white;
+}
+#UnlockDiscount{
+    cursor: pointer;
+    padding: 5px 50px 5px  50px;
+    border-radius: 30px;
+    background: white; 
+    color: #c5c5c5
+}
+#UnlockDiscounts{
+    cursor: pointer;
+    padding: 5px 50px 5px  50px;
+    border-radius: 30px;
+    background: #60c3ad; 
+    color: white
+}
+.password input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e1e1e1 ;
+    border-radius: 8px;
+    outline: none;
+    
+}
+.password input:hover{
+    border: 1px solid #60c3ad;
+}
+.password{
+    margin-bottom: 35px;
+    
+}
+#nameContainer{
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    margin-bottom: 35px;
+  
+}
+#nameContainer input{
+        padding: 10px;
+        border: none;
+        border: 1px solid #e1e1e1;
+        border-radius: 8px;
+        outline: none;
+}
+#nameContainer input:hover{
+    border: 1px solid #60c3ad;
+}
+#selectType{
+
+    margin-bottom: 35px;
+}
+
+.form-check span{
+    font-size: 15px;
+}
+.form-check a{
+    color: #60c3ad;
+    text-decoration: none;
+}
+.form-check{
+    margin-bottom: 15px;
+}
+#action{
+    display: flex;
+    gap: 55px;
+    margin: auto;
+    margin-bottom: 25px;
+    margin-left: 35px;
+}
+#Submit{
+    width: 70%;
+    padding: 10px;
+    color: rgb(39, 35, 35);
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 35px;
+    font-weight: 500;
+    
+}
+
+#shiftTologin{
+    margin-top: 15px;
+    margin-bottom: -15px;
+}
+#loginPage{
+    color: #60c3ad;
+    font-weight: bolder;
+    cursor: pointer;
+}
+#popup2{
+    padding: 15px;
+    display: none;
+    border-radius: 10px;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 39%;
+    margin: auto;
+    background-color: #ffffff;
+}
+
+#workP{
+    margin-top: 20px;
+    display: flex;
+    gap: 35px;
+    margin-bottom: 10px;
+}
+#dates{
+    /* border: 1px solid black; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+#Clander{
+    margin-top: 25px;
+    display: flex;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+.date{
+    cursor: pointer;
+    background-color: white;
+    border: 1px solid #e1e1e1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding:    0 20px 0 20px;
+}
+
+#day1{
+    padding-left: 75px;
+}
+#day2{
+    padding-left: 65px;
+}
+#day3{
+    padding-left: 65px;
+}
