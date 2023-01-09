@@ -162,7 +162,11 @@ let populateHouseList = (data) => {
                     })
                     // mouse click, navigate to next page , individual house page
                     house_deets_name_h3.addEventListener("click", function(){
-                        localStorage.setItem( "individual", JSON.stringify(elem))
+                        local_storage_object = {
+                            "product" : elem
+                        }
+                        
+                        localStorage.setItem( "individual", JSON.stringify(local_storage_object))
                         window.location.href = "../../individualPage/individualPage.html"
                     })
 
