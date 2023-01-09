@@ -3,8 +3,32 @@
 }
 
 
-#plp_main_container {
+#wl_main_container {
     margin-top: 5px;
+}
+
+#wl_directory{
+    display : flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 21px;
+}
+
+#back_to_listings_txt{
+    margin-left: 5px;;
+    font-size: small;
+    color: black;
+}
+
+#back_to_listings_txt:hover{
+    margin-left: 5px;
+    font-size: small;
+    color: grey;
+}
+
+#wl_total_number{
+    margin-left: 10px;;
+    font-weight: 600;
 }
 
 #plp_main_filter{
@@ -17,62 +41,21 @@
 }
 
 #plp_main_filter > button {
-    display : flex;
-    justify-content: space-evenly;
-    align-items: center;
     height : 50px;
     border-radius: 20px;
+    border: 1px;
     padding: 7px 20px;
     font-size: 15px;
     font-weight: 100;
-    border: thin rgb(204, 201, 201) solid;
 }
-
-#plp_main_filter > button:hover {
-    justify-content: space-evenly;
-    display: flex;
-    align-items: center;
-    height : 50px;
-    border-radius: 20px;
-    padding: 7px 20px;
-    font-size: 15px;
-    font-weight: 100;
-    border: thin rgb(114, 113, 113) solid;
-}
-
-#sort_data_dropdown{
-    margin-left: 8px;
-    width: 130px;
-}
-
-.filters_drop_arrows{
-    margin-left: 13px;
-
-}
-/* page begins----------------------- */
 
 #plp_directory{
-    font-size: small;
     margin-left: 20px;
-    margin-top: 10px;
-    margin-bottom: 10px;
 }
-
-#plp_directory_return_to_main_page{
-    font-size: small;
-    text-decoration: none;
-    color: black;
-    font-weight: 500;
-}   
-
-#plp_directory_return_to_main_page:hover{
-    font-size: small;
-    text-decoration: none;
-    color: gray;
-    font-weight: 500;
-}   
-
-#plp_search_query {
+#wl_search_query {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     margin-top: 20px;
     margin-left: 20px;
 }
@@ -83,7 +66,7 @@
     /* background-color: red; */
 }
 
-#plp_content_left_list{
+#wl_content_left_list{
     /* background-color: aqua; */
     padding : 20px;
     width : 65%;
@@ -129,7 +112,7 @@
 
 /* --------------------------- Map div - content right part --------------------- */
 
-#plp_content_right_map{
+#wl_content_right_map{
     padding : 15px;
     width : 35%;
     /* background-color: blue; */
@@ -278,7 +261,7 @@
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     top : 110%;
     background-color: white;
-    width : 45%;
+    width : 40%;
     left : 45vw;
     z-index: 5000;
 }
@@ -312,16 +295,16 @@
 .house_deets_housename{
     display : flex;
     justify-content: space-between;
-    margin-left: 5px;;
+    margin-left: 5px;
 }
 
 /* micromarketname - koramangala, marathalli, etc */
 .house_deets_area{
     margin-top: -6px;
     font-size: 13px;
+    font-weight: 500;
     color : grey;
     margin-left: 5px;
-    font-weight: 500;
 }
 
 
@@ -386,7 +369,6 @@
     align-items: center;
     padding : 2px;
     border : none;
-    background-color: white;
 }
 
 
@@ -395,9 +377,9 @@
 .house_deets_amneties{
     margin-top: 15px;
     color : rgb(137,137,137);
-    font-size: 13px;
-    margin-bottom: 1px;
+    font-size: 12px;
     margin-left: 5px;
+    margin-bottom: 1px;
 }
 
 /*  tray 2 icons begin ------------------ */
@@ -504,10 +486,30 @@ h2 {
     display : block;
     width: 30%;
     height: 30%;
-    margin: auto;
+    margin: 30px auto;
     /* background-color: yellow; */
 }
 
-.make_font_small{
-    font-size: small;
+.nothing_to_see_here_div{
+    margin: 30px auto;
+    width : 50%;
+    /* background-color: yellow; */
+    text-align: center;
+}
+
+.nothing_to_see_here_text{
+    font-weight: 600;
+    margin-top: 15px;
+    margin-bottom: 60px;
+    /* background-color: red; */
+}
+
+.go_back_to_listing_btn{
+    display : flex;
+    margin : 30px auto;
+    border-radius: 15px;
+    padding : 15px;
+    color : white;
+    background-color: grey;
+    border : 1px solid grey;
 }
