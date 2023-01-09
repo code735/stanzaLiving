@@ -85,6 +85,7 @@ img{
     display: block !important;
     width: 50%;
     padding: 0 5%;
+    
  } 
 
  #globalWhy2{
@@ -183,3 +184,128 @@ img{
     display: flex;
     margin-left: 90%;
 } */
+#howBox > div{
+    display: flex;
+    /* padding: 0 8%; */
+    border-radius: 22px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    align-items: center;
+    
+}
+#howBox{
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    padding: 0 7%;
+}
+#howBox > div > div{
+    width: 50%;
+   margin: 50px;
+}
+#howBox > div > div img{
+    height: 500px;
+    width: 100%;
+}
+#howBox  > :nth-child(3){
+    background-color: #60c3ad;
+
+}
+#howBox  > :nth-child(3) h1{
+    font-weight: bolder;
+    font-size: 4.5rem;
+     
+}
+#howBox  > :nth-child(3) div p{
+    color: white;
+}
+#howBox  > :nth-child(6){
+    background-color: #60c3ad;
+}
+#howBox  > :nth-child(6) h1{
+    font-weight: bolder;
+    font-size: 4.5rem;
+     
+}
+#howBox  > :nth-child(6) div p{
+     color: white;
+}
+#howBox  > :nth-child(6) span{
+   color: white;
+}
+#howBox  > :nth-child(9){
+    background-color: #60c3ad;
+}
+#howBox  > :nth-child(9) h1{
+    font-weight: bolder;
+    font-size: 4.5rem;
+     
+}
+#howBox  > :nth-child(9) div p{
+    color: white;
+}
+#howBox  > :nth-child(9) span{
+    color: white;
+ }
+#howBox p {
+    font-size: larger;
+    line-height: 1.8rem;
+    font-style: inherit;
+}
+#howBox span{
+    color: #60c3ad;
+}
+#whatBox > div{
+    display: flex;
+}
+#whatLowerPart{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; 
+    border-radius: 45px;
+    
+}
+.colourHead{
+    color: white;
+}
+#whatLowerPart img{
+    width: 400px;
+}
+#whatLowerPart p{
+    font-size: large;
+    /* background-color: #60c3ad; */
+}
+#whatBox{
+    width: 80%;
+    margin: auto;
+}
+#scrollPage > div :nth-child(1){
+    display: flex;
+    justify-content: space-evenly;
+}
+#scrollPage > div :nth-child(2){
+    /* padding: 43px 31%; */
+    /* background-color: #60c3ad; */
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 5%;
+}
+#scrollPage > div p{
+    text-align: center;
+    padding: 5% 0;
+}
+#scrollPage >div{
+    padding: 0 6%;
+}
+#mainPara p{
+    font-size: larger;
+    text-align: center;
+}
+#mainPara{
+    margin: 5%;
+}
+#homePage span{
+    font-weight: 100;
+    
+}
+#bodyMain{
+    background: rgb(233,255,252);
+    background: linear-gradient(180deg, rgba(233,255,252,1) 2%, rgba(255,255,255,1) 7%);
+}
