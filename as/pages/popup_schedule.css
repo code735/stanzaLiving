@@ -1,182 +1,16 @@
-img {
+#parent {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* Caroursel */
-
-#carousel {
-    margin: 50px auto;
-    text-align: center;
-    position: relative;
-}
-
-#carousel a i {
-    font-size: 1.5rem;
-}
-
-#slides {
-    display: flex;
-}
-
-.slide {
-    flex: 1;
-    width: 100%;
-    height: 400px;
-    border-radius: 20px;
-}
-
-.slide img {
-    border-radius: 20px;
-}
-
-.active {
-    display: block;
-}
-
-.prev,
-.next {
-    cursor: pointer;
-    user-select: none;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 6px 12px;
-    background: white;
-    margin-top: -22px;
-    color: black;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 100px;
-}
-
-.prev {
-    left: 3%;
-}
-
-.next {
-    right: 3%;
-}
-
-#dots {
-    position: absolute;
-    bottom: 20px;
-    width: 100%;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-}
-
-#close_btn {
-    padding: none !important;
-    box-shadow: none !important;
-    display: flex;
+    overflow-y: scroll;
     justify-content: center;
     align-items: center;
-    position: static !important;
-}
-
-.dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-
-.inactive {
-    background-color: #bbb;
-}
-
-.active,
-.dot:hover {
-    background-color: white;
-}
-
-.disabled {
+    background: #00000082;
     display: none;
-}
-
-
-#schedule_a_visit {
-    width: 38%;
-}
-
-/* carousel */
-
-#details {
-    width: 60%;
-
-}
-
-#details .d-flex {
-    gap: 10px;
-}
-
-#details h2 {
-    font-weight: bold;
-}
-
-#details h6 {
-    color: gray;
-    font-weight: 400;
-}
-
-#gender {
-    font-size: .7rem;
-    color: rgb(110, 110, 243);
-    font-weight: bold;
-    background: #f4eeff;
-    padding: 5px 10px;
-    border-radius: 50px;
-}
-
-#occupy_append {
-    gap: 20px;
-}
-
-.occupyCard {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    background: #f6f7ff;
-    text-align: center;
-    border-radius: 5px;
-}
-
-#amenities_append p {
-    font-size: .9rem;
-    font-weight: 600;
-    border: 2px solid #c5bdbd;
-    padding: 8px 10px;
-    border-radius: 50px;
-    color: #8f8a8a;
-}
-
-#services_append p {
-    font-size: .9rem;
-    font-weight: 600;
-    border: 2px solid #c5bdbd;
-    padding: 8px 10px;
-    border-radius: 50px;
-    color: #8f8a8a;
-}
-
-#desc_text {
-    color: #3b776a;
-    font-weight: 600;
-    font-size: 1rem;
-}
-
-#general_rules li {
-    color: #3b776a;
-    font-weight: 600;
-    font-size: 1rem;
+    position: fixed;
+    z-index: 200;
+    left: 0;
+    top: 0;
+    padding: 5% 0;
+    height: 100vh;
 }
 
 #bodyBox {
@@ -187,6 +21,7 @@ img {
     background: rgb(211, 238, 232);
     background: linear-gradient(195deg, rgba(211, 238, 232, 1) 0%, rgba(255, 255, 255, 1) 78%);
     margin-bottom: 25px;
+
 }
 
 #Partnerwithus {
@@ -202,6 +37,10 @@ img {
 #popup {
     padding: 15px;
     border-radius: 10px;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 39%;
     margin: auto;
     background-color: #ffffff;
 
@@ -284,11 +123,6 @@ img {
     /* display: none; */
 }
 
-#parent {
-    position: sticky;
-    top: 0;
-}
-
 #referalCode {
     /* margin-top: 25px; */
     border-radius: 8px;
@@ -324,41 +158,43 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .headText {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 400;
-    margin: 0;
-    padding: 10px 0;
 }
 
 #ScheduleAvisit {
     cursor: pointer;
-    padding: 5px 50px 5px 50px;
+    padding: 5px 30px 5px 30px;
     border-radius: 30px;
     background: #60c3ad;
     color: white;
+    font-size: medium;
 }
 
 #ScheduleAvisits {
     cursor: pointer;
-    padding: 5px 50px 5px 50px;
+    padding: 5px 30px 5px 30px;
     border-radius: 30px;
     background: #60c3ad;
     color: white;
+    font-size: medium;
 }
 
 #UnlockDiscount {
     cursor: pointer;
-    padding: 5px 50px 5px 50px;
+    padding: 5px 30px 5px 30px;
     border-radius: 30px;
     color: #60c3ad;
+    font-size: medium;
 }
 
 #UnlockDiscounts {
     cursor: pointer;
-    padding: 5px 50px 5px 50px;
+    padding: 5px 30px 5px 30px;
     border-radius: 30px;
     background: #60c3ad;
     color: white
+    font-size: medium;
 }
 
 .password input {
@@ -463,6 +299,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     padding: 15px;
     display: none;
     border-radius: 10px;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 39%;
+    margin: auto;
     background-color: #ffffff;
 }
 
@@ -574,84 +415,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     border-radius: 10px;
 }
 
-#phoneNumber img {
-    width: 24px;
-}
-
-body {
-    font-family: Arial, sans-serif;
-}
-
-.otp_verifyAndCLose {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid gray;
-    position: relative;
-    padding: 10px 0;
-}
-
-#button {
-    background: #61c3ae;
-}
-
-.parent {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    background-color: #00000045;
-}
-
-.otp-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.otp-form input {
-    font-size: 20px;
-    padding: 10px;
-    margin: 10px;
-    border: 1px solid #ccc;
-    width: 50px;
-    text-align: center;
-}
-
-.otp-form button {
-    font-size: 20px;
-    padding: 10px;
-    margin: 10px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-.otp-form p {
-    padding: 10px 0;
-    margin: 0;
-}
-
-.error {
-    color: red;
-}
-
-#pop_up {
-    background: white;
-    border-radius: 10px;
-    padding: 4px 10px;
-}
-
-#close_btn_otp {
-    cursor: pointer;
-}
-
-ul {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
+.img_of_indian_flag { 
+    width : 50px;
 }

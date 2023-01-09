@@ -15,12 +15,16 @@
     
     <link rel="stylesheet" href="./product_list.css">
     <link rel="stylesheet" href="./budget_slider.css">
-    
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
     <link rel="stylesheet" href="../../components/navandfooter.css">
+    <link rel="stylesheet" href="./popup_schedule.css">
+
+    <!--  new  -->
 </head>
 
 <body>
@@ -102,19 +106,19 @@
     <div id="plp_main_container">
 
         <div id="plp_directory">
-            Stanza Living / PG in Delhi
+            <a href = "../../index.html" id="plp_directory_return_to_main_page"> Stanza Living </a> / PG in <span id="pg_in_cityname">Delhi</span>
         </div>
 
         <div id="plp_main_filter">
-            <button id="filter_locality" onclick="showfunction(`locality`)"> Locality </button>
-            <button id="filter_budget" onclick="showfunction(`budget`)"> Budget </button>
-            <button id="filter_occupancy" onclick="showfunction(`occupancy`)"> Occupancy </button>
-            <button id="filter_gender" onclick="showfunction(`gender`)"> Gender</button>
-            <button id="filter_amenties" onclick="showfunction(`amneties`)">Amneties</button>
+            <button id="filter_locality" onclick="showfunction(`locality`)"> <span> Locality </span> <i class="fa-solid fa-angle-down fa-xs filters_drop_arrows"></i> </button>
+            <button id="filter_budget" onclick="showfunction(`budget`)"> <span> Budget </span><i class="fa-solid fa-angle-down fa-xs filters_drop_arrows"></i> </button>
+            <button id="filter_occupancy" onclick="showfunction(`occupancy`)"> <span> Occupancy </span> <i class="fa-solid fa-angle-down fa-xs filters_drop_arrows"></i> </button>
+            <button id="filter_gender" onclick="showfunction(`gender`)"> <span> Gender </span><i class="fa-solid fa-angle-down fa-xs filters_drop_arrows"></i></button>
+            <button id="filter_amenties" onclick="showfunction(`amneties`)"><span> Amneties </span><i class="fa-solid fa-angle-down fa-xs filters_drop_arrows"></i></button>
             <span> | </span>
-            <button id="wishlist_btn" onclick="moveToWishlist()">My Wishlist</button>
-            <button>More Filters</button>
-            <button id="dropdown_sort"> Sort By :
+            <button id="wishlist_btn" onclick="moveToWishlist()">My Wishlist <i class="fa-solid fa-angle-right fa-xs filters_drop_arrows"></i> </button>
+            <button> <span> More Filters </span><i class="fa-solid fa-angle-down fa-xs filters_drop_arrows"></i> </button>
+            <button id="dropdown_sort" > Sort by :
                 <select name="" id="sort_data_dropdown" class="form-select form-select-sm"
                     aria-label=".form-select-sm example" onchange="sortData()">
                     <option value="ascending">Low to High</option>
@@ -124,7 +128,7 @@
             </button>
 
             <div id="dropdown_locality">
-                <div> <input type="text" id="dropdown_locality_input"> </div>
+                <!-- <div> <input type="text" id="dropdown_locality_input"> </div> -->
                 <div id="dropdown_locality_results"> </div>
                 <hr>
                 <div class="dropdown_save" id="locality_save">
@@ -255,10 +259,9 @@
         </div>
 
         <div id="plp_search_query">
-            <h2> <span id="number_of_search_results"> </span> PGs waiting to be yours in <span id="cityname_of_search_results"></span></h2>
+            <h2> <span id="number_of_search_results"> </span> PGs waiting to be yours in <span id="cityname_of_search_results"></span> </h2>
         </div>
 
-        <hr>
         <div id="plp_content">
             <div id="plp_content_left_list">
 
@@ -508,11 +511,253 @@
 
 
     </div>
+
+    <div id="background_faded_div">
+        <div id="parent">
+                <div id="popup">
+                    <div class="close_btn"><i class="bi bi-x-lg"></i></div>
+                    <div id="Partnerwithus">
+                        <div id="ScheduleAvisit">
+                            <h5 class="headText">Schedule a Visit</h5>
+                        </div>
+                        <div id="UnlockDiscount">
+                            <h5 class="headText">Unlock Discount</h5>
+                        </div>
+                        
+                    </div>
+                    <div id="bodyBox">
+                        <form>
+                            <div id="nameContainer">
+                                <input style="  width: 100%;" type="text" placeholder="First Name">
+                                <input style="  width: 100%;" type="text" placeholder="Last Name">
+                            </div>
+                            <div id="phoneNumber">
+                                <img src="https://www.stanzaliving.com/assets/indian-mob.svg" alt="" class="img_of_indian_flag">
+                                <span>+91</span>
+                                <input type="tel" placeholder="Enter your mobile number">
+                            </div>
+                            <h5>I am a</h5>
+                            <div id="workP">
+                                
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        Working Professional
+                                    </label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        Student
+                                    </label>
+                                  </div>
+                            </div>
+                            <div id="Select">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Duration of your stay</option>
+                                    <option value="1">Less than 3 months</option>
+                                    <option value="2">3-6 months</option>
+                                    <option value="3">More than 6 months</option>
+                                  </select>
+                            </div>
+                            <h5>When are you planning to visit?</h5>
+                            <div id="Clander">
+                                <div id="dates">
+                                            <div class="date">
+                                                <strong style="width: 50px;" id="date1">08 Jan</strong>
+                                                <span id="day1">Sun</span>
+                                            </div>
+                                            <div class="date">
+                                                <strong style="width: 50px;" id="date2">09 Jan</strong>
+                                                <span id="day2">Mon</span>
+                                            </div>
+                                            <div class="date">
+                                                <strong style="width: 50px;" id="date3">10 Jan</strong>
+                                                <span id="day3">Tue</span>
+                                            </div>
+                                </div>
+                                <div id="Clanderlogo">
+                                    <div id="Clogo"><i style="color: #78d1be;" class="bi bi-calendar4"></i></div>
+                                    <span>Select Date</span>
+                                </div>
+                            </div>
+                            <div id="TimeSlote">
+                                <h5>What is your preferred time slot?</h5>
+                                <div id="slotes">
+                                    <div class="slote">9-12 PM</div>
+                                    <div class="slote">12-3 PM</div>
+                                    <div class="slote">3-6 PM</div>
+                                    <div class="slote">6-9 PM</div>
+                                </div>
+                            </div>
+                           
+                        </form>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            <span>I have read and agreed to the<a style="font-weight: bolder;"
+                                    href="https://www.stanzaliving.com/terms-and-conditions"> terms and conditions</a> and <a style="font-weight: bolder;"href="https://www.stanzaliving.com/privacy-policy"> privacy policy</a> and hereby confirm to proceed.</span>
+                        </label>
+                    </div>
+            
+                    <div id="action">
+                        <button id="Submit">Schedule a Visit</button>
+                    </div>
+                </div>
+                <div id="popup2">
+                    <div class="close_btn"><i class="bi bi-x-lg"></i></div>
+                    <div id="Partnerwithus">
+                        <div id="ScheduleAvisits">
+                            <h5 class="headText">Schedule a Visit</h5>
+                        </div>
+                        <div id="UnlockDiscounts">
+                            <h5 class="headText">Unlock Discount</h5>
+                        </div>
+                        
+                        
+                    </div>
+                    <div id="dasedBox">
+                        <div id="firsttag">
+                            <img style="width: 10%;height: 10%;" src="../../ScheduleOrUnlockRewardPage/LOGOS/firstLogoPng.png" alt="">
+                            <p>If you like a residence or apartment, make an initial payment of just
+                                ₹1,000/-</p>
+                        </div>
+                        <div id="secondtag">
+                            <img style="width: 10%;height: 10%;" src="../../ScheduleOrUnlockRewardPage/LOGOS/SecondLogo.png" alt="">
+                            <p>This will unlock a ₹1,000/- discount that you can avail on completing
+                                your booking</p>
+                        </div>
+                        <div id="thirdtag">
+                            <img style="width: 10%;height: 10%;"  src="../../ScheduleOrUnlockRewardPage/LOGOS/thirdLogo.png" alt="">
+                            <p>But if you change your mind anytime, you can get your money back (no questions asked)</p>
+                        </div>
+                    </div>
+                    <div id="bodyBox">
+                        <form>
+                            <div id="nameContainer">
+                                <input style="  width: 100%;" type="text" placeholder="First Name">
+                                <input style="  width: 100%;" type="text" placeholder="Last Name">
+                            </div>
+                            <div id="phoneNumber">
+                                <img src="https://www.stanzaliving.com/assets/indian-mob.svg" alt="" class="img_of_indian_flag">
+                                <span>+91</span>
+                                <input id="telNumber" type="tel" placeholder="Enter your mobile number">
+                            </div>
+                            <h5>I am a</h5>
+                            <div id="workP">
+                                
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        Working Professional
+                                    </label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        Student
+                                    </label>
+                                  </div>
+                            </div>
+                            <div id="emailId">
+                                <input type="email" placeholder="Email ID">
+                            </div>
+                            <div id="SelectOccupancyAndGender">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Select Occupancy</option>
+                                    <option value="1">Single Occupancy</option>
+                                    <option value="2">Double Occupancy</option>
+                                  </select>
+                                  <select class="form-select" aria-label="Default select example">
+                                    <option selected>Select Gender</option>
+                                    <option value="1">Male</option>
+                                    <option value="2">Female</option>
+                                  </select>
+                            </div>
+                            <div id="clander">
+                                <input type="date" id="dateCha" name="SelectDate" placeholder="Expected Move-in Date">
+                                <div id="Clogo"><i style="color: #78d1be;" class="bi bi-calendar4"></i></div>
+                                
+                            </div>
+                            <div id="referalCode">
+                                <input type="text" placeholder="Enter Referral Code ( Optional )">
+                            </div>
+                            
+                            
+                            
+                        </form>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            <span>I have read and agreed to the <a style="font-weight: bolder;"
+                                    href="https://www.stanzaliving.com/terms-and-conditions">terms & conditions</a> of unlock discount and hereby confirm to proceed.</span>
+                        </label>
+                    </div>
+            
+                    <div id="action">
+                        <button id="Submit1">Unlock Discount</button>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+    <footer class="mt-4 pt-5 ps-5 pe-5 pb-2">
+        <div class="d-flex justify-content-between">
+            <div class="footer_brand_logo">
+                <img src="https://res.cloudinary.com/stanza-living/image/upload/w_182/v1652358946/Website%20v5/Logo/stanzalogo.png"
+                    alt="">
+            </div>
+            <div id="footer_links" class="d-none d-lg-flex justify-content-center">
+                <div class="d-flex flex-column">
+                    <a href="#">About Us</a>
+                    <a href="#">Team</a>
+                    <a href="#">Investor Relations</a>
+                    <a href="#">Media</a>
+                </div>
+                <div class="d-flex flex-column">
+                    <a href="#">Blogs</a>
+                    <a href="#">FAQs</a>
+                    <a href="#">Refer and Earn</a>
+                    <a href="#">House Rules</a>
+                </div>
+                <div class="d-flex flex-column">
+                    <a href="#">T&C</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Contact Us</a>
+                </div>
+                <div class="d-flex flex-column">
+                    <a href="#">COVID-19</a>
+                    <a href="#">Refunds</a>
+                    <a href="#">Partner with Us</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+            <div id="social_links">
+                <div class="d-flex justify-content-between align-items-center">
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-linkedin"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright d-flex justify-content-between align-items-center pt-5">
+            <p class="copyright_l">Copyright © 2022 | All Rights Reserved by Dtwelve Spaces Pvt Ltd. | Sitemap</p>
+            <p class="copyright_r">Images shown are for representational purposes only. Amenities depicted may or may
+                not form a part of
+                that individual property.</p>
+        </div>
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
     <script src="./product_list.js"> </script>
     <script src="./budget_slider.js"></script>
+    <script src="./popup_schedule.js"></script>
+    <script src="https://kit.fontawesome.com/53dd2c8df1.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
