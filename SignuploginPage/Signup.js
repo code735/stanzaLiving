@@ -69,7 +69,7 @@ function logIn() {
       let loggedInUserval = ins[i].Firstname;
       localStorage.setItem("loggedInUser", loggedInUserval);
       document.getElementById("after_login").textContent = loggedInUser;
-      location.href = "../index.html";
+      location.href = "https://code735.github.io/stanzaLiving/index.html";
       flag = 1;
       document.getElementById("parent").style.display = "none";
       break;
