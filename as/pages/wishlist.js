@@ -166,7 +166,7 @@ let populateHouseList = (data) => {
                     // mouse click, navigate to next page , individual house page
                     house_deets_name_h3.addEventListener("click", function(){
                         localStorage.setItem( "individual_house", JSON.stringify(elem))
-                        window.location.href = "./individual_product_page.html"
+                        window.location.href = "../../individualPage/individualPage.html"
                     })
 
                     let house_deets_name_fav_btn = createe("span")
