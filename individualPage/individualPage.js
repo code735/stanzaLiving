@@ -27,6 +27,9 @@ document.getElementById("close_btn").onclick = () => {
     popup.style.display = "none";
 }
 
+document.getElementById("close_btn_otp").onclick = () => {
+    document.querySelector(".parent").style.display = "none";
+}
 
 
 
@@ -257,3 +260,8 @@ document.getElementById("ScheduleAvisits").addEventListener("click", function ()
     document.getElementById("UnlockDiscount").style.background = "white";
     document.getElementById("UnlockDiscount").style.color = "#c5c5c5";
 });
+
+
+document.getElementById("Submit").onclick = () => {
+    document.querySelector(".submit").style.display = "flex";
+}
