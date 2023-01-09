@@ -263,5 +263,5 @@ document.getElementById("ScheduleAvisits").addEventListener("click", function ()
 
 
 document.getElementById("Submit").onclick = () => {
-    document.querySelector(".submit").style.display = "flex";
+    document.querySelector(".parent").style.display = "flex";
 }
