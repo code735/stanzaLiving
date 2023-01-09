@@ -27,8 +27,7 @@ margin-bottom: 25px;
     justify-content: space-between;
     padding: 3px;
     border: 1px solid #e1e1e1;
-    border-radius: 30px;
-    margin-bottom: 30px;
+
 
 }
 #popup{
@@ -162,8 +161,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     cursor: pointer;
     padding: 5px 50px 5px  50px;
     border-radius: 30px;
-    background: #60c3ad; 
-    color: white
+    background: white; 
+    color: #c5c5c5
 }
 #UnlockDiscounts{
     cursor: pointer;
