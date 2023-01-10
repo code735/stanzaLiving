@@ -20,7 +20,7 @@ Our goal was to replicate both the frontend and funtionality of StanzaLiving to 
 
 ![snips from porject 2](./readme_homepage2.png "About us, Partner with Us and Our Team Page")
 
-<h3> User Flow Path <h3> 
+<h3> User Flow Path </h3> 
 
 Landing page **>** Sign in **>** Make a search (property type + area) **>** House Listing Page **>** User applies filters/sorting **>** Reach Individual Property Page **>**  Make a callback request 
 
