@@ -13,11 +13,16 @@ Stanzaliving provides apartments, co-living and PG properties on rent across maj
 <h3> Project Goal </h3>
 Our goal was to replicate both the frontend and funtionality of StanzaLiving to the maximum, in 5 days, using only HTML, JS and CSS ( - no frameworks ). The implemntion of the user flow was cruicial in taking the project to completion.   
 
-![our homepage](./readme_homepage.png "this is us")
+<br><br>
+![snips from project 1](./readme_homepage.png "Home Page, Property Listing Page and Property Page")
+
+<br><br>
+
+![snips from porject 2](./readme_homepage2.png "About us, Partner with Us and Our Team Page")
 
 <h3> User Flow Path <h3> 
 
-Landing page **->** Sign in **->** Make a search (property type + area) **->** House Listing Page **->** User applies filters/sorting **->** Reach Individual Property Page **->**  Make a callback request 
+Landing page **>** Sign in **>** Make a search (property type + area) **>** House Listing Page **>** User applies filters/sorting **>** Reach Individual Property Page **>**  Make a callback request 
 
 <h3> Pages Implemented </h3>
 
