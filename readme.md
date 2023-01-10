@@ -22,7 +22,7 @@ Our goal was to replicate both the frontend and funtionality of StanzaLiving to 
 
 <h3> User Flow Path </h3> 
 
-Landing page **>** Sign in **>** Make a search (property type + area) **>** House Listing Page **>** User applies filters/sorting **>** Reach Individual Property Page **>**  Make a callback request 
+Landing page  **>**  Sign in  **>**  Make a search (property type + area)  **>**  House Listing Page  **>**  User applies filters/sorting  **>**  Reach Individual Property Page  **>**   Make a callback request 
 
 <h3> Pages Implemented </h3>
 
